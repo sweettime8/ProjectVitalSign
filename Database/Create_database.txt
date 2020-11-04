@@ -132,8 +132,8 @@ CREATE TABLE `gate` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Gate device (Android)';
 
 CREATE TABLE `display` (
-  `id` int(11) NOT NULL,
-  `serial_number` varchar(45) DEFAULT NULL,
+  `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+  `serial_number` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int NOT NULL DEFAULT '1',
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
