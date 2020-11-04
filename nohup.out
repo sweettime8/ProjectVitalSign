@@ -116,3 +116,12 @@ Caused by: java.sql.SQLSyntaxErrorException: (conn=11) Unknown database 'vitalsi
 04-11-2020 20:37:12.660 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 7952 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
 04-11-2020 20:37:12.660 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
 04-11-2020 20:37:14.400 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.101 seconds (JVM running for 2.376)
+04-11-2020 23:00:04.632 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 19900 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+04-11-2020 23:00:04.634 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+04-11-2020 23:00:07.206 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.873 seconds (JVM running for 3.143)
+04-11-2020 23:20:06.183 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarting - Starting VitalsignProjectServicesApplicationTests on MSI with PID 19360 (started by admin in E:\6.Project_elcom\ProjectVitalSign)
+04-11-2020 23:20:06.185 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+04-11-2020 23:20:10.676 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarted - Started VitalsignProjectServicesApplicationTests in 4.754 seconds (JVM running for 5.589)
+04-11-2020 23:20:27.295 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 18836 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+04-11-2020 23:20:27.298 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+04-11-2020 23:20:29.996 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.003 seconds (JVM running for 3.289)
