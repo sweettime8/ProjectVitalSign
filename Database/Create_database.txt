@@ -22,7 +22,7 @@ CREATE TABLE `account` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng đăng nhập hệ thống'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Người dùng đăng nhập hệ thống';
 
 CREATE TABLE `department` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE `department` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Khoa'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Khoa';
 
 CREATE TABLE `employee` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `employee` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Nhân viên y tế'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Nhân viên y tế';
 
 
 CREATE TABLE `room` (
@@ -54,7 +54,7 @@ CREATE TABLE `room` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Phòng'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Phòng';
 
 CREATE TABLE `patient` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `patient` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Bệnh nhân'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Bệnh nhân';
 
 CREATE TABLE `bed` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE `bed` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Giường'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Giường';
 
 CREATE TABLE `employee_patient` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -91,7 +91,7 @@ CREATE TABLE `employee_patient` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Bảng map nhân viên y tế với bệnh nhân'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Bảng map nhân viên y tế với bệnh nhân';
 
 CREATE TABLE `sensor` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE `sensor` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Thiết bị đo'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Thiết bị đo';
 
 
 CREATE TABLE `gate` (
@@ -129,13 +129,17 @@ CREATE TABLE `gate` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Gate device (Android)'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Gate device (Android)';
 
 CREATE TABLE `display` (
   `id` int(11) NOT NULL,
   `serial_number` varchar(45) DEFAULT NULL,
+  `status` int NOT NULL DEFAULT '1',
+  `is_deleted` int(1) NOT NULL DEFAULT 0,
+  `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Display'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Display';
+
 
 CREATE TABLE `data_bp` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -150,7 +154,7 @@ CREATE TABLE `data_bp` (
   `measure_at` timestamp(3) NULL DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Thời gian server insert row này',
   PRIMARY KEY (`id`,`created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số BP (nhịp tim)'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số BP (nhịp tim)';
  
 CREATE TABLE `data_bp_latest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -165,7 +169,7 @@ CREATE TABLE `data_bp_latest` (
   `last_measure_at` timestamp(3) NULL DEFAULT NULL,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Thời gian server update row này',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số BP "bản mới nhất"'
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số BP "bản mới nhất"';
 
 
 CREATE TABLE `data_spo2` (
@@ -182,7 +186,7 @@ CREATE TABLE `data_spo2` (
   `measure_at` timestamp(3) NULL DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Thời gian server insert row này',
   PRIMARY KEY (`id`,`created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số SPO2'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số SPO2';
 
 CREATE TABLE `data_spo2_latest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -198,7 +202,7 @@ CREATE TABLE `data_spo2_latest` (
   `last_measure_at` timestamp(3) NULL DEFAULT NULL,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Thời gian server update row này',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số SPO2 "bản mới nhất"'
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số SPO2 "bản mới nhất"';
 
 
 CREATE TABLE `data_temp` (
@@ -211,7 +215,7 @@ CREATE TABLE `data_temp` (
   `measure_at` timestamp(3) NULL DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Thời gian server insert row này',
   PRIMARY KEY (`id`,`created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ';
 
 CREATE TABLE `data_temp_latest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -223,7 +227,7 @@ CREATE TABLE `data_temp_latest` (
   `last_measure_at` timestamp(3) NULL DEFAULT NULL,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Thời gian server update row này',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ "bản mới nhất"'
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ "bản mới nhất"';
 
 
 

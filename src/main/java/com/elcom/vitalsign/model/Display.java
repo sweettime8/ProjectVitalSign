@@ -8,36 +8,29 @@ package com.elcom.vitalsign.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.UUID;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Proxy;
-import org.hibernate.annotations.Type;
 
 /**
  *
- * @author Admin
+ * @author admin
  */
 @Entity
-@Table(name = "department")
+@Table(name = "display")
 //@Proxy(lazy = false)
 //@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 //@org.springframework.cache.annotation.Cacheable
-public class Department implements Serializable {
+public class Display implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue
-    @Type(type = "uuid-char")
-    @Column(name = "id", length = 36, updatable = false, nullable = false)
-    private UUID id;
+    @Column(name = "id", updatable = false, nullable = false)
+    private String id;
 
-    @Column(name = "hospital_id")
-    private String hospitalId;
-
-    @Column(name = "name")
-    private String name;
+    @Column(name = "serial_number")
+    private String serial_number;
 
     @Column(name = "status")
     private Integer status;
@@ -47,6 +40,9 @@ public class Department implements Serializable {
 
     @Column(name = "last_updated_at")
     private Timestamp lastUpdatedAt;
+
+    public Display() {
+    }
 
     @PrePersist
     void preInsert() {
@@ -60,93 +56,52 @@ public class Department implements Serializable {
 
     @PreUpdate
     void preUpdate() {
+        if (this.isDeleted == null) {
+            this.setIsDeleted(0);
+        }
+        if (this.status == null) {
+            this.setStatus(1);
+        }
     }
 
-    public Department() {
-    }
-
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
+    public String getSerial_number() {
+        return serial_number;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void setSerial_number(String serial_number) {
+        this.serial_number = serial_number;
     }
 
-    /**
-     * @return the status
-     */
     public Integer getStatus() {
         return status;
     }
 
-    /**
-     * @param status the status to set
-     */
     public void setStatus(Integer status) {
         this.status = status;
     }
 
-    /**
-     * @return the isDeleted
-     */
     public Integer getIsDeleted() {
         return isDeleted;
     }
 
-    /**
-     * @param isDeleted the isDeleted to set
-     */
     public void setIsDeleted(Integer isDeleted) {
         this.isDeleted = isDeleted;
     }
 
-    /**
-     * @return the lastUpdatedAt
-     */
     public Timestamp getLastUpdatedAt() {
         return lastUpdatedAt;
     }
 
-    /**
-     * @param lastUpdatedAt the lastUpdatedAt to set
-     */
     public void setLastUpdatedAt(Timestamp lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
     }
 
-    /**
-     * @return the serialVersionUID
-     */
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
-    /**
-     * @return the hospitalId
-     */
-    public String getHospitalId() {
-        return hospitalId;
-    }
-
-    /**
-     * @param hospitalId the hospitalId to set
-     */
-    public void setHospitalId(String hospitalId) {
-        this.hospitalId = hospitalId;
-    }
 }
