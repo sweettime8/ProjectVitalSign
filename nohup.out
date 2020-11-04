@@ -1,0 +1,6 @@
+04-11-2020 16:54:46.600 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarting - Starting VitalsignProjectServicesApplicationTests on DESKTOP-2U9UF8V with PID 12744 (started by Admin in E:\1.ELCOM\VitalsignProjectServices)
+04-11-2020 16:54:46.623 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+04-11-2020 16:54:56.846 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarted - Started VitalsignProjectServicesApplicationTests in 14.732 seconds (JVM running for 19.7)
+04-11-2020 16:55:12.314 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on DESKTOP-2U9UF8V with PID 6796 (E:\1.ELCOM\VitalsignProjectServices\target\classes started by Admin in E:\1.ELCOM\VitalsignProjectServices)
+04-11-2020 16:55:12.318 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+04-11-2020 16:55:14.906 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.994 seconds (JVM running for 3.314)
