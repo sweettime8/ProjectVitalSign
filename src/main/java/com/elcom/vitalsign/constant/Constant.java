@@ -10,13 +10,17 @@ package com.elcom.vitalsign.constant;
  * @author admin
  */
 public class Constant {
-
     /* MQTT */
     public static final String MQTT_BROKER_PROTOCOL = "tcp";
     public static final String MQTT_BROKER_HOST = "103.21.151.182";
     public static final int MQTT_BROKER_PORT = 1883;
 
     public static final int MQTT_QOS = 1;
+
+    //display turn On
+    public static final String SERVER_RES_GATE_SENSOR = "SERVER_RES_GATE_SENSOR"; // Pub
+    public static final String DISPLAY_REQ_GATE_SENSOR = "DISPLAY_REQ_GATE_SENSOR"; // Sub
+    
 
     public static final String MQTT_TOPIC_DATA_ECG = "VITALSIGN-TOPIC-DATA-ECG";
     public static final String MQTT_SUB_ID_DATA_ECG = "VITALSIGN-SUB-ID-DATA-ECG";

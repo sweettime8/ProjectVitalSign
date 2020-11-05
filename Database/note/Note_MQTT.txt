@@ -1,0 +1,29 @@
+==============================================================
+= 			MQTT = Message Queue Telemetry Transport         =
+==============================================================
+MQTT   : là một giao thức truyền thông điệp (message) theo mô hình publish/subscribe (xuất bản – theo dõi)
+		 Kiến trúc mức cao (high-level) của MQTT gồm 2 phần chính là Broker và Clients
+		 
+broker : là server nhận dữ liệu và giao tiếp với các client đã được chỉ định.
+
+Client : chia thành 2 nhóm là publisher và subscriber.
+		 Client chỉ làm ít nhất một trong 2 việc là publish các thông điệp (message)
+		 lên một/nhiều topic cụ thể hoặc subscribe một/nhiều topic nào đó để nhận message từ topic này.		
+
+ba mức độ tin cậy cho việc truyền dữ liệu (QoS: Quality of service) : 
+	QoS 0: Broker/client sẽ gửi dữ liệu đúng một lần, 
+		   quá trình gửi được xác nhận bởi chỉ giao thức TCP/IP.
+	QoS 1: Broker/client sẽ gửi dữ liệu với ít nhất một lần xác nhận từ đầu kia, 
+		   nghĩa là có thể có nhiều hơn 1 lần xác nhận đã nhận được dữ liệu.
+	QoS 2: Broker/client đảm bảo khi gửi dữ liệu thì phía nhận chỉ nhận được đúng một lần,
+		   quá trình này phải trải qua 4 bước bắt tay.
+
+
+** Mô hình Pub/Sub và Cơ chế hoạt động của MQTT
+Mô hình Pub/Sub
+1. Thành phần
+Client
+Publisher - Nơi gửi thông điệp
+Subscriber - Nơi nhận thông điệp
+Broker - Máy chủ môi giới   952692168620300
+							952707678015000

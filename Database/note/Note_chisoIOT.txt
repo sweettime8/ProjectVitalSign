@@ -1,0 +1,72 @@
+Spo2 : là viết tắt của cụm từ Saturation of peripheral oxygen - độ bão hòa oxy trong máu ngoại vi.
+	   Hiểu một cách khác, SpO2 là tỷ lệ hemoglobin oxy hóa (hemoglobin có chứa oxy) so với tổng lượng hemoglobin trong máu
+	   
+ECG  : (còn được gọi là Điện tâm đồ hoặc Đo điện tim) là xét nghiệm ghi lại các tín hiệu điện của tim.
+	    Xét nghiệm này rất phổ biến nhằm phát hiện các vấn đề và theo dõi tình trạng của tim trong nhiều tình huống.
+		
+
+Sensor : cảm biến
+
+
+
+
+================Display turn on =============================
+- Display -> Server : load_device_list
+	Topic: pub DISPLAY_REQ_GATE_SENSOR_<DISPLAY_ID>
+	Topic: sub SERVER_RES_GATE_SENSOR_<DISPLAY_ID>
+	
+	{“display_id”:”xxxx”} 
+	
+- Display <--Server : load_device_list_res(gate(ID,status), sensor_list(mac,status))
+	sub DISPLAY_REQ_GATE_SENSOR_<DISPLAY_ID>
+	pub SERVER_RES_GATE_SENSOR_<DISPLAY_ID>
+	
+	{“gate”:{
+		“ID”:"00bade93cdd4bd18",
+		”status”:”active”
+		},
+			“sensor”:{type + patient ,“MAC”:”112233445566”,”status:”out of range”}
+			“sensor”:{“MAC”:”112233445567”,”status:”in range”}
+			“sensor”:{“MAC”:”112233445568”,”status:”connected”}
+			“sensor”:{“MAC”:”112233445569”,”status:”synchronizing”}
+	}
+
+	
+-> gửi lên display_Id ->(display)-> displayID ->(gate) -> gateId ->(sensor)-> laod sensor
+
+
+
+{
+"gate":
+	{
+		"display_":"123456",
+		"status":"active"
+	},
+	"sensor":[
+		{"sensor_type":"v6","patient_id":"1","MAC":"112233445566","status":"out of range"},
+		{"sensor_type":"v6","patient_id":"2","MAC":"112233445566","status":"out of range"},
+		{"sensor_type":"v6","patient_id":"3","MAC":"112233445566","status":"out of range"}
+	]
+}
+	
+	
+	“sensor”:{“MAC”:”112233445566”,”status:”out of range”}
+	“sensor”:{“MAC”:”112233445567”,”status:”in range”}
+	“sensor”:{“MAC”:”112233445568”,”status:”connected”}
+	“sensor”:{“MAC”:”112233445569”,”status:”synchronizing”}
+}
+
+
+String id = topic.substring("DISPLAY_REQ_GATE_SENSOR_".length());
+
+                    
+MqttPublisher mqttPublisher = new MqttPublisher();
+mqttPublisher.publisherForDisplay();
+
+
+
+
+
+
+
+

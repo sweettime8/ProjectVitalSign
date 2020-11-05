@@ -115,7 +115,6 @@ CREATE TABLE `sensor` (
 
 CREATE TABLE `gate` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
-  `display_id` int(11) NOT NULL DEFAULT 0,
   `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `model` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `serial_number` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -133,6 +132,7 @@ CREATE TABLE `gate` (
 
 CREATE TABLE `display` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+  `gate_id` varchar(36) COLLATE utf8_unicode_ci DEFAULT NULL,
   `serial_number` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int NOT NULL DEFAULT '1',
   `is_deleted` int(1) NOT NULL DEFAULT 0,

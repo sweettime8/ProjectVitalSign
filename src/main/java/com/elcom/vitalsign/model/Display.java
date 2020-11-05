@@ -29,6 +29,9 @@ public class Display implements Serializable {
     @Column(name = "id", updatable = false, nullable = false)
     private String id;
 
+    @Column(name = "gate_id")
+    private String gateId;
+
     @Column(name = "serial_number")
     private String serial_number;
 
@@ -71,6 +74,15 @@ public class Display implements Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
+    public String getGateId() {
+        return gateId;
+    }
+
+    public void setGateId(String gateId) {
+        this.gateId = gateId;
+    }
+    
 
     public String getSerial_number() {
         return serial_number;
