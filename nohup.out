@@ -615,3 +615,108 @@ Identify and stop the process that's listening on port 8001 or configure this ap
 05-11-2020 16:45:16.330 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_d1bade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_d1bade93cdd4bd18] SUCCESS!
 05-11-2020 16:45:16.362 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
 05-11-2020 16:45:23.342 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+05-11-2020 21:16:16.227 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarting - Starting VitalsignProjectServicesApplicationTests on MSI with PID 10252 (started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 21:16:16.233 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 21:16:21.382 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarted - Started VitalsignProjectServicesApplicationTests in 5.44 seconds (JVM running for 6.372)
+05-11-2020 21:16:37.166 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 16724 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 21:16:37.170 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 21:16:40.056 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.219 seconds (JVM running for 3.596)
+05-11-2020 21:16:40.061 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 21:53:50.211 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 20620 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 21:53:50.214 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 21:53:53.375 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.5 seconds (JVM running for 3.819)
+05-11-2020 21:53:53.380 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 21:53:53.957 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 21:53:54.877 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 21:59:21.561 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 19664 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 21:59:21.564 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 21:59:24.489 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.31 seconds (JVM running for 3.642)
+05-11-2020 21:59:24.492 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 21:59:24.708 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 21:59:24.829 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:02:17.649 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:02:24.504 INFO  c.e.v.process.BQDataConsumerInitApp.run - [display_id] = cdbade93cdd4bd18
+05-11-2020 22:02:36.194 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 17112 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 22:02:36.196 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 22:02:38.934 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.05 seconds (JVM running for 3.38)
+05-11-2020 22:02:38.937 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 22:02:40.158 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 22:02:40.299 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:02:43.519 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:02:48.937 INFO  c.e.v.process.BQDataConsumerInitApp.run - [display_id] = cdbade93cdd4bd18
+05-11-2020 22:05:49.606 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 15004 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 22:05:49.608 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 22:05:52.475 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.172 seconds (JVM running for 3.502)
+05-11-2020 22:05:52.478 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 22:05:53.665 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 22:05:53.847 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:05:58.918 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:06:02.479 INFO  c.e.v.process.BQDataConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 22:24:17.876 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 12724 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 22:24:17.878 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 22:24:20.609 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.041 seconds (JVM running for 3.421)
+05-11-2020 22:24:20.612 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 22:24:20.813 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 22:24:20.938 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:24:29.532 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:24:30.613 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 22:24:30.650 ERROR c.e.v.r.GateCustomizeRepository.findByUuid - javax.persistence.NoResultException: No entity found for query
+05-11-2020 22:34:10.607 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 21480 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 22:34:10.609 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 22:34:13.345 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.045 seconds (JVM running for 3.363)
+05-11-2020 22:34:13.349 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 22:34:14.758 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 22:34:15.652 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:34:16.328 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+05-11-2020 22:34:25.372 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:34:33.350 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 22:34:33.380 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_id] = 00bade93cdd4bd18
+05-11-2020 22:51:34.389 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 19672 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 22:51:34.391 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 22:51:37.138 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.05 seconds (JVM running for 3.361)
+05-11-2020 22:51:37.141 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 22:51:37.367 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 22:51:37.565 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:51:37.669 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+05-11-2020 22:51:50.541 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:51:57.142 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 22:51:57.185 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_id] = 00bade93cdd4bd18
+05-11-2020 22:51:57.199 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - (conn=136) Unknown column 'gateId' in 'where clause'
+05-11-2020 22:53:24.082 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 8176 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 22:53:24.084 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 22:53:26.832 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.053 seconds (JVM running for 3.359)
+05-11-2020 22:53:26.835 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 22:53:27.126 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 22:53:27.225 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 22:53:27.328 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+05-11-2020 22:53:34.723 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 22:53:36.836 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 22:53:36.897 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_id] = 00bade93cdd4bd18
+05-11-2020 22:53:36.912 INFO  c.e.v.process.MqttConsumerInitApp.run - sensor : com.elcom.vitalsign.model.Sensor@1fe0eb2b/n
+05-11-2020 22:53:36.913 INFO  c.e.v.process.MqttConsumerInitApp.run - sensor : com.elcom.vitalsign.model.Sensor@5bd74ec/n
+05-11-2020 23:03:35.269 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 18892 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 23:03:35.271 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 23:03:38.083 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.129 seconds (JVM running for 3.442)
+05-11-2020 23:03:38.086 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 23:03:38.331 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 23:03:38.470 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 23:03:38.590 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+05-11-2020 23:04:00.913 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 23:04:08.089 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 23:04:08.134 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_id] = 00bade93cdd4bd18
+05-11-2020 23:04:08.141 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+05-11-2020 23:04:08.147 INFO  c.e.v.process.MqttConsumerInitApp.run - sensor : com.elcom.vitalsign.model.Sensor@44a53d2
+05-11-2020 23:04:08.147 INFO  c.e.v.process.MqttConsumerInitApp.run - sensor : com.elcom.vitalsign.model.Sensor@6c8fc312
+05-11-2020 23:04:32.357 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 20600 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+05-11-2020 23:04:32.359 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+05-11-2020 23:04:35.103 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.052 seconds (JVM running for 3.367)
+05-11-2020 23:04:35.106 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [ subscribe topic ]
+05-11-2020 23:04:35.320 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+05-11-2020 23:04:35.434 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+05-11-2020 23:04:35.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribers - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+05-11-2020 23:04:40.344 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18
+05-11-2020 23:04:45.107 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = cdbade93cdd4bd18
+05-11-2020 23:04:45.138 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_id] = 00bade93cdd4bd18
+05-11-2020 23:04:45.141 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+05-11-2020 23:04:45.145 INFO  c.e.v.process.MqttConsumerInitApp.run - sensor : sensor1
+05-11-2020 23:04:45.145 INFO  c.e.v.process.MqttConsumerInitApp.run - sensor : sensor2

@@ -5,11 +5,17 @@
  */
 package com.elcom.vitalsign.service.impl;
 
+import com.elcom.vitalsign.model.Display;
+import com.elcom.vitalsign.model.Gate;
+import com.elcom.vitalsign.model.Sensor;
 import com.elcom.vitalsign.model.measuredata.DataBp;
 import com.elcom.vitalsign.model.measuredata.DataSpo2;
 import com.elcom.vitalsign.model.measuredata.DataTemp;
+import com.elcom.vitalsign.repository.DisplayCustomizeRepository;
 import com.elcom.vitalsign.repository.DisplayRepository;
+import com.elcom.vitalsign.repository.GateCustomizeRepository;
 import com.elcom.vitalsign.repository.GateRepository;
+import com.elcom.vitalsign.repository.SensorCustomizeRepository;
 import com.elcom.vitalsign.repository.measuredata.DataBpCustomizeRepository;
 import com.elcom.vitalsign.repository.measuredata.DataBpRepository;
 import com.elcom.vitalsign.repository.measuredata.DataPartition;
@@ -17,9 +23,6 @@ import com.elcom.vitalsign.repository.measuredata.DataSpo2CustomizeRepository;
 import com.elcom.vitalsign.repository.measuredata.DataSpo2Repository;
 import com.elcom.vitalsign.repository.measuredata.DataTempCustomizeRepository;
 import com.elcom.vitalsign.service.DataService;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,8 +50,12 @@ public class DataServiceImpl implements DataService {
 
     private final DataPartition dataPartition;
     private final DisplayRepository displayRepository;
-    private final GateRepository gateRepository;
+    private final DisplayCustomizeRepository displayCustomizeRepository;
 
+    private final GateRepository gateRepository;
+    private final GateCustomizeRepository gateCustomizeRepository;
+    
+    private final SensorCustomizeRepository sensorCustomizeRepository;
 
     /*private final DataRrRepository dataRrRepository;
     private final DataRrCustomizeRepository dataRrCustomizeRepository;
@@ -58,7 +65,8 @@ public class DataServiceImpl implements DataService {
             DataBpRepository dataBpRepository, DataBpCustomizeRepository dataBpCustomizeRepository,
             DataSpo2Repository dataSpo2Repository, DataSpo2CustomizeRepository dataSpo2CustomizeRepository,
             DataTempRepository dataTempRepository, DataTempCustomizeRepository dataTempCustomizeRepository,
-            DataPartition dataPartition, DisplayRepository displayRepository, GateRepository gateRepository
+            DataPartition dataPartition, DisplayRepository displayRepository, DisplayCustomizeRepository displayCustomizeRepository,
+            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository , SensorCustomizeRepository sensorCustomizeRepository
     ) {
 
         this.dataBpRepository = dataBpRepository;
@@ -72,7 +80,12 @@ public class DataServiceImpl implements DataService {
 
         this.dataPartition = dataPartition;
         this.displayRepository = displayRepository;
+        this.displayCustomizeRepository = displayCustomizeRepository;
+
         this.gateRepository = gateRepository;
+        this.gateCustomizeRepository = gateCustomizeRepository;
+        
+        this.sensorCustomizeRepository = sensorCustomizeRepository;
     }
 
     @Override
@@ -128,8 +141,6 @@ public class DataServiceImpl implements DataService {
         this.dataPartition.addDataPartition(tables);
     }
 
-
-
 //    @Override
 //    public void updateDeviceInActive(String deviceType) {
 //        if ("SENSOR".equals(deviceType)) {
@@ -159,5 +170,19 @@ public class DataServiceImpl implements DataService {
         return null;
     }
 
-    
+    @Override
+    public Display findGateByDisplayId(String id) {
+        return displayCustomizeRepository.findByUuid(id);
+    }
+
+    @Override
+    public List<Sensor> findAllSensorByGateId(String gateId) {
+        return sensorCustomizeRepository.findByGateId(gateId);
+    }
+
+    @Override
+    public Gate findGateById(String id) {
+        return gateCustomizeRepository.findByUuid(id);
+    }
+
 }

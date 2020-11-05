@@ -7,6 +7,7 @@ package com.elcom.vitalsign.repository;
 
 import com.elcom.vitalsign.model.Sensor;
 import com.elcom.vitalsign.model.dto.GateWithSensor;
+import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
@@ -24,31 +25,32 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class SensorCustomizeRepository {
-    
+
     private static final Logger LOGGER = LoggerFactory.getLogger(SensorCustomizeRepository.class);
-    
+
     private SessionFactory sessionFactory;
-    
+
     @Autowired
     public SensorCustomizeRepository(EntityManagerFactory factory) {
-        if(factory.unwrap(SessionFactory.class) == null)
+        if (factory.unwrap(SessionFactory.class) == null) {
             throw new NullPointerException("factory is not a hibernate factory");
-        
+        }
+
         this.sessionFactory = factory.unwrap(SessionFactory.class);
     }
-    
+
     public Sensor findByUuid(String uuid) {
         Session session = openSession();
         try {
             return session.find(Sensor.class, uuid);
-        }catch(Exception ex) {
+        } catch (Exception ex) {
             LOGGER.error(ex.toString());
         } finally {
             closeSession(session);
         }
         return null;
     }
-    
+
     public void sensorRelation(GateWithSensor gateWithSensor) {
         Session session = openSession();
         try {
@@ -64,28 +66,46 @@ public class SensorCustomizeRepository {
                     query.setParameter(1, gateWithSensor.getGateId());
                     query.setParameter(2, item.getId());
                     query.executeUpdate();
-                }catch(NoResultException ex) {
+                } catch (NoResultException ex) {
                     //Ko tìm thấy thì insert mới
                     LOGGER.error(ex.toString());
-                    session.save(new Sensor(item.getId(), item.getName(), gateWithSensor.getGateId(), item.getModel()
-                            , item.getSensorType(), item.getMac(), item.getSerialNumber(), item.getManufacture()
-                            , item.getFirmwareVersion(), item.getBatteryValue()));
+                    session.save(new Sensor(item.getId(), item.getName(), gateWithSensor.getGateId(), item.getModel(),
+                            item.getSensorType(), item.getMac(), item.getSerialNumber(), item.getManufacture(),
+                            item.getFirmwareVersion(), item.getBatteryValue()));
                 }
             });
             tx.commit();
-        }catch(Exception ex) {
+        } catch (Exception ex) {
             LOGGER.error(ex.toString());
         } finally {
             closeSession(session);
         }
     }
-    
+
+    public List<Sensor> findByGateId(String gateId) {
+        Session session = openSession();
+        List<Sensor> lstSensor = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM sensor WHERE gate_Id = ?", Sensor.class);
+            query.setParameter(1, gateId);
+            lstSensor = query.getResultList();
+            return lstSensor;    
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+
+        return null;
+    }
+
     private Session openSession() {
         return this.sessionFactory.openSession();
     }
-    
+
     private void closeSession(Session session) {
-        if (session != null)
+        if (session != null) {
             session.close();
+        }
     }
 }

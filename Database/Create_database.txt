@@ -1,3 +1,5 @@
+use vitalsign;
+
 CREATE TABLE `hospital` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
@@ -7,7 +9,7 @@ CREATE TABLE `hospital` (
   `is_deleted` int(1) NOT NULL DEFAULT 0,
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Bệnh viện'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Bệnh viện';
 
 CREATE TABLE `account` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -96,6 +98,7 @@ CREATE TABLE `employee_patient` (
 CREATE TABLE `sensor` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `gate_id` varchar(36) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `patient_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `model` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `sensor_type` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'V6' COMMENT '1 trong các giá trị: V6, BPHR, O2HR, ECG+',

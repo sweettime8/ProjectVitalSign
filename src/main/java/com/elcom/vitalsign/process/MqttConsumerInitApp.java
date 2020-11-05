@@ -7,30 +7,31 @@ package com.elcom.vitalsign.process;
 
 import com.elcom.vitalsign.config.PropertiesConfig;
 import com.elcom.vitalsign.constant.Constant;
-import com.elcom.vitalsign.model.measuredata.DataBp;
+import com.elcom.vitalsign.model.Display;
+import com.elcom.vitalsign.model.Gate;
+import com.elcom.vitalsign.model.Sensor;
 import com.elcom.vitalsign.model.measuredata.DataSpo2;
 import com.elcom.vitalsign.model.measuredata.DataTemp;
 import com.elcom.vitalsign.service.DataService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 
 /**
  *
- * @author Admin
+ * @author admin
  */
-public class BQDataConsumerInitApp implements Runnable {
+public class MqttConsumerInitApp implements Runnable {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(BQDataConsumerInitApp.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MqttConsumerInitApp.class);
 
     private final BlockingQueue sharedQueue;
     private final DataService dataService;
 
-    public BQDataConsumerInitApp(BlockingQueue sharedQueue, ApplicationContext applicationContext) {
+    public MqttConsumerInitApp(BlockingQueue sharedQueue, ApplicationContext applicationContext) {
         this.sharedQueue = sharedQueue;
         this.dataService = applicationContext.getBean(DataService.class);
     }
@@ -46,11 +47,24 @@ public class BQDataConsumerInitApp implements Runnable {
                     sharedQueue.drainTo(lst);
                     switch (PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME) {
                         case Constant.DISPLAY_REQ_GATE_SENSOR:
-                            for(Object s : lst){
-                                LOGGER.info("[display_id] = " + s.toString());
+                            for (Object s : lst) {
+                                LOGGER.info("[BQDataConsumerInitApp - display_id] = " + s.toString());
+                                Display display = this.dataService.findGateByDisplayId(s.toString());
+                                String gateId = display.getGateId();
+                                LOGGER.info("[BQDataConsumerInitApp - gate_id] = " + gateId);
+                                
+                                Gate gate = this.dataService.findGateById(gateId);
+                                LOGGER.info("[BQDataConsumerInitApp - gate_status] = " + gate.getStatus());
+                                
+                                List<Sensor> lstSensor =  this.dataService.findAllSensorByGateId(gateId);
+                                for(Sensor sen : lstSensor){
+                                    LOGGER.info("sensor : " + sen.getId() );
+                                }
+                                
+                                
                             }
                             break;
-                            
+
                         case Constant.MQTT_TOPIC_DATA_SPO2:
                             this.dataService.saveDataSpo2((List<DataSpo2>) lst);
                             break;

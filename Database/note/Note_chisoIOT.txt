@@ -39,8 +39,8 @@ Sensor : cảm biến
 {
 "gate":
 	{
-		"display_":"123456",
-		"status":"active"
+	    "display_":"123456",
+	    "status":"active"
 	},
 	"sensor":[
 		{"sensor_type":"v6","patient_id":"1","MAC":"112233445566","status":"out of range"},
