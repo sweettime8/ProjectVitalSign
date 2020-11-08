@@ -7,6 +7,7 @@ package com.elcom.vitalsign.service;
 
 import com.elcom.vitalsign.model.Display;
 import com.elcom.vitalsign.model.Gate;
+import com.elcom.vitalsign.model.Patient;
 import com.elcom.vitalsign.model.Sensor;
 import com.elcom.vitalsign.model.measuredata.DataBp;
 import com.elcom.vitalsign.model.measuredata.DataSpo2;
@@ -34,9 +35,17 @@ public interface DataService {
 
     List<String> findAllGateForSubscribe();
     
-    Display findGateByDisplayId(String id);
+    Display findByDisplayId(String id);
     
     Gate findGateById(String id);
     
     List<Sensor> findAllSensorByGateId(String gateId);
+    
+    Patient findPatientById(String id);
+    
+    void unLinkGate(Display display);
+    
+    void addLinkGate(Display display);
+    
+    Display findDisplayByGateId(String gateId);
 }

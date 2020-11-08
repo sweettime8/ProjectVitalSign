@@ -26,26 +26,16 @@ import org.hibernate.annotations.Type;
 public class Patient implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    
     @Id
-    @GeneratedValue
-    @Type(type = "uuid-char")
-    @Column(name = "id", length = 36, updatable = false, nullable = false)
-    private UUID id;
-
-    @Column(name = "bed_id")
-    private String bedId;
-
-    //@Column(name = "sensor_id")
-    //private String sensorId;
-    @Column(name = "gate_id")
-    private String gateId;
-
-    @Column(name = "full_name")
-    private String fullName;
+    @Column(name = "id", updatable = false, nullable = false)
+    private String id;
 
     @Column(name = "patient_code")
     private String patientCode;
+
+    @Column(name = "full_name")
+    private String fullName;
 
     @Column(name = "birth_date")
     private String birthDate;
@@ -56,6 +46,13 @@ public class Patient implements Serializable {
     @Column(name = "mobile")
     private String mobile;
 
+    @Column(name = "bed_id")
+    private String bedId;
+
+    //@Column(name = "sensor_id")
+    //private String sensorId;
+//    @Column(name = "gate_id")
+//    private String gateId;
     @Column(name = "additional_info")
     private String additionalInfo;
 
@@ -85,11 +82,11 @@ public class Patient implements Serializable {
     public Patient() {
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -229,17 +226,16 @@ public class Patient implements Serializable {
     /**
      * @return the gateId
      */
-    public String getGateId() {
-        return gateId;
-    }
-
-    /**
-     * @param gateId the gateId to set
-     */
-    public void setGateId(String gateId) {
-        this.gateId = gateId;
-    }
-
+//    public String getGateId() {
+//        return gateId;
+//    }
+//
+//    /**
+//     * @param gateId the gateId to set
+//     */
+//    public void setGateId(String gateId) {
+//        this.gateId = gateId;
+//    }
     /**
      * @return the patientCode
      */

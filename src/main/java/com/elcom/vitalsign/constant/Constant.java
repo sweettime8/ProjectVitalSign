@@ -10,6 +10,7 @@ package com.elcom.vitalsign.constant;
  * @author admin
  */
 public class Constant {
+
     /* MQTT */
     public static final String MQTT_BROKER_PROTOCOL = "tcp";
     public static final String MQTT_BROKER_HOST = "103.21.151.182";
@@ -20,8 +21,28 @@ public class Constant {
     //display turn On
     public static final String SERVER_RES_GATE_SENSOR = "SERVER_RES_GATE_SENSOR"; // Pub
     public static final String DISPLAY_REQ_GATE_SENSOR = "DISPLAY_REQ_GATE_SENSOR"; // Sub
-    
 
+    //display unlink
+    public static final String DISPLAY_UNLINK_GATE_RES = "DISPLAY_UNLINK_GATE_RES"; // Pub
+    public static final String DISPLAY_UNLINK_GATE_REQ = "DISPLAY_UNLINK_GATE_REQ"; // Sub
+
+    //display add gate
+    public static final String DISPLAY_LINK_GATE_RES = "DISPLAY_LINK_GATE_RES"; // Pub
+    public static final String DISPLAY_LINK_GATE_REQ = "DISPLAY_LINK_GATE_REQ"; // Sub
+
+    //display get patient List
+    public static final String RES_PATIENT_LIST = "RES_PATIENT_LIST"; // Pub
+    public static final String GET_PATIENT_LIST = "GET_PATIENT_LIST"; // Sub
+
+    //title turn on gate
+    public static final String SERVER_RES_SENSOR_LIST = "SERVER_RES_SENSOR_LIST"; // Pub
+    public static final String GATE_REQ_DISPLAY_SENSOR = "GATE_REQ_DISPLAY_SENSOR"; // Sub
+
+    //title Add sensor         
+    public static final String SERVER_RES_DISPLAY_ADD_SENSOR = "SERVER_RES_DISPLAY_ADD_SENSOR"; // Pub
+    public static final String DISPLAY_REQ_SERVER_ADD_SENSOR = "DISPLAY_REQ_SERVER_ADD_SENSOR"; // Sub
+
+    //=================================================================================
     public static final String MQTT_TOPIC_DATA_ECG = "VITALSIGN-TOPIC-DATA-ECG";
     public static final String MQTT_SUB_ID_DATA_ECG = "VITALSIGN-SUB-ID-DATA-ECG";
 

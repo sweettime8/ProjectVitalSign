@@ -69,7 +69,7 @@ public class SensorCustomizeRepository {
                 } catch (NoResultException ex) {
                     //Ko tìm thấy thì insert mới
                     LOGGER.error(ex.toString());
-                    session.save(new Sensor(item.getId(), item.getName(), gateWithSensor.getGateId(), item.getModel(),
+                    session.save(new Sensor(item.getId(), item.getName(), gateWithSensor.getGateId(),item.getPatientId(), item.getModel(),
                             item.getSensorType(), item.getMac(), item.getSerialNumber(), item.getManufacture(),
                             item.getFirmwareVersion(), item.getBatteryValue()));
                 }

@@ -1,0 +1,776 @@
+08-11-2020 19:03:10.056 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 22856 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 19:03:10.067 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 19:03:14.784 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 5.298 seconds (JVM running for 5.827)
+08-11-2020 19:03:14.810 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 19:03:15.068 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:03:15.180 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:03:15.286 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:03:15.388 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:03:15.492 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:03:15.596 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:03:15.701 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:03:15.804 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:03:15.909 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.013 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.116 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.220 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.324 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.425 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.520 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.624 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:03:16.724 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:03:16.816 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:03:16.920 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:03:17.020 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:03:48.324 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 19:03:48.325 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 19:03:54.812 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] - displayId = {"display_id":"4eb2459ae05f004c"}
+08-11-2020 19:03:54.835 INFO  c.e.v.process.MqttConsumerInitApp.run - [DISPLAY_REQ_GATE_SENSOR - gate_id] = 00bade93cdd4bd18
+08-11-2020 19:03:54.843 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+08-11-2020 19:03:55.310 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 19:17:18.116 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 17600 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 19:17:18.116 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 19:17:20.831 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.02 seconds (JVM running for 3.347)
+08-11-2020 19:17:20.847 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 19:17:21.033 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:17:21.147 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:17:21.267 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:17:21.378 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:17:21.516 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:17:21.632 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:17:21.748 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:17:21.881 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:17:21.995 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:22.299 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:22.533 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:22.622 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:22.895 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:23.011 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:23.133 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:23.280 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:17:23.596 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:17:23.897 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:17:24.601 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:17:25.301 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:17:52.653 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 19:17:52.653 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 19:18:00.872 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] - displayId = {"display_id":"4eb2459ae05f004c"}
+08-11-2020 19:18:00.934 INFO  c.e.v.process.MqttConsumerInitApp.run - [DISPLAY_REQ_GATE_SENSOR - gate_id] = 00bade93cdd4bd18
+08-11-2020 19:18:00.941 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+08-11-2020 19:18:01.057 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 19:24:40.793 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 30624 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 19:24:40.809 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 19:24:43.489 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.98 seconds (JVM running for 3.278)
+08-11-2020 19:24:43.489 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 19:24:43.674 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:24:43.805 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:24:43.923 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:24:44.044 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:24:44.144 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:24:44.276 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:24:44.392 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:24:44.523 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:24:44.645 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:44.777 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:44.893 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:45.009 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:45.124 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:45.247 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:45.362 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:45.495 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:24:45.625 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:24:45.763 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:24:45.894 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:24:46.048 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:25:02.786 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GET_PATIENT_LIST_4eb2459ae05f004c
+08-11-2020 19:25:02.786 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GET_PATIENT_LIST
+08-11-2020 19:25:03.503 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GET_PATIENT_LIST]
+08-11-2020 19:25:03.503 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - display_id] = 4eb2459ae05f004c
+08-11-2020 19:25:03.527 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherListPatient - SendToTopic : RES_PATIENT_LIST_{"display_id":"4eb2459ae05f004c"}
+08-11-2020 19:25:03.635 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherListPatient - Send Message to Display :  
+[{"id":"p1","patientCode":"p1_code","fullName":"Nguyen Van A","birthDate":"8-12-1991","gender":"M","mobile":"0912014002","bedId":"bed1","status":1,"isDeleted":0,"lastUpdatedAt":"2020-11-06 10:56:21"},{"id":"p2","patientCode":"p2_code","fullName":"Nguyen Van B","birthDate":"8-11-1991","gender":"M","mobile":"0922024002","bedId":"bed2","status":1,"isDeleted":0,"lastUpdatedAt":"2020-11-06 10:56:52"}]
+08-11-2020 19:38:22.718 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 19:38:22.718 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_UNLINK_GATE_REQ
+08-11-2020 19:38:24.178 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_UNLINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 19:38:25.011 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayUnLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19","result":"OK"}
+08-11-2020 19:38:39.105 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 5944 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 19:38:39.105 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 19:38:41.188 ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+08-11-2020 19:39:12.404 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 24996 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 19:39:12.404 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 19:39:15.271 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.155 seconds (JVM running for 3.479)
+08-11-2020 19:39:15.275 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 19:39:15.454 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:39:15.556 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:39:15.661 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:39:15.765 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 19:39:15.872 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:39:15.977 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:39:16.084 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:39:16.199 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 19:39:16.315 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:16.435 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:16.537 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:16.637 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:16.753 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:16.854 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:16.977 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:17.086 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 19:39:17.189 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:39:17.297 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:39:17.409 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:39:17.517 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 19:39:41.514 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 19:39:41.515 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_UNLINK_GATE_REQ
+08-11-2020 19:39:45.325 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_UNLINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 19:39:45.504 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayUnLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19","result":"OK"}
+08-11-2020 21:09:53.228 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 5448 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:09:53.230 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:09:56.314 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.399 seconds (JVM running for 3.726)
+08-11-2020 21:09:56.317 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:09:56.594 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 21:09:56.595 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 21:09:56.638 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:09:56.748 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:09:56.864 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:09:56.972 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:09:57.088 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:09:57.205 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:09:57.317 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:09:57.424 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:09:57.548 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:57.655 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:57.760 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:57.877 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:57.996 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:58.103 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:58.229 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:58.337 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:09:58.449 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:09:58.593 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:09:58.736 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:09:58.827 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:10:04.785 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 21:10:04.786 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 21:10:06.318 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] - displayId = {"display_id":"4eb2459ae05f004c"}
+08-11-2020 21:10:06.369 INFO  c.e.v.process.MqttConsumerInitApp.run - [DISPLAY_REQ_GATE_SENSOR - gate_id] = 00bade93cdd4bd18
+08-11-2020 21:10:06.374 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+08-11-2020 21:10:06.512 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 21:10:06.515 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] - displayId = {"display_id":"4eb2459ae05f004c"}
+08-11-2020 21:10:06.519 INFO  c.e.v.process.MqttConsumerInitApp.run - [DISPLAY_REQ_GATE_SENSOR - gate_id] = 00bade93cdd4bd18
+08-11-2020 21:10:06.524 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+08-11-2020 21:10:06.656 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 21:44:31.946 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 15944 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:44:31.946 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:44:34.705 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.143 seconds (JVM running for 3.465)
+08-11-2020 21:44:34.708 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:44:34.923 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:44:35.053 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:44:35.173 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:44:35.285 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:44:35.406 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:44:35.527 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:44:35.643 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:44:35.758 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:44:35.882 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.011 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.127 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.275 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.397 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.650 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.782 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:44:36.918 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:44:37.039 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:44:37.153 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:44:37.274 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:47:44.918 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 8808 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:47:44.920 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:47:47.636 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.022 seconds (JVM running for 3.399)
+08-11-2020 21:47:47.639 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:47:47.863 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:47:47.969 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:47:48.089 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:47:48.197 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:47:48.301 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:47:48.409 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:47:48.522 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:47:48.633 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:47:48.746 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:48.861 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:48.981 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:49.101 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:49.216 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:49.325 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:49.452 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:49.562 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:47:49.777 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:47:49.919 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:47:50.061 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:47:50.185 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:48:13.852 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 21:48:13.855 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 21:48:17.681 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] - displayId = {"display_id":"4eb2459ae05f004c"}
+08-11-2020 21:48:17.702 INFO  c.e.v.process.MqttConsumerInitApp.run - [DISPLAY_REQ_GATE_SENSOR - gate_id] = 00bade93cdd4bd18
+08-11-2020 21:48:17.706 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+08-11-2020 21:48:17.833 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 21:48:45.438 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 26732 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:48:45.441 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:48:48.251 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.126 seconds (JVM running for 3.431)
+08-11-2020 21:48:48.254 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:48:49.209 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:48:49.621 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:48:49.901 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:48:50.337 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:48:50.745 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:48:51.070 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:48:51.491 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:48:51.692 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:48:52.023 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:52.253 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:53.101 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:53.521 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:54.109 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:54.853 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:55.097 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:55.213 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:48:55.344 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:48:55.460 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:48:55.576 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:48:55.702 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:49:02.276 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 21:49:02.279 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_UNLINK_GATE_REQ
+08-11-2020 21:49:08.255 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_UNLINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:49:08.433 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayUnLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19","result":"FAILED"}
+08-11-2020 21:50:14.078 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 25500 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:50:14.080 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:50:17.228 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.451 seconds (JVM running for 3.772)
+08-11-2020 21:50:17.231 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:50:18.769 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:50:19.670 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:50:19.948 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:50:20.041 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:50:20.156 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:50:21.382 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:50:21.609 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:50:22.641 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:50:22.852 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:22.964 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:23.092 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:23.213 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:23.332 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:23.448 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:23.566 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:23.684 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:50:24.267 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:50:24.779 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:50:25.025 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:50:25.365 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:50:51.571 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 21:50:51.571 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_LINK_GATE_REQ
+08-11-2020 21:50:57.249 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_LINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:50:57.494 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayAddLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:53:09.081 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 21:53:09.081 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_UNLINK_GATE_REQ
+08-11-2020 21:53:17.524 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_UNLINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:53:18.259 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayUnLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19","result":"FAILED"}
+08-11-2020 21:53:44.280 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 8912 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:53:44.282 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:53:47.016 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.243 seconds (JVM running for 3.587)
+08-11-2020 21:53:47.019 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:53:47.708 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:53:48.432 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:53:49.049 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:53:49.847 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:53:50.063 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:53:51.873 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:53:52.149 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:53:52.349 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:53:52.608 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.017 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.267 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.424 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.540 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.652 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.768 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.880 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:53:53.993 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:53:54.095 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:53:54.200 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:53:54.311 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:54:00.504 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 21:54:00.504 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_LINK_GATE_REQ
+08-11-2020 21:54:07.031 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_LINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:54:07.264 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayAddLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:54:44.361 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 31356 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:54:44.365 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:54:47.726 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.763 seconds (JVM running for 5.111)
+08-11-2020 21:54:47.740 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:54:47.939 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:54:48.026 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:54:48.127 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:54:48.241 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:54:48.361 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:54:48.451 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:54:48.564 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:54:48.681 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:54:48.788 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:48.895 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:48.999 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:49.103 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:49.206 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:49.323 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:49.427 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:49.532 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:54:49.632 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:54:49.752 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:54:49.864 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:54:49.965 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:55:10.393 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 21:55:10.397 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_LINK_GATE_REQ
+08-11-2020 21:55:17.752 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_LINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:57:59.507 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 4084 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:57:59.509 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:58:02.653 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.516 seconds (JVM running for 3.882)
+08-11-2020 21:58:02.656 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:58:02.876 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:58:02.992 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:58:03.123 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:58:03.243 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:58:03.366 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:58:03.486 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:58:03.606 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:58:03.716 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:58:03.837 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:03.955 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.090 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.266 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.391 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.523 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.648 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.767 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:58:04.926 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:58:05.051 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:58:05.173 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:58:05.295 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:58:18.361 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 21:58:18.377 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_LINK_GATE_REQ
+08-11-2020 21:58:22.671 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_LINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:58:23.960 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayAddLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 21:59:20.654 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 20128 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 21:59:20.656 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 21:59:23.442 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.095 seconds (JVM running for 3.404)
+08-11-2020 21:59:23.442 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 21:59:23.712 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:59:23.830 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:59:23.952 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:59:24.077 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 21:59:24.190 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:59:24.310 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:59:24.431 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:59:24.550 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 21:59:24.665 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:24.807 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:24.929 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:25.051 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:25.166 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:25.298 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:25.414 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:25.552 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 21:59:25.665 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:59:25.774 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:59:25.894 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 21:59:26.039 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 22:00:04.264 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 22:00:04.265 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_LINK_GATE_REQ
+08-11-2020 22:00:13.464 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_LINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 22:00:14.066 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayAddLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 22:00:36.215 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 7680 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 22:00:36.218 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 22:00:38.859 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.947 seconds (JVM running for 3.313)
+08-11-2020 22:00:38.859 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribe topic ]
+08-11-2020 22:00:39.060 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 22:00:39.182 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 22:00:39.298 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 22:00:39.429 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 22:00:39.546 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 22:00:39.683 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 22:00:39.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 22:00:39.931 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 22:00:40.062 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.200 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.331 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.479 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.598 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.719 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.831 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:40.968 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 22:00:41.090 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 22:00:41.226 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 22:00:41.335 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 22:00:41.467 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 22:00:57.414 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f
+08-11-2020 22:00:57.429 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_LINK_GATE_REQ
+08-11-2020 22:00:58.868 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_LINK_GATE_REQ] - displayId = {"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19"}
+08-11-2020 22:00:59.699 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayAddLinkGate - Send Message to Display :  
+{"display_id":"4eb2459ae05f004f","gate_id":"00bade93cdd4bd19","result":"OK"}
+08-11-2020 23:04:04.351 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 17188 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:04:04.353 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:04:07.129 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.082 seconds (JVM running for 3.411)
+08-11-2020 23:04:07.133 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:04:08.257 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:04:08.379 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:04:08.502 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:04:08.611 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:04:08.720 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:04:08.827 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:04:09.055 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:04:09.171 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:04:09.293 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:09.400 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:09.511 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:09.627 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:09.740 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:09.846 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:09.953 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:10.054 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:10.155 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:10.254 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:10.355 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:10.458 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:10.459 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:04:10.567 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [DISPLAY_REQ_GATE_SENSOR_00bade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:10.683 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [DISPLAY_UNLINK_GATE_REQ_00bade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:10.787 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GET_PATIENT_LIST_00bade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:10.943 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [DISPLAY_LINK_GATE_REQ_00bade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:04:11.051 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [DISPLAY_REQ_GATE_SENSOR_00bade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:11.164 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [DISPLAY_UNLINK_GATE_REQ_00bade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:11.269 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GET_PATIENT_LIST_00bade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:04:11.377 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [DISPLAY_LINK_GATE_REQ_00bade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:06.323 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 1928 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:05:06.325 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:05:09.068 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.054 seconds (JVM running for 3.376)
+08-11-2020 23:05:09.071 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:05:09.284 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:05:09.407 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:05:09.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:05:09.650 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:05:09.772 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:05:09.899 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:05:10.022 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:05:10.143 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:05:10.270 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:10.386 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:10.509 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:10.623 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:10.751 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:10.871 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:10.994 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:11.119 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:11.232 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:11.343 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:11.446 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:11.533 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:11.534 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:05:11.643 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:11.759 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:11.883 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:05:12.018 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:12.139 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:05:12.259 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:33.222 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 16344 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:07:33.225 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:07:36.087 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.195 seconds (JVM running for 3.516)
+08-11-2020 23:07:36.091 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:07:36.539 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:07:37.462 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:07:38.111 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:07:38.390 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:07:38.627 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:07:38.874 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:07:39.117 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:07:39.539 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:07:39.839 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:39.983 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:40.446 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:41.326 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:43.029 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:43.382 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:44.349 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:45.253 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:45.950 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:46.706 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:47.357 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:49.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:49.528 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:07:50.204 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:52.551 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:52.653 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:07:52.757 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:52.858 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:07:52.982 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:08:00.335 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 23:08:00.339 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 23:08:06.093 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] - displayId = {"display_id":"4eb2459ae05f004c"}
+08-11-2020 23:08:06.108 INFO  c.e.v.process.MqttConsumerInitApp.run - [DISPLAY_REQ_GATE_SENSOR - gate_id] = 00bade93cdd4bd18
+08-11-2020 23:08:06.111 INFO  c.e.v.process.MqttConsumerInitApp.run - [BQDataConsumerInitApp - gate_status] = 1
+08-11-2020 23:08:06.243 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 23:12:10.012 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 13532 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:12:10.015 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:12:12.892 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.19 seconds (JVM running for 3.501)
+08-11-2020 23:12:12.896 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:12:13.105 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:12:13.239 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:12:13.361 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:12:13.484 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:12:13.602 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:12:13.713 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:12:13.838 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:12:13.953 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:12:14.077 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.200 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.321 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.441 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.572 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.693 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.815 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:14.933 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:15.057 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:15.182 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:15.333 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:15.449 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:15.452 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:12:15.578 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:15.710 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:15.832 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:12:15.961 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:16.089 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:16.217 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:12:36.410 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 23:12:36.413 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 23:12:42.897 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] : {"display_id":"4eb2459ae05f004c"}
+08-11-2020 23:12:43.828 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 23:46:11.802 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 17728 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:46:11.805 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:46:14.673 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.183 seconds (JVM running for 3.5)
+08-11-2020 23:46:14.676 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:46:14.907 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:46:15.067 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:46:15.178 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:46:15.287 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:46:15.375 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:46:15.492 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:46:15.594 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:46:15.710 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:46:15.850 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:15.966 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.089 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.193 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.311 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.432 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.550 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.674 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:16.779 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:16.908 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:17.026 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:17.142 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:17.143 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:46:17.263 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:17.459 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:17.562 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:17.685 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:46:17.794 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:17.902 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:18.027 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:46:18.150 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:47:24.772 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c
+08-11-2020 23:47:24.772 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = DISPLAY_REQ_GATE_SENSOR
+08-11-2020 23:47:34.682 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [DISPLAY_REQ_GATE_SENSOR] : {"display_id":"4eb2459ae05f004c"}
+08-11-2020 23:47:34.869 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherDisplayTurnOn - Send Message to Display :  
+{"gateId":"00bade93cdd4bd18","status":"active","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 23:48:29.506 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 26752 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:48:29.508 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:48:32.318 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.121 seconds (JVM running for 3.437)
+08-11-2020 23:48:32.321 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:48:32.936 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:48:33.453 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:48:34.383 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:48:35.170 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:48:35.618 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:48:35.738 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:48:35.994 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:48:36.253 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:48:37.041 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:37.669 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:38.734 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:39.042 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:39.625 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:41.358 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:42.127 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:42.707 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:42.986 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:43.449 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:44.514 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:44.861 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:44.862 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:48:44.959 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:45.065 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:45.184 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:45.289 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:48:45.395 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:45.507 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:45.598 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:48:45.693 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:49:44.283 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19
+08-11-2020 23:49:44.286 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GATE_REQ_DISPLAY_SENSOR
+08-11-2020 23:49:52.326 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GATE_REQ_DISPLAY_SENSOR] : {"gate_id":"00bade93cdd4bd19"}
+08-11-2020 23:49:52.340 ERROR c.e.v.process.MqttConsumerInitApp.run - org.json.JSONException: JSONObject["gateId"] not found.
+08-11-2020 23:50:33.082 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 6468 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:50:33.084 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:50:35.878 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.113 seconds (JVM running for 3.439)
+08-11-2020 23:50:35.882 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:50:36.650 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:50:38.657 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:50:39.410 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:50:43.677 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:50:44.514 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:50:45.070 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:50:45.643 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:50:46.002 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:50:46.782 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.152 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.274 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.403 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.522 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.650 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.773 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:47.886 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:48.016 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:48.196 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:48.306 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:48.415 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:48.417 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:50:48.538 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:48.641 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:48.742 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:48.857 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:50:48.965 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:49.068 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:49.198 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:49.305 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:50:55.760 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19
+08-11-2020 23:50:55.762 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GATE_REQ_DISPLAY_SENSOR
+08-11-2020 23:50:55.884 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GATE_REQ_DISPLAY_SENSOR] : {"gateId":"00bade93cdd4bd19"}
+08-11-2020 23:50:56.041 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherGateTurnOn - Send Message to Display :  
+{"displayId":"4eb2459ae05f004f","sensorLst":[]}
+08-11-2020 23:51:24.007 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19
+08-11-2020 23:51:24.008 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GATE_REQ_DISPLAY_SENSOR
+08-11-2020 23:51:26.045 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GATE_REQ_DISPLAY_SENSOR] : {"gateId":"00bade93cdd4bd18"}
+08-11-2020 23:52:20.242 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 31768 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:52:20.244 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:52:23.029 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.124 seconds (JVM running for 3.472)
+08-11-2020 23:52:23.032 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:52:24.743 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:52:25.833 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:52:26.729 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:52:27.046 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:52:27.342 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:52:27.583 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:52:29.694 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:52:30.566 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:52:30.682 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:30.796 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:30.894 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:30.988 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:31.093 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:31.206 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:31.315 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:31.458 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:31.564 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:31.669 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:31.778 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:31.885 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:31.888 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:52:31.999 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:32.109 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:32.229 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:32.329 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:52:32.426 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:32.534 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:32.662 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:32.779 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:52:37.283 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19
+08-11-2020 23:52:37.286 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GATE_REQ_DISPLAY_SENSOR
+08-11-2020 23:52:43.033 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GATE_REQ_DISPLAY_SENSOR] : {"gateId":"00bade93cdd4bd18"}
+08-11-2020 23:52:43.063 ERROR c.e.v.process.MqttConsumerInitApp.run - org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 4; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 4
+08-11-2020 23:53:42.037 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19
+08-11-2020 23:53:42.037 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GATE_REQ_DISPLAY_SENSOR
+08-11-2020 23:53:43.066 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GATE_REQ_DISPLAY_SENSOR] : {"gateId":"00bade93cdd4bd18"}
+08-11-2020 23:53:43.573 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherGateTurnOn - Send Message to Display :  
+{"displayId":"4eb2459ae05f004c","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}
+08-11-2020 23:55:13.203 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 8184 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+08-11-2020 23:55:13.205 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-11-2020 23:55:15.985 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.089 seconds (JVM running for 3.406)
+08-11-2020 23:55:15.989 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+08-11-2020 23:55:16.237 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:55:16.345 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:55:16.452 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:55:16.572 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+08-11-2020 23:55:16.681 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:55:16.784 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:55:16.896 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:55:17.004 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+08-11-2020 23:55:17.116 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.228 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.331 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_cdbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.436 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_cdbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.548 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.654 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.760 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ddbade93cdd4bd18] subscribe topic [GET_PATIENT_LIST_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.864 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] subscribe topic [DISPLAY_LINK_GATE_REQ_ddbade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:17.964 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] subscribe topic [DISPLAY_REQ_GATE_SENSOR_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:18.071 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_UNLINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:18.200 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_edbade93cdd4bd19] subscribe topic [GET_PATIENT_LIST_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:18.304 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] subscribe topic [DISPLAY_LINK_GATE_REQ_edbade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:18.306 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+08-11-2020 23:55:18.413 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:18.532 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:18.636 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:18.745 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd18] SUCCESS!
+08-11-2020 23:55:18.852 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] subscribe topic [GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:18.966 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_BP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:19.080 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_SPO2_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:19.191 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] subscribe topic [MQTT_TOPIC_DATA_TEMP_00bade93cdd4bd19] SUCCESS!
+08-11-2020 23:55:53.924 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: GATE_REQ_DISPLAY_SENSOR_00bade93cdd4bd19
+08-11-2020 23:55:53.928 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [PropertiesConfig.MQTT_SUBSCRIBE_TOPIC_NAME] = GATE_REQ_DISPLAY_SENSOR
+08-11-2020 23:55:55.990 INFO  c.e.v.process.MqttConsumerInitApp.run - Case = [GATE_REQ_DISPLAY_SENSOR] : {"gateId":"00bade93cdd4bd18"}
+08-11-2020 23:55:56.168 INFO  c.e.vitalsign.mqtt.MqttPulisherRes.publisherGateTurnOn - Send Message to Gate ToPic  : +SERVER_RES_SENSOR_LIST_00bade93cdd4bd18 
+{"displayId":"4eb2459ae05f004c","sensorLst":[{"id":"sensor1","gateId":"00bade93cdd4bd18","patientId":"p1","name":"nameSensor1","sensorType":"V6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:02"},{"id":"sensor2","gateId":"00bade93cdd4bd18","patientId":"p2","name":"nameSensor2","sensorType":"v6","batteryValue":0,"status":1,"measureState":0,"isDeleted":0,"lastUpdatedAt":"2020-11-05 22:50:33"}]}

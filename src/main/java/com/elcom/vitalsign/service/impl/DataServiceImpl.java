@@ -7,6 +7,7 @@ package com.elcom.vitalsign.service.impl;
 
 import com.elcom.vitalsign.model.Display;
 import com.elcom.vitalsign.model.Gate;
+import com.elcom.vitalsign.model.Patient;
 import com.elcom.vitalsign.model.Sensor;
 import com.elcom.vitalsign.model.measuredata.DataBp;
 import com.elcom.vitalsign.model.measuredata.DataSpo2;
@@ -15,6 +16,7 @@ import com.elcom.vitalsign.repository.DisplayCustomizeRepository;
 import com.elcom.vitalsign.repository.DisplayRepository;
 import com.elcom.vitalsign.repository.GateCustomizeRepository;
 import com.elcom.vitalsign.repository.GateRepository;
+import com.elcom.vitalsign.repository.PatientCustomizeRepository;
 import com.elcom.vitalsign.repository.SensorCustomizeRepository;
 import com.elcom.vitalsign.repository.measuredata.DataBpCustomizeRepository;
 import com.elcom.vitalsign.repository.measuredata.DataBpRepository;
@@ -54,8 +56,10 @@ public class DataServiceImpl implements DataService {
 
     private final GateRepository gateRepository;
     private final GateCustomizeRepository gateCustomizeRepository;
-    
+
     private final SensorCustomizeRepository sensorCustomizeRepository;
+
+    private final PatientCustomizeRepository patientCustomizeRepository;
 
     /*private final DataRrRepository dataRrRepository;
     private final DataRrCustomizeRepository dataRrCustomizeRepository;
@@ -66,7 +70,8 @@ public class DataServiceImpl implements DataService {
             DataSpo2Repository dataSpo2Repository, DataSpo2CustomizeRepository dataSpo2CustomizeRepository,
             DataTempRepository dataTempRepository, DataTempCustomizeRepository dataTempCustomizeRepository,
             DataPartition dataPartition, DisplayRepository displayRepository, DisplayCustomizeRepository displayCustomizeRepository,
-            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository , SensorCustomizeRepository sensorCustomizeRepository
+            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository, SensorCustomizeRepository sensorCustomizeRepository,
+            PatientCustomizeRepository patientCustomizeRepository
     ) {
 
         this.dataBpRepository = dataBpRepository;
@@ -84,8 +89,10 @@ public class DataServiceImpl implements DataService {
 
         this.gateRepository = gateRepository;
         this.gateCustomizeRepository = gateCustomizeRepository;
-        
+
         this.sensorCustomizeRepository = sensorCustomizeRepository;
+
+        this.patientCustomizeRepository = patientCustomizeRepository;
     }
 
     @Override
@@ -171,7 +178,7 @@ public class DataServiceImpl implements DataService {
     }
 
     @Override
-    public Display findGateByDisplayId(String id) {
+    public Display findByDisplayId(String id) {
         return displayCustomizeRepository.findByUuid(id);
     }
 
@@ -183,6 +190,27 @@ public class DataServiceImpl implements DataService {
     @Override
     public Gate findGateById(String id) {
         return gateCustomizeRepository.findByUuid(id);
+    }
+
+    @Override
+    public Patient findPatientById(String id) {
+        return patientCustomizeRepository.findByUuid(id);
+    }
+
+    @Override
+    public void unLinkGate(Display display) {
+        display.setGateId("0");
+        displayRepository.save(display);
+    }
+
+    @Override
+    public void addLinkGate(Display display) {
+        displayRepository.save(display);
+    }
+
+    @Override
+    public Display findDisplayByGateId(String gateId) {
+        return displayCustomizeRepository.findByGateId(gateId);
     }
 
 }

@@ -10,61 +10,29 @@ Sensor : cảm biến
 
 
 
-================Display turn on =============================
-- Display -> Server : load_device_list
-	Topic: pub DISPLAY_REQ_GATE_SENSOR_<DISPLAY_ID>
-	Topic: sub SERVER_RES_GATE_SENSOR_<DISPLAY_ID>
-	
-	{“display_id”:”xxxx”} 
-	
-- Display <--Server : load_device_list_res(gate(ID,status), sensor_list(mac,status))
-	sub DISPLAY_REQ_GATE_SENSOR_<DISPLAY_ID>
-	pub SERVER_RES_GATE_SENSOR_<DISPLAY_ID>
-	
-	{“gate”:{
-		“ID”:"00bade93cdd4bd18",
-		”status”:”active”
-		},
-			“sensor”:{type + patient ,“MAC”:”112233445566”,”status:”out of range”}
-			“sensor”:{“MAC”:”112233445567”,”status:”in range”}
-			“sensor”:{“MAC”:”112233445568”,”status:”connected”}
-			“sensor”:{“MAC”:”112233445569”,”status:”synchronizing”}
-	}
 
-	
--> gửi lên display_Id ->(display)-> displayID ->(gate) -> gateId ->(sensor)-> laod sensor
-
-
-
-{
-"gate":
-	{
-	    "display_":"123456",
-	    "status":"active"
-	},
-	"sensor":[
-		{"sensor_type":"v6","patient_id":"1","MAC":"112233445566","status":"out of range"},
-		{"sensor_type":"v6","patient_id":"2","MAC":"112233445566","status":"out of range"},
-		{"sensor_type":"v6","patient_id":"3","MAC":"112233445566","status":"out of range"}
-	]
-}
-	
-	
-	“sensor”:{“MAC”:”112233445566”,”status:”out of range”}
-	“sensor”:{“MAC”:”112233445567”,”status:”in range”}
-	“sensor”:{“MAC”:”112233445568”,”status:”connected”}
-	“sensor”:{“MAC”:”112233445569”,”status:”synchronizing”}
-}
-
-
-String id = topic.substring("DISPLAY_REQ_GATE_SENSOR_".length());
-
-                    
-MqttPublisher mqttPublisher = new MqttPublisher();
-mqttPublisher.publisherForDisplay();
-
-
-
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
 
 
 

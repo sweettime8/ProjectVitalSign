@@ -32,6 +32,9 @@ public class Sensor implements Serializable {
     @Column(name = "gate_id")
     private String gateId;
 
+    @Column(name = "patient_id")
+    private String patientId;
+
     @Column(name = "name")
     private String name;
 
@@ -94,11 +97,13 @@ public class Sensor implements Serializable {
         }
     }
 
-    public Sensor(String id, String name, String gateId, String model, String sensorType, String mac, String serialNumber,
-             String manufacture, String firmwareVersion, Integer batteryValue) {
+    public Sensor(String id, String name, String gateId, String patientId,
+            String model, String sensorType, String mac, String serialNumber,
+            String manufacture, String firmwareVersion, Integer batteryValue) {
         this.id = id;
         this.name = name;
         this.gateId = gateId;
+        this.patientId = patientId;
         this.model = model;
         this.sensorType = sensorType;
         this.mac = mac;
@@ -259,6 +264,14 @@ public class Sensor implements Serializable {
         this.gateId = gateId;
     }
 
+    public String getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
     /**
      * @return the sensorType
      */
@@ -300,4 +313,11 @@ public class Sensor implements Serializable {
     public void setMeasureState(Integer measureState) {
         this.measureState = measureState;
     }
+
+    @Override
+    public String toString() {
+        return "Sensor{"+ "sensorType:" + sensorType + ",patientId:" + patientId + ", mac=:" + mac + ", status:" + status  + '}';
+    }
+
+    
 }

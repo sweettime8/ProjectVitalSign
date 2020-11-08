@@ -51,6 +51,21 @@ public class DisplayCustomizeRepository {
         return result != null ? (Display) result : null;
     }
 
+    public Display findByGateId(String uuid) {
+        Session session = openSession();
+        Object result = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM display WHERE gate_id = ?", Display.class);
+            query.setParameter(1, uuid);
+            result = query.getSingleResult();
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+        return result != null ? (Display) result : null;
+    }
+
     private Session openSession() {
         return this.sessionFactory.openSession();
     }
