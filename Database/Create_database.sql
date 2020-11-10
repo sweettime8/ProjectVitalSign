@@ -1,4 +1,3 @@
-use vitalsign;
 
 CREATE TABLE `hospital` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
@@ -66,7 +65,6 @@ CREATE TABLE `patient` (
   `gender` varchar(1) COLLATE utf8_unicode_ci DEFAULT 'M' COMMENT 'M: male, F: female',
   `mobile` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `bed_id` varchar(36) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `gate_id` varchar(36) COLLATE utf8_unicode_ci DEFAULT NULL,
   `additional_info` varchar(512) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
   `is_deleted` int(1) NOT NULL DEFAULT 0,
@@ -158,7 +156,10 @@ CREATE TABLE `data_bp` (
   `pr` int(10) DEFAULT NULL COMMENT 'Chỉ số nhịp tim (tương tự HR)',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Thời gian server insert row này',
   PRIMARY KEY (`id`,`created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số BP (nhịp tim)';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số BP (nhịp tim)'
+PARTITION BY RANGE (UNIX_TIMESTAMP(created_at))
+(PARTITION p_first VALUES LESS THAN (UNIX_TIMESTAMP('2020-11-10 00:00:00')),
+ PARTITION p_2020_11_10 VALUES LESS THAN (UNIX_TIMESTAMP('2020-11-11 00:00:00')));
  
 CREATE TABLE `data_bp_latest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -189,7 +190,10 @@ CREATE TABLE `data_spo2` (
   `step` int(10) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Thời gian server insert row này',
   PRIMARY KEY (`id`,`created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số SPO2';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số SPO2'
+PARTITION BY RANGE (UNIX_TIMESTAMP(created_at))
+(PARTITION p_first VALUES LESS THAN (UNIX_TIMESTAMP('2020-11-10 00:00:00')),
+ PARTITION p_2020_11_10 VALUES LESS THAN (UNIX_TIMESTAMP('2020-11-11 00:00:00')));
 
 CREATE TABLE `data_spo2_latest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -217,7 +221,10 @@ CREATE TABLE `data_temp` (
   `temp` float NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Thời gian server insert row này',
   PRIMARY KEY (`id`,`created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ'
+PARTITION BY RANGE (UNIX_TIMESTAMP(created_at))
+(PARTITION p_first VALUES LESS THAN (UNIX_TIMESTAMP('2020-11-10 00:00:00')),
+ PARTITION p_2020_11_10 VALUES LESS THAN (UNIX_TIMESTAMP('2020-11-11 00:00:00')));
 
 CREATE TABLE `data_temp_latest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -230,9 +237,6 @@ CREATE TABLE `data_temp_latest` (
   `last_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Thời gian server update row này',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Chứa dữ liệu đo của chỉ số nhiệt độ "bản mới nhất"';
-
-
-
 
 
 

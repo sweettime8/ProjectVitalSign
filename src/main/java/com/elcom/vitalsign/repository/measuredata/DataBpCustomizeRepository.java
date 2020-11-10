@@ -43,23 +43,23 @@ public class DataBpCustomizeRepository {
         try {
             Transaction tx = session.beginTransaction();
             try {
-                Query query = session.createNativeQuery(" SELECT id FROM data_bp_latest WHERE gate_id = ? AND sensor_id = ? ");
+                Query query = session.createNativeQuery(" SELECT id FROM data_bp_latest WHERE gate_id = ? AND display_id = ? AND sensor_id = ? ");
                 query.setParameter(1, item.getGateId());
-                query.setParameter(2, item.getSensorId());
+                query.setParameter(2, item.getDisplayId());
+                query.setParameter(3, item.getSensorId());
                 Object result = query.getSingleResult();
 
                 // Không throws NoResultException thì là tìm thấy, cần update
                 Long id = ((Integer) result).longValue();
-                query = session.createNativeQuery(" UPDATE data_bp_latest SET sys_v = ?, dia_v = ? "
-                                        + ", map_v = ?, pr = ?, measure_id = ?, step_id = ?, last_measure_at = ? WHERE id = ? ");
-                query.setParameter(1, item.getSysValue());
-                query.setParameter(2, item.getDiaValue());
-                query.setParameter(3, item.getMapValue());
-                query.setParameter(4, item.getPr());
-                query.setParameter(5, item.getMeasureId());
-                query.setParameter(6, item.getStepId());
-                query.setParameter(7, item.getMeasureAt());
-                query.setParameter(8, id);
+                query = session.createNativeQuery(" UPDATE data_bp_latest SET measure_id = ?, ts = ? "
+                                        + ", dia = ?, sys = ?, map = ?, pr = ? WHERE id = ? ");
+                query.setParameter(1, item.getMeasureId());
+                query.setParameter(2, item.getTs());
+                query.setParameter(3, item.getDia());
+                query.setParameter(4, item.getSys());
+                query.setParameter(5, item.getMap());
+                query.setParameter(6, item.getPr());
+                query.setParameter(7, id);
                 query.executeUpdate();
                 
                 //Đánh dấu gate đang hoạt động
@@ -68,17 +68,11 @@ public class DataBpCustomizeRepository {
                 query.setParameter(2, Constant.SENSOR_MEASURE_STATE_INACTIVE);
                 query.executeUpdate();
                 
-                //Đánh dấu sensor đang hoạt động
-//                query = session.createNativeQuery(" UPDATE sensor SET measure_state = ?, measure_last_time = current_timestamp() WHERE status = 1 AND measure_state = ? AND id = ? ");
-//                query.setParameter(1, Constant.SENSOR_MEASURE_STATE_ACTIVE);
-//                query.setParameter(2, Constant.SENSOR_MEASURE_STATE_INACTIVE);
-//                query.setParameter(3, item.getSensorId());
-//                query.executeUpdate();
             }catch(NoResultException ex) {
                 //Ko tìm thấy thì insert mới
                 LOGGER.error(ex.toString());
-                session.save(new DataBpLatest(item.getGateId(), item.getSensorId(), item.getSysValue(), item.getDiaValue()
-                                , item.getMapValue(), item.getPr(), item.getMeasureId(), item.getStepId(), item.getMeasureAt()));
+                session.save(new DataBpLatest(item.getGateId(), item.getDisplayId() ,item.getSensorId(), item.getMeasureId(), item.getTs()
+                                , item.getDia(), item.getSys(), item.getMap(), item.getPr()));
             }
             tx.commit();
         }catch(Exception ex) {

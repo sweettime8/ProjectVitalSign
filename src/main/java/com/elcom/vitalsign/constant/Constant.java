@@ -42,6 +42,18 @@ public class Constant {
     public static final String SERVER_RES_DISPLAY_ADD_SENSOR = "SERVER_RES_DISPLAY_ADD_SENSOR"; // Pub
     public static final String DISPLAY_REQ_SERVER_ADD_SENSOR = "DISPLAY_REQ_SERVER_ADD_SENSOR"; // Sub
 
+    //title Connect Sensor
+    public static final String RES_CONNECT_TO_SENSOR = "RES_CONNECT_TO_SENSOR"; // Sub
+    
+    //title DIS Connect Sensor
+    public static final String RES_DISCONNECT_TO_SENSOR = "RES_DISCONNECT_TO_SENSOR"; // Sub
+    
+    //sync data
+    public static final String RES_TRANSMIT_DATA_SPO2 = "RES_TRANSMIT_DATA_SPO2";
+    public static final String RES_TRANSMIT_DATA_TEMP = "RES_TRANSMIT_DATA_TEMP";
+    public static final String RES_TRANSMIT_DATA_NIBP = "RES_TRANSMIT_DATA_NIBP";
+    
+   
     //=================================================================================
     public static final String MQTT_TOPIC_DATA_ECG = "VITALSIGN-TOPIC-DATA-ECG";
     public static final String MQTT_SUB_ID_DATA_ECG = "VITALSIGN-SUB-ID-DATA-ECG";

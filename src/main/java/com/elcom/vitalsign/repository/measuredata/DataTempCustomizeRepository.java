@@ -44,18 +44,20 @@ public class DataTempCustomizeRepository {
         try {
             Transaction tx = session.beginTransaction();
             try {
-                Query query = session.createNativeQuery(" SELECT id FROM data_temp_latest WHERE gate_id = ? AND sensor_id = ? ");
+                Query query = session.createNativeQuery(" SELECT id FROM data_temp_latest WHERE gate_id = ? AND display_id = ? AND sensor_id = ? ");
                 query.setParameter(1, item.getGateId());
-                query.setParameter(2, item.getSensorId());
+                query.setParameter(2, item.getDisplayId());
+                query.setParameter(3, item.getSensorId());
                 Object result = query.getSingleResult();
 
                 // Không throws NoResultException thì là tìm thấy, cần update
                 Long id = ((Integer) result).longValue();
-                query = session.createNativeQuery(" UPDATE data_temp_latest SET temp = ?, measure_id = ?, step_id = ?, last_measure_at = ? WHERE id = ? ");
-                query.setParameter(1, item.getTemp());
-                query.setParameter(2, item.getMeasureId());
-                query.setParameter(3, item.getStepId());
-                query.setParameter(4, item.getMeasureAt());
+                query = session.createNativeQuery(" UPDATE data_temp_latest SET measure_id = ?, ts = ?, temp = ?, "
+                        + "last_updated_at = ? WHERE id = ? ");
+                query.setParameter(1, item.getMeasureId());
+                query.setParameter(2, item.getTs());
+                query.setParameter(3, item.getTemp());
+                query.setParameter(4, item.getCreatedAt());
                 query.setParameter(5, id);
                 query.executeUpdate();
 
@@ -65,17 +67,11 @@ public class DataTempCustomizeRepository {
                 query.setParameter(2, Constant.SENSOR_MEASURE_STATE_INACTIVE);
                 query.executeUpdate();
 
-                //Đánh dấu sensor đang hoạt động
-//                query = session.createNativeQuery(" UPDATE sensor SET measure_state = ?, measure_last_time = current_timestamp() WHERE status = 1 AND measure_state = ? AND id = ? ");
-//                query.setParameter(1, Constant.SENSOR_MEASURE_STATE_ACTIVE);
-//                query.setParameter(2, Constant.SENSOR_MEASURE_STATE_INACTIVE);
-//                query.setParameter(3, item.getSensorId());
-//                query.executeUpdate();
             } catch (NoResultException ex) {
                 //Ko tìm thấy thì insert mới
                 LOGGER.error(ex.toString());
-                session.save(new DataTempLatest(item.getGateId(), item.getSensorId(), item.getTemp(),
-                         item.getMeasureId(), item.getStepId(), item.getMeasureAt()));
+                session.save(new DataTempLatest(item.getGateId(), item.getDisplayId(), item.getSensorId(), item.getMeasureId(), item.getTs(),
+                       item.getTemp()));
             }
             tx.commit();
         } catch (Exception ex) {

@@ -27,29 +27,29 @@ public class DataBpLatest implements Serializable {
     @Column(name = "gate_id")
     private String gateId;
 
+    @Column(name = "display_id")
+    private String displayId;
+
     @Column(name = "sensor_id")
     private String sensorId;
-
-    @Column(name = "sys_v")
-    private Long sysValue;
-
-    @Column(name = "dia_v")
-    private Long diaValue;
-
-    @Column(name = "map_v")
-    private Long mapValue;
-
-    @Column(name = "pr")
-    private Integer pr;
 
     @Column(name = "measure_id")
     private String measureId;
 
-    @Column(name = "step_id")
-    private String stepId;
+    @Column(name = "ts")
+    private Float ts;
 
-    @Column(name = "last_measure_at")
-    private Timestamp lastMeasureAt;
+    @Column(name = "dia")
+    private Long dia;
+
+    @Column(name = "sys")
+    private Long sys;
+
+    @Column(name = "map")
+    private Long map;
+
+    @Column(name = "pr")
+    private Integer pr;
 
     @Column(name = "last_updated_at")
     private Timestamp lastUpdatedAt;
@@ -57,17 +57,24 @@ public class DataBpLatest implements Serializable {
     public DataBpLatest() {
     }
 
-    public DataBpLatest(String gateId, String sensorId, Long sysValue, Long diaValue, Long mapValue,
-             Integer pr, String measureId, String stepId, Timestamp lastMeasureAt) {
+    public DataBpLatest(String gateId, String displayId, String sensorId, String measureId, Float ts,
+            Long dia, Long sys, Long map, Integer pr) {
         this.gateId = gateId;
+        this.displayId = displayId;
         this.sensorId = sensorId;
-        this.sysValue = sysValue;
-        this.diaValue = diaValue;
-        this.mapValue = mapValue;
-        this.pr = pr;
         this.measureId = measureId;
-        this.stepId = stepId;
-        this.lastMeasureAt = lastMeasureAt;
+        this.ts = ts;
+        this.dia = dia;
+        this.sys = sys;
+        this.map = map;
+        this.pr = pr;
+    }
+
+    @PrePersist
+    void preInsert() {
+        if (this.lastUpdatedAt == null) {
+            this.setLastUpdatedAt(new Timestamp(System.currentTimeMillis()));
+        }
     }
 
     public Long getId() {
@@ -78,143 +85,84 @@ public class DataBpLatest implements Serializable {
         this.id = id;
     }
 
-    /**
-     * @return the gateId
-     */
     public String getGateId() {
         return gateId;
     }
 
-    /**
-     * @param gateId the gateId to set
-     */
     public void setGateId(String gateId) {
         this.gateId = gateId;
     }
 
-    /**
-     * @return the sensorId
-     */
+    public String getDisplayId() {
+        return displayId;
+    }
+
+    public void setDisplayId(String displayId) {
+        this.displayId = displayId;
+    }
+
     public String getSensorId() {
         return sensorId;
     }
 
-    /**
-     * @param sensorId the sensorId to set
-     */
     public void setSensorId(String sensorId) {
         this.sensorId = sensorId;
     }
 
-    /**
-     * @return the measureId
-     */
     public String getMeasureId() {
         return measureId;
     }
 
-    /**
-     * @param measureId the measureId to set
-     */
     public void setMeasureId(String measureId) {
         this.measureId = measureId;
     }
 
-    /**
-     * @return the sysValue
-     */
-    public Long getSysValue() {
-        return sysValue;
+    public Float getTs() {
+        return ts;
     }
 
-    /**
-     * @param sysValue the sysValue to set
-     */
-    public void setSysValue(Long sysValue) {
-        this.sysValue = sysValue;
+    public void setTs(Float ts) {
+        this.ts = ts;
     }
 
-    /**
-     * @return the diaValue
-     */
-    public Long getDiaValue() {
-        return diaValue;
+    public Long getDia() {
+        return dia;
     }
 
-    /**
-     * @param diaValue the diaValue to set
-     */
-    public void setDiaValue(Long diaValue) {
-        this.diaValue = diaValue;
+    public void setDia(Long dia) {
+        this.dia = dia;
     }
 
-    /**
-     * @return the mapValue
-     */
-    public Long getMapValue() {
-        return mapValue;
+    public Long getSys() {
+        return sys;
     }
 
-    /**
-     * @param mapValue the mapValue to set
-     */
-    public void setMapValue(Long mapValue) {
-        this.mapValue = mapValue;
+    public void setSys(Long sys) {
+        this.sys = sys;
     }
 
-    /**
-     * @return the lastMeasureAt
-     */
-    public Timestamp getLastMeasureAt() {
-        return lastMeasureAt;
+    public Long getMap() {
+        return map;
     }
 
-    /**
-     * @param lastMeasureAt the lastMeasureAt to set
-     */
-    public void setLastMeasureAt(Timestamp lastMeasureAt) {
-        this.lastMeasureAt = lastMeasureAt;
+    public void setMap(Long map) {
+        this.map = map;
     }
 
-    /**
-     * @return the lastUpdatedAt
-     */
-    public Timestamp getLastUpdatedAt() {
-        return lastUpdatedAt;
-    }
-
-    /**
-     * @param lastUpdatedAt the lastUpdatedAt to set
-     */
-    public void setLastUpdatedAt(Timestamp lastUpdatedAt) {
-        this.lastUpdatedAt = lastUpdatedAt;
-    }
-
-    /**
-     * @return the stepId
-     */
-    public String getStepId() {
-        return stepId;
-    }
-
-    /**
-     * @param stepId the stepId to set
-     */
-    public void setStepId(String stepId) {
-        this.stepId = stepId;
-    }
-
-    /**
-     * @return the pr
-     */
     public Integer getPr() {
         return pr;
     }
 
-    /**
-     * @param pr the pr to set
-     */
     public void setPr(Integer pr) {
         this.pr = pr;
     }
+
+    public Timestamp getLastUpdatedAt() {
+        return lastUpdatedAt;
+    }
+
+    public void setLastUpdatedAt(Timestamp lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+    }
+
 }

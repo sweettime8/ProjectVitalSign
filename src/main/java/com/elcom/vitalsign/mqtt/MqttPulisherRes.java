@@ -30,12 +30,22 @@ public class MqttPulisherRes {
     private static final Logger LOGGER = LoggerFactory.getLogger(MqttPulisherRes.class);
     private static final String MQTT_BROKER = Constant.MQTT_BROKER_PROTOCOL + "://" + Constant.MQTT_BROKER_HOST + ":" + Constant.MQTT_BROKER_PORT;
 
-    public void publisherDisplayTurnOn(String topic, GateWithSensorDisplay gds) throws MqttException {
-        String data = JSONConverter.toJSON(gds);
+    private MqttClient client;
+    private MqttMessage message;
 
-        MqttClient client = new MqttClient(MQTT_BROKER, topic, new MemoryPersistence());
-        client.connect();
-        MqttMessage message = new MqttMessage();
+    public MqttPulisherRes() throws MqttException {
+        if (client == null) {
+            client = new MqttClient(MQTT_BROKER, String.valueOf(System.nanoTime()));
+            client.connect();
+        }
+        if (message == null) {
+            message = new MqttMessage();
+        }
+    }
+
+    public void publisherDisplayTurnOn(String topic, GateWithSensorDisplay gds) throws MqttException {
+
+        String data = JSONConverter.toJSON(gds);
         message.setPayload(data.getBytes());
         client.publish(topic, message);
 
@@ -46,9 +56,6 @@ public class MqttPulisherRes {
     public void publisherListPatient(String topic, List<Patient> lstPatient) throws MqttException {
         String data = JSONConverter.toJSON(lstPatient);
         LOGGER.info("SendToTopic : " + topic);
-        MqttClient client = new MqttClient(MQTT_BROKER, topic, new MemoryPersistence());
-        client.connect();
-        MqttMessage message = new MqttMessage();
         message.setPayload(data.getBytes());
         client.publish(topic, message);
 
@@ -61,10 +68,6 @@ public class MqttPulisherRes {
 
         try {
             String data = objectMapper.writeValueAsString(mapdata);
-
-            MqttClient client = new MqttClient(MQTT_BROKER, topic, new MemoryPersistence());
-            client.connect();
-            MqttMessage message = new MqttMessage();
             message.setPayload(data.getBytes());
             client.publish(topic, message);
 
@@ -72,19 +75,12 @@ public class MqttPulisherRes {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-
     }
 
     public void publisherDisplayAddLinkGate(String topic, Map<String, String> mapdata) throws MqttException, JsonProcessingException {
-
         ObjectMapper objectMapper = new ObjectMapper();
-
         try {
             String data = objectMapper.writeValueAsString(mapdata);
-
-            MqttClient client = new MqttClient(MQTT_BROKER, topic, new MemoryPersistence());
-            client.connect();
-            MqttMessage message = new MqttMessage();
             message.setPayload(data.getBytes());
             client.publish(topic, message);
 
@@ -92,18 +88,13 @@ public class MqttPulisherRes {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-
     }
 
     public void publisherGateTurnOn(String topic, DisplayWithSensor ds) throws MqttException {
         String data = JSONConverter.toJSON(ds);
 
-        MqttClient client = new MqttClient(MQTT_BROKER, topic, new MemoryPersistence());
-        client.connect();
-        MqttMessage message = new MqttMessage();
         message.setPayload(data.getBytes());
         client.publish(topic, message);
-
         LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
 
     }

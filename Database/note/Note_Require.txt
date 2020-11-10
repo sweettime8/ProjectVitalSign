@@ -50,20 +50,20 @@ JSON :
 ======================================================= 
 = 		remove a gate	-> update gateId = 0		  =
 =======================================================
-+/ display : +/pub DISPLAY_UNLINK_GATE_REQ
++/ display : +/pub DISPLAY_UNLINK_GATE_REQ_<display_id>
 			  
-Json : {"displayID":"111","gateID":"123456"}
+Json : {"display_id":"111","gate_id":"123456"}
 
 		     +/sub DISPLAY_UNLINK_GATE_RES
 		  		  
 		  
-+/server :  sub DISPLAY_UNLINK_GATE_REQ
-		    pub DISPLAY_UNLINK_GATE_RES	
++/server :  sub DISPLAY_UNLINK_GATE_REQ_<display_id>
+		    pub DISPLAY_UNLINK_GATE_RES_<display_id>
 		  
 Json : 
 {
-   "displayID":"111",
-   "gateID":"123456",
+   "display_id":"111",
+   "gate_id":"123456",
    "result":"OK"
 }
 		  
@@ -71,16 +71,16 @@ Json :
 =				Add Gate				  =
 =========================================== 
 (đang có data -> LINKED , data đang = 0 -> update gateID -> OK , link thất bại -> failed		 
-Display : pub  DISPLAY_LINK_GATE_REQ
+Display : pub  DISPLAY_LINK_GATE_REQ_<display_id>
 				
-				Json : {"displayID":"111","gateID":"123456"}
+				Json : {"display_id":"111","display_id":"123456"}
 
-		  sub  DISPLAY_LINK_GATE_RES
+		  sub  DISPLAY_LINK_GATE_RES_<display_id>
 		  
-Server  : pub  DISPLAY_LINK_GATE_RES
+Server  : pub  DISPLAY_LINK_GATE_RES_<display_id>
 				Json : {"displayID":”111”,“gateID”:”123456”,"result","OK/FAILED/LINKED"}
 
-		  sub  DISPLAY_LINK_GATE_REQ
+		  sub  DISPLAY_LINK_GATE_REQ_<display_id>
 		  
 =============== lay danh sach benh nhan =======
 display 
@@ -152,18 +152,74 @@ JSON :
 }
 
 ===========================================================
-=                   title Add sensor                      =
+=                   title Add sensor                      =  
 ===========================================================
 display :    pub   : DISPLAY_REQ_SERVER_ADD_SENSOR_<display_id>
-					 {“display”: “111”,“sensor”:”mac1”}
+					 {“display_id”: “111”,“sensor”:”mac1”}
 			 sub   : SERVER_RES_DISPLAY_ADD_SENSOR_<display_id>
 
-server  :    pub   : SERVER_RES_DISPLAY_ADD_SENSOR_<display_id>   -> da them vao DB luon
-					 {“displayID”:111
-					  “gateID”:111,
-					  “result”:”OK”/”FAILED”} 
-
-
-			 sub   : DISPLAY_REQ_SERVER_ADD_SENSOR_<display_id>
-
+server  :    pub->display   : SERVER_RES_DISPLAY_ADD_SENSOR_<display_id>      =>> ??? sao server bắn cái này
+								{“displayID”:111
+								“gateID”:111,
+								“result”:”OK”/”FAILED”} FAILED-> da them vao DB 
+								
+			
+			 sub->display   : DISPLAY_REQ_SERVER_ADD_SENSOR_<display_id>
+			 sub->gate      : GATE_UPDATE_SENSOR_STATUS_<gate_id>	
+			 
+					json:   : {
+								  "sensor": {
+									"id": "sensor1",
+									"gateId": "00bade93cdd4bd18",
+									"patientId": "p1",
+									"name": "nameSensor1",
+									"sensorType": "V6",
+									"batteryValue": 0,
+									"status": 1,
+									"measureState": 0,
+									"isDeleted": 0,
+									"lastUpdatedAt": "2020-11-05 22:50:02"
+								  }
+								}
+			 
+===========================================================
+=                   title Connect sensor                  =  
+===========================================================			 
+			 SerVer : sub : RES_CONNECT_TO_SENSOR_<displayid>
+			 
+								{“gate_id”:111
+								“display_id”:111,
+								“sensor_id”:111”}
+			 
+			 
+			 
+==================data
+SpO2:
+{
+    "gate_id": "GW-122mdmas",
+    "display_id": "DP123456",
+    "sensor_id": "SS123",
+    "measure_id": "asacdasdas",
+    "ts": 12345678992,
+    "spo2": 23,
+    "pi": 12,
+    "pr":12,
+    "step": 1000
+}			 
+			 
+Temp :
+{
+    "gate_id": "GW-122mdmas",
+    "display_id": "DP123456",
+    "sensor_id": "SS123",
+    "measure_id": "asacdasdas",
+    "ts": 12345678992,
+    "temp": 3645
+}			 
+			 
+			 
+			 
+			 
+			 
+			 
 

@@ -18,6 +18,7 @@ import com.elcom.vitalsign.repository.GateCustomizeRepository;
 import com.elcom.vitalsign.repository.GateRepository;
 import com.elcom.vitalsign.repository.PatientCustomizeRepository;
 import com.elcom.vitalsign.repository.SensorCustomizeRepository;
+import com.elcom.vitalsign.repository.SensorRepository;
 import com.elcom.vitalsign.repository.measuredata.DataBpCustomizeRepository;
 import com.elcom.vitalsign.repository.measuredata.DataBpRepository;
 import com.elcom.vitalsign.repository.measuredata.DataPartition;
@@ -58,6 +59,7 @@ public class DataServiceImpl implements DataService {
     private final GateCustomizeRepository gateCustomizeRepository;
 
     private final SensorCustomizeRepository sensorCustomizeRepository;
+    private final SensorRepository sensorRepository;
 
     private final PatientCustomizeRepository patientCustomizeRepository;
 
@@ -70,7 +72,8 @@ public class DataServiceImpl implements DataService {
             DataSpo2Repository dataSpo2Repository, DataSpo2CustomizeRepository dataSpo2CustomizeRepository,
             DataTempRepository dataTempRepository, DataTempCustomizeRepository dataTempCustomizeRepository,
             DataPartition dataPartition, DisplayRepository displayRepository, DisplayCustomizeRepository displayCustomizeRepository,
-            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository, SensorCustomizeRepository sensorCustomizeRepository,
+            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository, 
+            SensorCustomizeRepository sensorCustomizeRepository, SensorRepository sensorRepository,
             PatientCustomizeRepository patientCustomizeRepository
     ) {
 
@@ -91,7 +94,8 @@ public class DataServiceImpl implements DataService {
         this.gateCustomizeRepository = gateCustomizeRepository;
 
         this.sensorCustomizeRepository = sensorCustomizeRepository;
-
+        this.sensorRepository = sensorRepository;
+        
         this.patientCustomizeRepository = patientCustomizeRepository;
     }
 
@@ -211,6 +215,16 @@ public class DataServiceImpl implements DataService {
     @Override
     public Display findDisplayByGateId(String gateId) {
         return displayCustomizeRepository.findByGateId(gateId);
+    }
+
+    @Override
+    public Sensor findSensorById(String sensorId) {
+        return sensorCustomizeRepository.findByUuid(sensorId); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateStatusSensor(Sensor sensor) {
+        sensorRepository.save(sensor); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -47,5 +47,9 @@ public interface DataService {
     
     void addLinkGate(Display display);
     
+    void updateStatusSensor(Sensor sensor);
+    
     Display findDisplayByGateId(String gateId);
+    
+    Sensor findSensorById(String sensorId);
 }

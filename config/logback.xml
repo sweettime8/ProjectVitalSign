@@ -29,7 +29,7 @@
     <logger name="root" level="ERROR"/>
     <logger name="org.springframework" level="ERROR" />
     <logger name="com.elcom.vitalsign" level="INFO" />
-<!--    <logger name="org.hibernate" level="TRACE" />-->
+    <logger name="org.hibernate" level="INFO" />
 <!--    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" />
     <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="TRACE" /> -->
 </configuration>

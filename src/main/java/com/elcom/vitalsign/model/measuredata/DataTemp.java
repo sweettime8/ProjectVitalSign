@@ -9,7 +9,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.UUID;
-import org.hibernate.annotations.Type;
 
 /**
  *
@@ -22,48 +21,47 @@ public class DataTemp implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue
-    @Type(type = "uuid-char")
     @Column(name = "id", length = 36, updatable = false, nullable = false)
-    private UUID id;
+    private String id;
 
     @Column(name = "gate_id")
     private String gateId;
 
+    @Column(name = "display_id")
+    private String displayId;
+
     @Column(name = "sensor_id")
     private String sensorId;
-
-    @Column(name = "temp")
-    private Float temp;
 
     @Column(name = "measure_id")
     private String measureId;
 
-    @Column(name = "step_id")
-    private String stepId;
+    @Column(name = "ts")
+    private Float ts;
 
-    @Transient
-    private Long measureTime;
-
-    @Column(name = "measure_at")
-    private Timestamp measureAt;
+    @Column(name = "temp")
+    private Float temp;
 
     @Column(name = "created_at")
     private Timestamp createdAt;
 
     @PrePersist
     void preInsert() {
-        this.measureAt = new Timestamp(this.measureTime);
+        if(this.getId()==null)
+            this.setId(UUID.randomUUID().toString());
+        if(this.createdAt == null){
+            this.setCreatedAt(new Timestamp(System.currentTimeMillis()));
+        }
     }
 
     public DataTemp() {
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -81,102 +79,52 @@ public class DataTemp implements Serializable {
         this.gateId = gateId;
     }
 
-    /**
-     * @return the sensorId
-     */
+    public String getDisplayId() {
+        return displayId;
+    }
+
+    public void setDisplayId(String displayId) {
+        this.displayId = displayId;
+    }
+
     public String getSensorId() {
         return sensorId;
     }
 
-    /**
-     * @param sensorId the sensorId to set
-     */
     public void setSensorId(String sensorId) {
         this.sensorId = sensorId;
     }
 
-    /**
-     * @return the measureId
-     */
     public String getMeasureId() {
         return measureId;
     }
 
-    /**
-     * @param measureId the measureId to set
-     */
     public void setMeasureId(String measureId) {
         this.measureId = measureId;
     }
 
-    /**
-     * @return the measureAt
-     */
-    public Timestamp getMeasureAt() {
-        return measureAt;
+    public Float getTs() {
+        return ts;
     }
 
-    /**
-     * @param measureAt the measureAt to set
-     */
-    public void setMeasureAt(Timestamp measureAt) {
-        this.measureAt = measureAt;
+    public void setTs(Float ts) {
+        this.ts = ts;
     }
 
-    /**
-     * @return the createdAt
-     */
-    public Timestamp getCreatedAt() {
-        return createdAt;
-    }
-
-    /**
-     * @param createdAt the createdAt to set
-     */
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    /**
-     * @return the measureTime
-     */
-    public Long getMeasureTime() {
-        return measureTime;
-    }
-
-    /**
-     * @param measureTime the measureTime to set
-     */
-    public void setMeasureTime(Long measureTime) {
-        this.measureTime = measureTime;
-    }
-
-    /**
-     * @return the stepId
-     */
-    public String getStepId() {
-        return stepId;
-    }
-
-    /**
-     * @param stepId the stepId to set
-     */
-    public void setStepId(String stepId) {
-        this.stepId = stepId;
-    }
-
-    /**
-     * @return the temp
-     */
     public Float getTemp() {
         return temp;
     }
 
-    /**
-     * @param temp the temp1 to set
-     */
     public void setTemp(Float temp) {
         this.temp = temp;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
     }
 
 }

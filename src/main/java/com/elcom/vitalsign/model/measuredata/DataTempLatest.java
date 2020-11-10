@@ -8,6 +8,7 @@ package com.elcom.vitalsign.model.measuredata;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.UUID;
 
 /**
  *
@@ -27,36 +28,43 @@ public class DataTempLatest implements Serializable {
     @Column(name = "gate_id")
     private String gateId;
 
+    @Column(name = "display_id")
+    private String displayId;
+
     @Column(name = "sensor_id")
     private String sensorId;
-    
-    @Column(name = "temp")
-    private Float temp;
-        
+
     @Column(name = "measure_id")
     private String measureId;
-    
-    @Column(name = "step_id")
-    private String stepId;
-    
-    @Column(name = "last_measure_at")
-    private Timestamp lastMeasureAt;
-    
+
+    @Column(name = "ts")
+    private Float ts;
+
+    @Column(name = "temp")
+    private Float temp;
+
     @Column(name = "last_updated_at")
     private Timestamp lastUpdatedAt;
 
     public DataTempLatest() {
     }
-    
-    public DataTempLatest(String gateId, String sensorId, Float temp, String measureId, String stepId, Timestamp lastMeasureAt) {
+
+    public DataTempLatest(String gateId, String displayId, String sensorId, String measureId, Float ts, Float temp) {
         this.gateId = gateId;
+        this.displayId = displayId;
         this.sensorId = sensorId;
-        this.temp = temp;
         this.measureId = measureId;
-        this.stepId = stepId;
-        this.lastMeasureAt = lastMeasureAt;
+        this.ts = ts;
+        this.temp = temp;
     }
-    
+
+    @PrePersist
+    void preInsert() {
+        if (this.lastUpdatedAt == null) {
+            this.setLastUpdatedAt(new Timestamp(System.currentTimeMillis()));
+        }
+    }
+
     public Long getId() {
         return id;
     }
@@ -79,89 +87,52 @@ public class DataTempLatest implements Serializable {
         this.gateId = gateId;
     }
 
-    /**
-     * @return the sensorId
-     */
+    public String getDisplayId() {
+        return displayId;
+    }
+
+    public void setDisplayId(String displayId) {
+        this.displayId = displayId;
+    }
+
     public String getSensorId() {
         return sensorId;
     }
 
-    /**
-     * @param sensorId the sensorId to set
-     */
     public void setSensorId(String sensorId) {
         this.sensorId = sensorId;
     }
 
-    /**
-     * @return the measureId
-     */
     public String getMeasureId() {
         return measureId;
     }
 
-    /**
-     * @param measureId the measureId to set
-     */
     public void setMeasureId(String measureId) {
         this.measureId = measureId;
     }
 
-    /**
-     * @return the lastMeasureAt
-     */
-    public Timestamp getLastMeasureAt() {
-        return lastMeasureAt;
+    public Float getTs() {
+        return ts;
     }
 
-    /**
-     * @param lastMeasureAt the lastMeasureAt to set
-     */
-    public void setLastMeasureAt(Timestamp lastMeasureAt) {
-        this.lastMeasureAt = lastMeasureAt;
+    public void setTs(Float ts) {
+        this.ts = ts;
     }
 
-    /**
-     * @return the lastUpdatedAt
-     */
-    public Timestamp getLastUpdatedAt() {
-        return lastUpdatedAt;
-    }
-
-    /**
-     * @param lastUpdatedAt the lastUpdatedAt to set
-     */
-    public void setLastUpdatedAt(Timestamp lastUpdatedAt) {
-        this.lastUpdatedAt = lastUpdatedAt;
-    }
-    
-    /**
-     * @return the stepId
-     */
-    public String getStepId() {
-        return stepId;
-    }
-
-    /**
-     * @param stepId the stepId to set
-     */
-    public void setStepId(String stepId) {
-        this.stepId = stepId;
-    }
-
-    /**
-     * @return the temp
-     */
     public Float getTemp() {
         return temp;
     }
 
-    /**
-     * @param temp the temp to set
-     */
     public void setTemp(Float temp) {
         this.temp = temp;
     }
 
-}
+    public Timestamp getLastUpdatedAt() {
+        return lastUpdatedAt;
+    }
 
+    public void setLastUpdatedAt(Timestamp lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+    }
+
+}
