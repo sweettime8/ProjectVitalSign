@@ -37,6 +37,7 @@ CREATE TABLE `department` (
 
 CREATE TABLE `employee` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+  `account_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `department_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `full_name` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   `mobile` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -59,6 +60,7 @@ CREATE TABLE `room` (
 
 CREATE TABLE `patient` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+  `account_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
   `patient_code` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `full_name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `birth_date` varchar(36) COLLATE utf8_unicode_ci DEFAULT NULL,

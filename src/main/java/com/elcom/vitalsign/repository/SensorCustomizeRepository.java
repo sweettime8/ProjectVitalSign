@@ -6,6 +6,7 @@
 package com.elcom.vitalsign.repository;
 
 import com.elcom.vitalsign.model.Sensor;
+import com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO;
 import com.elcom.vitalsign.model.dto.GateWithSensor;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
@@ -98,7 +99,7 @@ public class SensorCustomizeRepository {
 
         return null;
     }
-
+             
     private Session openSession() {
         return this.sessionFactory.openSession();
     }

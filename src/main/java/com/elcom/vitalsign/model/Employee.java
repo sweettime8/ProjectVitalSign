@@ -28,10 +28,8 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue
-    @Type(type = "uuid-char")
     @Column(name = "id", length = 36, updatable = false, nullable = false)
-    private UUID id;
+    private String id;
 
     @Column(name = "department_id")
     private String departmentId;
@@ -68,11 +66,11 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

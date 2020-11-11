@@ -6,6 +6,7 @@
 package com.elcom.vitalsign.repository;
 
 import com.elcom.vitalsign.model.Patient;
+import com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO;
 import com.elcom.vitalsign.model.dto.PatientGateRelationDTO;
 import com.elcom.vitalsign.model.dto.ReportDataBpDTO;
 import com.elcom.vitalsign.model.dto.ReportDataSpo2DTO;

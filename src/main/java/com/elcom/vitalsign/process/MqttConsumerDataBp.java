@@ -5,11 +5,8 @@
  */
 package com.elcom.vitalsign.process;
 
-import com.elcom.vitalsign.config.PropertiesConfig;
 import com.elcom.vitalsign.constant.Constant;
 import com.elcom.vitalsign.model.measuredata.DataBp;
-import com.elcom.vitalsign.model.measuredata.DataSpo2;
-import com.elcom.vitalsign.model.measuredata.DataTemp;
 import com.elcom.vitalsign.service.DataService;
 import java.util.ArrayList;
 import java.util.List;
