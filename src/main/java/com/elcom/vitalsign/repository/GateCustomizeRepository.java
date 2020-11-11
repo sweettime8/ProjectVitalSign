@@ -50,6 +50,21 @@ public class GateCustomizeRepository {
         }
         return result != null ? (Gate) result : null;
     }
+    
+        public Gate findBySerialNumber(String id) {
+        Session session = openSession();
+        Object result = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM gate WHERE serial_number = ?", Gate.class);
+            query.setParameter(1, id);
+            result = query.getSingleResult();
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+        return result != null ? (Gate) result : null;
+    }
 
     private Session openSession() {
         return this.sessionFactory.openSession();

@@ -19,6 +19,9 @@ public class AccountPatientSenSorDTO {
     private String displayId;
     private String gateId;
     private String patientCode;
+    private String fullName;
+    private String birthDate;
+    private String genDer;
     private String lstSensor;
 
     public String getDisplayId() {
@@ -45,6 +48,30 @@ public class AccountPatientSenSorDTO {
         this.patientCode = patientCode;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getGenDer() {
+        return genDer;
+    }
+
+    public void setGenDer(String genDer) {
+        this.genDer = genDer;
+    }
+
     public String getLstSensor() {
         return lstSensor;
     }
@@ -53,8 +80,4 @@ public class AccountPatientSenSorDTO {
         this.lstSensor = lstSensor;
     }
 
-
-
-    
-    
 }

@@ -55,8 +55,12 @@ public class GateController {
     @RequestMapping(value = "/api/account/{id}", method = RequestMethod.GET)
     public ResponseEntity<Object> findById(@PathVariable String id) {
         id = "47f28f75-9f8a-47fb-b858-f9d64c466f2b";
-        AccountPatientSenSorDTO accountPatientSenSorDTO =  employeeCustomizeRepository.findPatientSensor(id);
-        return new ResponseEntity<>(accountPatientSenSorDTO, HttpStatus.CREATED);
+        List<AccountPatientSenSorDTO> lstAccountPatientSenSorDTO =  employeeCustomizeRepository.findPatientSensor(id);
+        if(lstAccountPatientSenSorDTO != null){
+            
+        }
+        
+        return new ResponseEntity<>(lstAccountPatientSenSorDTO, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/api/account", method = RequestMethod.GET)

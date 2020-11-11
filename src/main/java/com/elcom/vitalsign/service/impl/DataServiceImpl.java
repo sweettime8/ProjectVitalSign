@@ -193,7 +193,7 @@ public class DataServiceImpl implements DataService {
 
     @Override
     public Gate findGateById(String id) {
-        return gateCustomizeRepository.findByUuid(id);
+        return gateCustomizeRepository.findBySerialNumber(id);
     }
 
     @Override

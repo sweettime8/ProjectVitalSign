@@ -31,6 +31,9 @@ public class Employee implements Serializable {
     @Column(name = "id", length = 36, updatable = false, nullable = false)
     private String id;
 
+    @Column(name = "account_id")
+    private String accountId;
+
     @Column(name = "department_id")
     private String departmentId;
 
@@ -151,6 +154,15 @@ public class Employee implements Serializable {
         this.mobile = mobile;
     }
 
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+    
+    
     /**
      * @return the departmentId
      */
