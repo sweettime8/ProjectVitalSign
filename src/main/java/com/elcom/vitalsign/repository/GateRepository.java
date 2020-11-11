@@ -18,6 +18,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GateRepository extends PagingAndSortingRepository<Gate, String> {
 
-    @Query(value = " SELECT id FROM gate WHERE status = 1 and is_deleted = 0 ", nativeQuery = true)
+    //@Query(value = " SELECT id FROM gate WHERE status = 1 and is_deleted = 0 ", nativeQuery = true)
+    @Query(value = " SELECT serial_number FROM gate WHERE status = 1 and is_deleted = 0 ", nativeQuery = true)
     List<String> findAllGateForSubscribe();
 }

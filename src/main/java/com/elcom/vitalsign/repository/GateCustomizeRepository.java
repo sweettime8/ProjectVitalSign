@@ -50,8 +50,8 @@ public class GateCustomizeRepository {
         }
         return result != null ? (Gate) result : null;
     }
-    
-        public Gate findBySerialNumber(String id) {
+
+    public Gate findBySerialNumber(String id) {
         Session session = openSession();
         Object result = null;
         try {

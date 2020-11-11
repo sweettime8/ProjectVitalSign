@@ -52,6 +52,21 @@ public class SensorCustomizeRepository {
         return null;
     }
 
+    public Sensor findByMac(String mac) {
+        Session session = openSession();
+        Object result = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM sensor WHERE mac = ?", Sensor.class);
+            query.setParameter(1, mac);
+            result = query.getSingleResult();
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+        return result != null ? (Sensor) result : null;
+    }
+
     public void sensorRelation(GateWithSensor gateWithSensor) {
         Session session = openSession();
         try {
@@ -70,7 +85,7 @@ public class SensorCustomizeRepository {
                 } catch (NoResultException ex) {
                     //Ko tìm thấy thì insert mới
                     LOGGER.error(ex.toString());
-                    session.save(new Sensor(item.getId(), item.getName(), gateWithSensor.getGateId(),item.getPatientId(), item.getModel(),
+                    session.save(new Sensor(item.getId(), item.getName(), gateWithSensor.getGateId(), item.getPatientId(), item.getModel(),
                             item.getSensorType(), item.getMac(), item.getSerialNumber(), item.getManufacture(),
                             item.getFirmwareVersion(), item.getBatteryValue()));
                 }
@@ -90,7 +105,7 @@ public class SensorCustomizeRepository {
             Query query = session.createNativeQuery("SELECT * FROM sensor WHERE gate_Id = ?", Sensor.class);
             query.setParameter(1, gateId);
             lstSensor = query.getResultList();
-            return lstSensor;    
+            return lstSensor;
         } catch (NoResultException ex) {
             LOGGER.error(ex.toString());
         } finally {
@@ -99,7 +114,24 @@ public class SensorCustomizeRepository {
 
         return null;
     }
-             
+
+    public List<Sensor> findAllSensorByGateId(String gateId) {
+        Session session = openSession();
+        List<Sensor> lstSensor = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM sensor WHERE gate_Id = ?", Sensor.class);
+            query.setParameter(1, gateId);
+            lstSensor = query.getResultList();
+            return lstSensor;
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+
+        return null;
+    }
+
     private Session openSession() {
         return this.sessionFactory.openSession();
     }

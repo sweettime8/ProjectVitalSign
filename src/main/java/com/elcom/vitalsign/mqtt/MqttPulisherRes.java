@@ -59,7 +59,7 @@ public class MqttPulisherRes {
         message.setPayload(data.getBytes());
         client.publish(topic, message);
 
-        LOGGER.info("Send Message to Gate ToPic  : +" + topic + " \n" + data);
+        LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
     }
 
     public void publisherDisplayUnLinkGate(String topic, Map<String, String> mapdata) throws MqttException, JsonProcessingException {

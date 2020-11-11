@@ -78,18 +78,21 @@ public class MqttConsumerInitApp implements Runnable {
                         LOGGER.info("Consummer - [DISPLAY_REQ_GATE_SENSOR] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
-                            Display display = this.dataService.findByDisplayId(jSONObject.getString("display_id"));
+                            //display_id của display bắn lên tương ứng serial_number trong database
+                            Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
                             String gateId = display.getGateId();
-
-                            Gate gate = this.dataService.findGateById(gateId);
+                            
+                            //gate_id trong data display tương ứng serial_number gate trong database
+                            Gate gate = this.dataService.findGateBySerialNumber(gateId);
                             if (gate == null) {
                                 LOGGER.info("Gate is not linked for Display");
                                 break;
                             }
+
                             List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(gateId);
 
                             GateWithSensorDisplay gateSensor = new GateWithSensorDisplay();
-                            gateSensor.setGateId(gateId);
+                            gateSensor.setGateId(gateId);  //tra ve cho Display with gateId = Gate_serialNumber
                             gateSensor.setStatus(gate.getStatus() == 1 ? "active" : "inactive");
                             gateSensor.setSensorLst(lstSensor);
 
@@ -111,9 +114,11 @@ public class MqttConsumerInitApp implements Runnable {
                         try {
                             LOGGER.info("Consummer - [GET_PATIENT_LIST] : " + s.toString());
                             JSONObject jSONObject = new JSONObject(s.toString());
-
-                            Display display = this.dataService.findByDisplayId(jSONObject.getString("display_id"));
+                            
+                            //display_id của display bắn lên tương ứng serial_number trong database
+                            Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
                             String gateId = display.getGateId();
+
                             List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(gateId);
 
                             List<Patient> lstPatient = new ArrayList<>();
@@ -148,13 +153,18 @@ public class MqttConsumerInitApp implements Runnable {
                             map.put("display_id", jSONObject.getString("display_id"));
                             map.put("gate_id", jSONObject.getString("gate_id"));
 
-                            Display display = this.dataService.findByDisplayId(jSONObject.getString("display_id"));
+                            //display_id của display bắn lên tương ứng serial_number trong database
+                            Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
                             if (display != null) {
-                                if (jSONObject.getString("gate_id").equals(display.getGateId())) {
-                                    this.dataService.unLinkGate(display);
+                                if (display.getGateId().equals("0")) {
                                     map.put("result", "OK");
                                 } else {
-                                    map.put("result", "FAILED");
+                                    if (display.getGateId().equals(jSONObject.getString("gate_id"))) {
+                                        this.dataService.unLinkGate(display);
+                                        map.put("result", "OK");
+                                    } else {
+                                        map.put("result", "FAILED");
+                                    }
                                 }
                             } else {
                                 map.put("result", "FAILED");
@@ -184,8 +194,12 @@ public class MqttConsumerInitApp implements Runnable {
                             map.put("display_id", jSONObject.getString("display_id"));
                             map.put("gate_id", jSONObject.getString("gate_id"));
 
-                            Display display = this.dataService.findByDisplayId(jSONObject.getString("display_id"));
+                            //display_id của display bắn lên tương ứng serial_number trong database
+                            Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
+
                             if (display != null) {
+                                //gate_id display gui len  = serialNumber gate trong DB
+                               
                                 if (jSONObject.getString("gate_id").equals(display.getGateId())) {
                                     map.put("result", "LINKED");
                                 } else if (display.getGateId().equals("0")) {
@@ -216,19 +230,16 @@ public class MqttConsumerInitApp implements Runnable {
                     for (Object s : lstGateTurnOn) {
                         LOGGER.info("Consummer - [GATE_REQ_DISPLAY_SENSOR] : " + s.toString());
                         try {
-                            JSONObject jSONObject = new JSONObject(s.toString());
-                            String gateId = jSONObject.getString("gate_id");
-                            Gate gate = this.dataService.findGateById(gateId);
+                            JSONObject jSONObject = new JSONObject(s.toString());                         
+                            List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(jSONObject.getString("gate_id"));
 
-                            List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(gateId);
-
-                            Display display = this.dataService.findDisplayByGateId(gateId);
+                            Display display = this.dataService.findDisplayByGateId(jSONObject.getString("gate_id"));
 
                             DisplayWithSensor displayWithSensor = new DisplayWithSensor();
-                            displayWithSensor.setDisplayId(display.getId());
+                            displayWithSensor.setDisplayId(display.getSerial_number()); // serial number tra ve cho display
                             displayWithSensor.setSensorLst(lstSensor);
 
-                            String topic = "SERVER_RES_SENSOR_LIST_" + jSONObject.getString("gateId");
+                            String topic = "SERVER_RES_SENSOR_LIST_" + jSONObject.getString("gate_id");
 
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherGateTurnOn(topic, displayWithSensor);
@@ -246,9 +257,10 @@ public class MqttConsumerInitApp implements Runnable {
                         LOGGER.info("Consummer - [RES_DISCONNECT_TO_SENSOR] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
-                            String sensorId = jSONObject.getString("sensor_id");
+                            String sensorMac = jSONObject.getString("sensor_id");
                             String gateId = jSONObject.getString("gate_id");
-                            Sensor sensor = this.dataService.findSensorById(sensorId);
+                            Sensor sensor = this.dataService.findSensorByMac(sensorMac);//sensorMac = sensorID display send
+                            
                             if (sensor != null) {
                                 if (sensor.getGateId().equals(gateId)) {
                                     sensor.setStatus(0);
@@ -272,7 +284,7 @@ public class MqttConsumerInitApp implements Runnable {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String sensorId = jSONObject.getString("sensor_id");
                             String gateId = jSONObject.getString("gate_id");
-                            Sensor sensor = this.dataService.findSensorById(sensorId);
+                            Sensor sensor = this.dataService.findSensorByMac(sensorId); //sensorMac = sensorID display send
                             if (sensor != null) {
                                 if (sensor.getGateId().equals(gateId)) {
                                     sensor.setStatus(1);

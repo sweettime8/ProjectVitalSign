@@ -18,6 +18,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DisplayRepository extends PagingAndSortingRepository<Display, String> {
 
-    @Query(value = " SELECT id FROM display WHERE status = 1 and is_deleted = 0 ", nativeQuery = true)
+    //@Query(value = " SELECT id FROM display WHERE status = 1 and is_deleted = 0 ", nativeQuery = true)
+    @Query(value = " SELECT serial_number FROM display WHERE status = 1 and is_deleted = 0 ", nativeQuery = true)
     List<String> findAllDisplayForSubscribe();
 }

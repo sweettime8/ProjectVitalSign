@@ -1,6 +1,5 @@
 package com.elcom.vitalsign;
 
-import ch.qos.logback.core.util.SystemInfo;
 import com.elcom.vitalsign.mqtt.MqttSubscriberInitApp;
 import com.elcom.vitalsign.process.DaemonThreadFactory;
 import com.elcom.vitalsign.process.MqttConsumerDataBp;

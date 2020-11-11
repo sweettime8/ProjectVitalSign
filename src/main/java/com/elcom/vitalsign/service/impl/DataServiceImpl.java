@@ -72,7 +72,7 @@ public class DataServiceImpl implements DataService {
             DataSpo2Repository dataSpo2Repository, DataSpo2CustomizeRepository dataSpo2CustomizeRepository,
             DataTempRepository dataTempRepository, DataTempCustomizeRepository dataTempCustomizeRepository,
             DataPartition dataPartition, DisplayRepository displayRepository, DisplayCustomizeRepository displayCustomizeRepository,
-            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository, 
+            GateRepository gateRepository, GateCustomizeRepository gateCustomizeRepository,
             SensorCustomizeRepository sensorCustomizeRepository, SensorRepository sensorRepository,
             PatientCustomizeRepository patientCustomizeRepository
     ) {
@@ -95,7 +95,7 @@ public class DataServiceImpl implements DataService {
 
         this.sensorCustomizeRepository = sensorCustomizeRepository;
         this.sensorRepository = sensorRepository;
-        
+
         this.patientCustomizeRepository = patientCustomizeRepository;
     }
 
@@ -187,12 +187,22 @@ public class DataServiceImpl implements DataService {
     }
 
     @Override
+    public Display findDisplayBySerialNumber(String id) {
+        return displayCustomizeRepository.findBySerialNumber(id);
+    }
+
+    @Override
     public List<Sensor> findAllSensorByGateId(String gateId) {
         return sensorCustomizeRepository.findByGateId(gateId);
     }
 
     @Override
     public Gate findGateById(String id) {
+        return gateCustomizeRepository.findByUuid(id);
+    }
+
+    @Override
+    public Gate findGateBySerialNumber(String id) {
         return gateCustomizeRepository.findBySerialNumber(id);
     }
 
@@ -220,6 +230,10 @@ public class DataServiceImpl implements DataService {
     @Override
     public Sensor findSensorById(String sensorId) {
         return sensorCustomizeRepository.findByUuid(sensorId); //To change body of generated methods, choose Tools | Templates.
+    }
+        @Override
+    public Sensor findSensorByMac(String sensorMac) {
+        return sensorCustomizeRepository.findByMac(sensorMac); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

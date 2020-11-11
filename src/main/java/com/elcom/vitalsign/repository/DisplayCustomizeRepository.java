@@ -51,6 +51,21 @@ public class DisplayCustomizeRepository {
         return result != null ? (Display) result : null;
     }
 
+    public Display findBySerialNumber(String serialNumber) {
+        Session session = openSession();
+        Object result = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM display WHERE serial_number = ?", Display.class);
+            query.setParameter(1, serialNumber);
+            result = query.getSingleResult();
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+        return result != null ? (Display) result : null;
+    }
+
     public Display findByGateId(String uuid) {
         Session session = openSession();
         Object result = null;

@@ -35,9 +35,11 @@ public interface DataService {
 
     List<String> findAllGateForSubscribe();
     
-    Display findByDisplayId(String id);
+    Display findByDisplayId(String id);    
+    Display findDisplayBySerialNumber(String id);
     
     Gate findGateById(String id);
+    Gate findGateBySerialNumber(String id);
     
     List<Sensor> findAllSensorByGateId(String gateId);
     
@@ -52,4 +54,5 @@ public interface DataService {
     Display findDisplayByGateId(String gateId);
     
     Sensor findSensorById(String sensorId);
+    Sensor findSensorByMac(String sensorMac);
 }

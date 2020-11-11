@@ -217,7 +217,8 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
             MqttClient mqttClient;
             String[] topicName = {"DISPLAY_REQ_GATE_SENSOR", "DISPLAY_UNLINK_GATE_REQ", "GET_PATIENT_LIST",
                 "DISPLAY_LINK_GATE_REQ", "DISPLAY_REQ_SERVER_ADD_SENSOR", "RES_CONNECT_TO_SENSOR",
-                "RES_DISCONNECT_TO_SENSOR", "RES_TRANSMIT_DATA_SPO2", "RES_TRANSMIT_DATA_TEMP", "RES_TRANSMIT_DATA_NIBP"
+                "RES_DISCONNECT_TO_SENSOR"
+               , "RES_TRANSMIT_DATA_SPO2", "RES_TRANSMIT_DATA_TEMP", "RES_TRANSMIT_DATA_NIBP"
             };
             String subId;
             for (String displayId : displayLst) {
