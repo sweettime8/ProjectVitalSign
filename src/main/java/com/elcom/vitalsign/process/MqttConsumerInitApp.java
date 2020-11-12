@@ -39,6 +39,8 @@ public class MqttConsumerInitApp implements Runnable {
     private final BlockingQueue sharedQueueDspUnLnkGate;
     private final BlockingQueue sharedQueueDspLnkGate;
     private final BlockingQueue sharedQueueGateTurnOn;
+    private final BlockingQueue sharedQueueDspSearchGate;
+    private final BlockingQueue sharedQueueDspAddSensor;
     private final BlockingQueue sharedQueueDspConnSen;
     private final BlockingQueue sharedQueueDspDisConnSen;
 
@@ -46,6 +48,7 @@ public class MqttConsumerInitApp implements Runnable {
 
     public MqttConsumerInitApp(BlockingQueue sharedQueueDspTurnOn, BlockingQueue sharedQueueGetPatient,
             BlockingQueue sharedQueueDspUnLnkGate, BlockingQueue sharedQueueDspLnkGate, BlockingQueue sharedQueueGateTurnOn,
+            BlockingQueue sharedQueueDspSearchGate, BlockingQueue sharedQueueDspAddSensor,
             BlockingQueue sharedQueueDspConnSen, BlockingQueue sharedQueueDspDisConnSen,
             ApplicationContext applicationContext) {
         this.sharedQueueDspTurnOn = sharedQueueDspTurnOn;
@@ -53,6 +56,8 @@ public class MqttConsumerInitApp implements Runnable {
         this.sharedQueueDspUnLnkGate = sharedQueueDspUnLnkGate;
         this.sharedQueueDspLnkGate = sharedQueueDspLnkGate;
         this.sharedQueueGateTurnOn = sharedQueueGateTurnOn;
+        this.sharedQueueDspSearchGate = sharedQueueDspSearchGate;
+        this.sharedQueueDspAddSensor = sharedQueueDspAddSensor;
         this.sharedQueueDspConnSen = sharedQueueDspConnSen;
         this.sharedQueueDspDisConnSen = sharedQueueDspDisConnSen;
 
@@ -67,6 +72,8 @@ public class MqttConsumerInitApp implements Runnable {
             List lstDspUnLnkGate;
             List lstDspLnkGate;
             List lstGateTurnOn;
+            List lstDspSearchGate;
+            List lstDspAddSensor;
             List lstDspConnSen;
             List lstDspDisConnSen;
 
@@ -81,7 +88,7 @@ public class MqttConsumerInitApp implements Runnable {
                             //display_id của display bắn lên tương ứng serial_number trong database
                             Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
                             String gateId = display.getGateId();
-                            
+
                             //gate_id trong data display tương ứng serial_number gate trong database
                             Gate gate = this.dataService.findGateBySerialNumber(gateId);
                             if (gate == null) {
@@ -114,7 +121,7 @@ public class MqttConsumerInitApp implements Runnable {
                         try {
                             LOGGER.info("Consummer - [GET_PATIENT_LIST] : " + s.toString());
                             JSONObject jSONObject = new JSONObject(s.toString());
-                            
+
                             //display_id của display bắn lên tương ứng serial_number trong database
                             Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
                             String gateId = display.getGateId();
@@ -199,7 +206,7 @@ public class MqttConsumerInitApp implements Runnable {
 
                             if (display != null) {
                                 //gate_id display gui len  = serialNumber gate trong DB
-                               
+
                                 if (jSONObject.getString("gate_id").equals(display.getGateId())) {
                                     map.put("result", "LINKED");
                                 } else if (display.getGateId().equals("0")) {
@@ -230,7 +237,7 @@ public class MqttConsumerInitApp implements Runnable {
                     for (Object s : lstGateTurnOn) {
                         LOGGER.info("Consummer - [GATE_REQ_DISPLAY_SENSOR] : " + s.toString());
                         try {
-                            JSONObject jSONObject = new JSONObject(s.toString());                         
+                            JSONObject jSONObject = new JSONObject(s.toString());
                             List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(jSONObject.getString("gate_id"));
 
                             Display display = this.dataService.findDisplayByGateId(jSONObject.getString("gate_id"));
@@ -248,7 +255,74 @@ public class MqttConsumerInitApp implements Runnable {
                         }
                     }
                 }
+                //------------------------------------------------------
+                if (sharedQueueDspSearchGate.size() > 0) {
+                    lstDspSearchGate = new ArrayList();
+                    sharedQueueDspSearchGate.drainTo(lstDspSearchGate);
+                    for (Object s : lstDspSearchGate) {
+                        LOGGER.info("Consummer - [DISPLAY_SERVER_SEARCH_GATE_REQ] : " + s.toString());
+                        try {
+                            JSONObject jSONObject = new JSONObject(s.toString());
+                            String displaySerial = jSONObject.getString("display_id");
+                            String gateSerial = jSONObject.getString("gate_id");
 
+                            Gate gate = this.dataService.findGateBySerialNumber(gateSerial);
+                            if (gate == null) {
+                                LOGGER.info("GATE not found");
+                                break;
+                            } else {
+                                String topic = "SERVER/DISPLAY/ADD_SENSOR_GATE_RES/" + jSONObject.getString("display_id");
+                                MqttPulisherRes mqtt = new MqttPulisherRes();
+                                mqtt.publisherToDisplaySearchGateRes(topic, gate);
+                            }
+
+                        } catch (Exception e) {
+                            LOGGER.error(e.toString());
+                        }
+                    }
+                }
+
+                //------------------------------------------------------
+                if (sharedQueueDspAddSensor.size() > 0) {
+                    lstDspAddSensor = new ArrayList<>();
+                    sharedQueueDspAddSensor.drainTo(lstDspAddSensor);
+                    for (Object s : lstDspAddSensor) {
+                        LOGGER.info("Consummer - [DISPLAY_REQ_SERVER_ADD_SENSOR] : " + s.toString());
+                        try {
+                            JSONObject jSONObject = new JSONObject(s.toString());
+
+                            String displaySerial = jSONObject.getString("display_id");
+                            String gateSerial = jSONObject.getString("gate_id");
+                            String sensorMac = jSONObject.getString("mac");
+                            String nameSensor = jSONObject.getString("name");
+                            int status = Integer.parseInt(jSONObject.get("status").toString());
+                            String message = jSONObject.getString("message");
+
+                            if (status == 1) {
+                                Sensor sensor = this.dataService.findSensorByMac(sensorMac);
+                                sensor.setGateId(gateSerial);
+                                sensor.setStatus(status);
+                                sensor.setName(nameSensor);
+                                this.dataService.saveSensor(sensor);
+                            }
+
+                            Map<String, Object> map = new LinkedHashMap<>();
+                            map.put("display_id", displaySerial);
+                            map.put("gate_id", gateSerial);
+                            map.put("mac", sensorMac);
+                            map.put("name", nameSensor);
+                            map.put("status", status);
+                            map.put("message", message);
+
+                            String topic = "SERVER/DISPLAY/ADD_SENSOR_GATE_RES/" + jSONObject.getString("display_id");
+                            MqttPulisherRes mqtt = new MqttPulisherRes();
+                            mqtt.publisherToDisplayAddSensor(topic, map);
+
+                        } catch (Exception e) {
+                            LOGGER.error(e.toString());
+                        }
+                    }
+                }
                 //------------------------------------------------------
                 if (sharedQueueDspDisConnSen.size() > 0) {
                     lstDspDisConnSen = new ArrayList<>();
@@ -259,10 +333,11 @@ public class MqttConsumerInitApp implements Runnable {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String sensorMac = jSONObject.getString("sensor_id");
                             String gateId = jSONObject.getString("gate_id");
+                            int resultCode = Integer.parseInt(jSONObject.get("result_code").toString());
                             Sensor sensor = this.dataService.findSensorByMac(sensorMac);//sensorMac = sensorID display send
-                            
+
                             if (sensor != null) {
-                                if (sensor.getGateId().equals(gateId)) {
+                                if (sensor.getGateId().equals(gateId) &&  resultCode == 0) {
                                     sensor.setStatus(0);
                                     this.dataService.updateStatusSensor(sensor);
                                 }
@@ -284,9 +359,11 @@ public class MqttConsumerInitApp implements Runnable {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String sensorId = jSONObject.getString("sensor_id");
                             String gateId = jSONObject.getString("gate_id");
+                            int resultCode = Integer.parseInt(jSONObject.get("result_code").toString());
+                            
                             Sensor sensor = this.dataService.findSensorByMac(sensorId); //sensorMac = sensorID display send
                             if (sensor != null) {
-                                if (sensor.getGateId().equals(gateId)) {
+                                if (sensor.getGateId().equals(gateId) &&  resultCode == 0) {
                                     sensor.setStatus(1);
                                     this.dataService.updateStatusSensor(sensor);
                                 }

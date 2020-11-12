@@ -241,4 +241,9 @@ public class DataServiceImpl implements DataService {
         sensorRepository.save(sensor); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void saveSensor(Sensor sensor) {
+        sensorRepository.save(sensor);
+    }
+
 }

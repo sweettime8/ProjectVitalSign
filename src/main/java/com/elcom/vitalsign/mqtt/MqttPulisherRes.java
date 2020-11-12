@@ -6,6 +6,7 @@
 package com.elcom.vitalsign.mqtt;
 
 import com.elcom.vitalsign.constant.Constant;
+import com.elcom.vitalsign.model.Gate;
 import com.elcom.vitalsign.model.Patient;
 import com.elcom.vitalsign.model.dto.DisplayWithSensor;
 import com.elcom.vitalsign.model.dto.GateWithSensorDisplay;
@@ -55,7 +56,6 @@ public class MqttPulisherRes {
 
     public void publisherListPatient(String topic, List<Patient> lstPatient) throws MqttException {
         String data = JSONConverter.toJSON(lstPatient);
-        LOGGER.info("SendToTopic : " + topic);
         message.setPayload(data.getBytes());
         client.publish(topic, message);
 
@@ -92,11 +92,35 @@ public class MqttPulisherRes {
 
     public void publisherGateTurnOn(String topic, DisplayWithSensor ds) throws MqttException {
         String data = JSONConverter.toJSON(ds);
-
         message.setPayload(data.getBytes());
         client.publish(topic, message);
         LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
 
+    }
+
+    public void publisherToDisplaySearchGateRes(String topic, Gate gate) throws MqttException, JsonProcessingException {
+        try {
+            String data = JSONConverter.toJSON(gate);
+            message.setPayload(data.getBytes());
+            client.publish(topic, message);
+
+            LOGGER.info("Send Message to Display ToPic  : " + topic + " \n" + data);
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
+        }
+    }
+
+    public void publisherToDisplayAddSensor(String topic, Map<String, Object> mapdata) throws MqttException, JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            String data = objectMapper.writeValueAsString(mapdata);
+            message.setPayload(data.getBytes());
+            client.publish(topic, message);
+
+            LOGGER.info("Send Message to Display ToPic  : " + topic + " \n" + data);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
     }
 
 }

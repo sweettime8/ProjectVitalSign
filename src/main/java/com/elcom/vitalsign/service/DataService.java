@@ -55,4 +55,6 @@ public interface DataService {
     
     Sensor findSensorById(String sensorId);
     Sensor findSensorByMac(String sensorMac);
+    
+    void saveSensor(Sensor sensor);
 }

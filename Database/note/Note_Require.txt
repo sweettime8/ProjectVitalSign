@@ -48,7 +48,7 @@ JSON :
 }
 	
 ======================================================= 
-= 		remove a gate	-> update gateId = 0		  =
+= 		remove a gate	-> update gateId = 0		  = 
 =======================================================
 +/ display : +/pub DISPLAY_UNLINK_GATE_REQ_<display_id>
 			  
@@ -189,11 +189,13 @@ server  :    pub->display   : SERVER_RES_DISPLAY_ADD_SENSOR_<display_id>      =>
 			 
 								{“gate_id”:111
 								“display_id”:111,
-								“sensor_id”:111”}
+								“sensor_id”:111”,
+								"result_code" 0
+								}
 			 
 			 
 			 
-==================data
+==================data : RES_TRANSMIT_DATA_TEMP
 SpO2:
 {
     "gate_id": "GW-122mdmas",
@@ -218,8 +220,47 @@ Temp :
 }			 
 			 
 			 
+===================== add sensor
+
+Server sub from gate : GATE/SERVER/ADD_SENSOR_REQ/<GATE_ID>
+Body:
+{
+       "display_id" : "<DISPLAY_ID>",
+       "gateId" : "1231231",
+       "mac" : "1b:23:12:2d:c3",
+       "name": "Máy đo huyết ap",
+       "status" : 0,
+       "message" : "Thêm thành công"
+}
+- status = 1 thêm thành công
+- status != 1 Thêm lỗi
+
+Server pub to display : SERVER/DISPLAY/ADD_SENSOR_GATE_RES/<DISPLAY_ID>
+Body:
+{
+       "display_id" : "<DISPLAY_ID>",
+       "gateId" : "1231231",
+       "mac" : "1b:23:12:2d:c3",
+       "name": "Máy đo huyết ap",
+       "status" : 0,
+       "message" : "Thêm thành công"
+}
+- status = 1 thêm thành công
+- status != 1 Thêm lỗi
+			
 			 
-			 
-			 
+=====================================================
+TÌm kiếm gate bằng id
+DISPLAY/SERVER/SEARCH_GATE_REQ/<DISPLAY_ID>
+Body:
+{
+       "display_id" : "<DISPLAY_ID>",
+       "gateId" : "1231231"
+}
+Resonse:
+SERVER/DISPLAY/SEARCH_GATE_RES/<DISPLAY_ID>
+{
+...
+}			 
 			 
 

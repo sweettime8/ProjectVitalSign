@@ -40,6 +40,9 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
     private final BlockingQueue sharedQueueDspUnLnkGate;
     private final BlockingQueue sharedQueueDspLnkGate;
     private final BlockingQueue sharedQueueGateTurnOn;
+
+    private final BlockingQueue sharedQueueDspSearchGate;
+    private final BlockingQueue sharedQueueDspAddSensor;
     private final BlockingQueue sharedQueueDspConnSen;
     private final BlockingQueue sharedQueueDspDisConnSen;
 
@@ -50,7 +53,8 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
 
     public MqttSubscriberInitApp(BlockingQueue sharedQueueData, BlockingQueue sharedQueueDspTurnOn,
             BlockingQueue sharedQueueGetPatient, BlockingQueue sharedQueueDspUnLnkGate, BlockingQueue sharedQueueDspLnkGate,
-            BlockingQueue sharedQueueGateTurnOn, BlockingQueue sharedQueueDspConnSen, BlockingQueue sharedQueueDspDisConnSen,
+            BlockingQueue sharedQueueGateTurnOn, BlockingQueue sharedQueueDspSearchGate, BlockingQueue sharedQueueDspAddSensor,
+            BlockingQueue sharedQueueDspConnSen, BlockingQueue sharedQueueDspDisConnSen,
             BlockingQueue sharedQueueDataBp, BlockingQueue sharedQueueDataSpo2, BlockingQueue sharedQueueDataTemp,
             ApplicationContext applicationContext) {
         this.sharedQueue = sharedQueueData;
@@ -59,6 +63,8 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
         this.sharedQueueDspUnLnkGate = sharedQueueDspUnLnkGate;
         this.sharedQueueDspLnkGate = sharedQueueDspLnkGate;
         this.sharedQueueGateTurnOn = sharedQueueGateTurnOn;
+        this.sharedQueueDspSearchGate = sharedQueueDspSearchGate;
+        this.sharedQueueDspAddSensor = sharedQueueDspAddSensor;
         this.sharedQueueDspConnSen = sharedQueueDspConnSen;
         this.sharedQueueDspDisConnSen = sharedQueueDspDisConnSen;
 
@@ -114,7 +120,22 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
                     LOGGER.error(ex.toString());
                 }
             }
-            if (topic.contains(Constant.RES_CONNECT_TO_SENSOR)) {
+            if (topic.contains(Constant.DISPLAY_SERVER_SEARCH_GATE_REQ)) { // display search gate
+                try {
+                    sharedQueueDspSearchGate.put(new String(message.getPayload()));
+                } catch (Exception ex) {
+                    LOGGER.error(ex.toString());
+                }
+            }
+
+            if (topic.contains(Constant.GATE_SERVER_ADD_SENSOR_REQ)) { // add sensor
+                try {
+                    sharedQueueDspAddSensor.put(new String(message.getPayload()));
+                } catch (Exception ex) {
+                    LOGGER.error(ex.toString());
+                }
+            }
+            if (topic.contains(Constant.RES_CONNECT_TO_SENSOR)) { // connect sensor
                 try {
                     sharedQueueDspConnSen.put(new String(message.getPayload()));
                 } catch (Exception ex) {
@@ -183,11 +204,9 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
                     if (dataTemp != null) {
                         sharedQueueDataTemp.put(dataTemp);
                     }
-
                 } catch (Exception ex) {
                     LOGGER.error(ex.toString());
                 }
-
             }
 
         }
@@ -215,12 +234,13 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
             conOpt.setConnectionTimeout(10);
             conOpt.setKeepAliveInterval(1800);
             MqttClient mqttClient;
-            String[] topicName = {"DISPLAY_REQ_GATE_SENSOR", "DISPLAY_UNLINK_GATE_REQ", "GET_PATIENT_LIST",
-                "DISPLAY_LINK_GATE_REQ", "DISPLAY_REQ_SERVER_ADD_SENSOR", "RES_CONNECT_TO_SENSOR",
-                "RES_DISCONNECT_TO_SENSOR"
-               , "RES_TRANSMIT_DATA_SPO2", "RES_TRANSMIT_DATA_TEMP", "RES_TRANSMIT_DATA_NIBP"
+            String[] topicName = {
+                "DISPLAY_REQ_GATE_SENSOR", "DISPLAY_UNLINK_GATE_REQ", "GET_PATIENT_LIST",
+                "DISPLAY_LINK_GATE_REQ","RES_CONNECT_TO_SENSOR","RES_DISCONNECT_TO_SENSOR",
+                "RES_TRANSMIT_DATA_SPO2", "RES_TRANSMIT_DATA_TEMP", "RES_TRANSMIT_DATA_NIBP"
             };
             String subId;
+
             for (String displayId : displayLst) {
                 for (String topic : topicName) {
                     subId = topic + "_" + displayId;
@@ -251,7 +271,7 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
             conOpt.setKeepAliveInterval(1800);
 
             MqttClient mqttClient;
-            String[] topicName = {"GATE_REQ_DISPLAY_SENSOR"};
+            String[] topicName = { "GATE_REQ_DISPLAY_SENSOR"};
             String subId;
             for (String gateId : gateLst) {
                 for (String topic : topicName) {
@@ -271,11 +291,65 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
         }
     }
 
+    private void subscribersGateDemo() throws MqttException {
+        LOGGER.info("[subscribersByGate topic ]");
+        MqttConnectOptions conOpt = new MqttConnectOptions();
+        conOpt.setCleanSession(false);
+        conOpt.setAutomaticReconnect(true);
+        conOpt.setConnectionTimeout(10);
+        conOpt.setKeepAliveInterval(1800);
+
+        MqttClient mqttClient;
+        String[] topicName = {
+            "GATE/SERVER/ADD_SENSOR_REQ/#"
+        };
+        for (String topic : topicName) {
+            try {
+                mqttClient = new MqttClient(MQTT_BROKER, MqttClient.generateClientId());
+                mqttClient.setCallback(this);
+                mqttClient.connect(conOpt);
+                mqttClient.subscribe(topic, Constant.MQTT_QOS);
+                LOGGER.info("[" + topic + "] subscribe topic [" + topic + "] SUCCESS!");
+            } catch (Exception ex) {
+                LOGGER.info("[" + topic + "] subscribe topic [" + topic + "] FAILED!, ex: " + ex.toString());
+            }
+        }
+
+    }
+
+    private void subscribersDisplayDemo() throws MqttException {
+        LOGGER.info("[subscribersByDisplay topic ]");
+        MqttConnectOptions conOpt = new MqttConnectOptions();
+        conOpt.setCleanSession(false);
+        conOpt.setAutomaticReconnect(true);
+        conOpt.setConnectionTimeout(10);
+        conOpt.setKeepAliveInterval(1800);
+
+        MqttClient mqttClient;
+        String[] topicName = {
+            "DISPLAY/SERVER/SEARCH_GATE_REQ/#"
+        };
+        for (String topic : topicName) {
+            try {
+                mqttClient = new MqttClient(MQTT_BROKER, MqttClient.generateClientId());
+                mqttClient.setCallback(this);
+                mqttClient.connect(conOpt);
+                mqttClient.subscribe(topic, Constant.MQTT_QOS);
+                LOGGER.info("[" + topic + "] subscribe topic [" + topic + "] SUCCESS!");
+            } catch (Exception ex) {
+                LOGGER.info("[" + topic + "] subscribe topic [" + topic + "] FAILED!, ex: " + ex.toString());
+            }
+        }
+
+    }
+
     @Override
     public void run() {
         try {
             this.subscribersByDisplay();
             this.subscribersByGate();
+            this.subscribersGateDemo();
+            this.subscribersDisplayDemo();
         } catch (MqttException ex) {
             LOGGER.error(ex.toString());
         }

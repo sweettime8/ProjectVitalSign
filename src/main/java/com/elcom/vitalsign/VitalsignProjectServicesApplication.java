@@ -15,12 +15,14 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class VitalsignProjectServicesApplication {
 
     public static void main(String[] args) throws MqttException, URISyntaxException {
-           
+        System.out.println("[CPU] : " + Runtime.getRuntime().availableProcessors());
         ApplicationContext applicationContext = SpringApplication.run(VitalsignProjectServicesApplication.class, args);
         BlockingQueue sharedQueueData = new LinkedBlockingQueue();
 
@@ -30,6 +32,8 @@ public class VitalsignProjectServicesApplication {
         BlockingQueue sharedQueueDspUnLnkGate = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspLnkGate = new LinkedBlockingQueue();
         BlockingQueue sharedQueueGateTurnOn = new LinkedBlockingQueue();
+        BlockingQueue sharedQueueDspSearchGate = new LinkedBlockingQueue();
+        BlockingQueue sharedQueueDspAddSensor = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspConnSen = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspDisConnSen = new LinkedBlockingQueue();
         //data
@@ -40,12 +44,15 @@ public class VitalsignProjectServicesApplication {
         //subcri init
         Runnable prodThread = new MqttSubscriberInitApp(sharedQueueData,
                 sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate, sharedQueueDspLnkGate,
-                sharedQueueGateTurnOn, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
-                sharedQueueDataBp, sharedQueueDataSpo2, sharedQueueDataTemp, applicationContext);
+                sharedQueueGateTurnOn, sharedQueueDspSearchGate,
+                sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
+                sharedQueueDataBp, sharedQueueDataSpo2, sharedQueueDataTemp,
+                applicationContext);
 
         //consumer init
         Runnable consThread = new MqttConsumerInitApp(sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate,
-                sharedQueueDspLnkGate, sharedQueueGateTurnOn, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
+                sharedQueueDspLnkGate, sharedQueueGateTurnOn, sharedQueueDspSearchGate,
+                sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
                 applicationContext);
 
         Runnable consThreadBp = new MqttConsumerDataBp(sharedQueueDataBp, applicationContext);
@@ -61,7 +68,6 @@ public class VitalsignProjectServicesApplication {
         executorService.submit(consThreadBp);
         executorService.submit(consThreadSpo2);
         executorService.submit(consThreadTemp);
-
     }
 
 }
