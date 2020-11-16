@@ -33,6 +33,7 @@ public class VitalsignProjectServicesApplication {
         BlockingQueue sharedQueueDspLnkGate = new LinkedBlockingQueue();
         BlockingQueue sharedQueueGateTurnOn = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspSearchGate = new LinkedBlockingQueue();
+        BlockingQueue sharedQueueDspGetGateSensor = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspAddSensor = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspConnSen = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspDisConnSen = new LinkedBlockingQueue();
@@ -44,14 +45,14 @@ public class VitalsignProjectServicesApplication {
         //subcri init
         Runnable prodThread = new MqttSubscriberInitApp(sharedQueueData,
                 sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate, sharedQueueDspLnkGate,
-                sharedQueueGateTurnOn, sharedQueueDspSearchGate,
+                sharedQueueGateTurnOn, sharedQueueDspSearchGate, sharedQueueDspGetGateSensor,
                 sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
                 sharedQueueDataBp, sharedQueueDataSpo2, sharedQueueDataTemp,
                 applicationContext);
 
         //consumer init
         Runnable consThread = new MqttConsumerInitApp(sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate,
-                sharedQueueDspLnkGate, sharedQueueGateTurnOn, sharedQueueDspSearchGate,
+                sharedQueueDspLnkGate, sharedQueueGateTurnOn, sharedQueueDspSearchGate, sharedQueueDspGetGateSensor,
                 sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
                 applicationContext);
 
@@ -60,14 +61,14 @@ public class VitalsignProjectServicesApplication {
         Runnable consThreadTemp = new MqttConsumerDataTemp(sharedQueueDataTemp, applicationContext);
 
         //executor 
-        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), new DaemonThreadFactory());
-        executorService.submit(prodThread);
-        executorService.submit(consThread);
-
-        //data
-        executorService.submit(consThreadBp);
-        executorService.submit(consThreadSpo2);
-        executorService.submit(consThreadTemp);
+//        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), new DaemonThreadFactory());
+//        executorService.submit(prodThread);
+//        executorService.submit(consThread);
+//
+//        //data
+//        executorService.submit(consThreadBp);
+//        executorService.submit(consThreadSpo2);
+//        executorService.submit(consThreadTemp);
     }
 
 }

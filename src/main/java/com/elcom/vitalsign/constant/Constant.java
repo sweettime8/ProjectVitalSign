@@ -46,6 +46,10 @@ public class Constant {
     public static final String SERVER_DISPLAY_SEARCH_GATE_RES = "SERVER/DISPLAY/SEARCH_GATE_RES/"; // Pub
     public static final String DISPLAY_SERVER_SEARCH_GATE_REQ = "DISPLAY/SERVER/SEARCH_GATE_REQ"; // Sub
 
+    //title Dispplay search sensor   
+    public static final String SERVER_DISPLAY_GET_GATE_SENSOR_LINKED_RES = "SERVER/DISPLAY/GET_GATE_SENSOR_LINKED_RES/"; // Pub
+    public static final String DISPLAY_SERVER_GET_GATE_SENSOR_LINKED_REQ = "DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ"; // Sub
+
     //title Connect Sensor
     public static final String RES_CONNECT_TO_SENSOR = "RES_CONNECT_TO_SENSOR"; // Sub
 

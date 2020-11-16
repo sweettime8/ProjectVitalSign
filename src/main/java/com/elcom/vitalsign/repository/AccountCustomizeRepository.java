@@ -69,7 +69,7 @@ public class AccountCustomizeRepository {
         Session session = openSession();
         Object result = null;
         try {
-            Query query = session.createNativeQuery("SELECT * FROM account WHERE email = ?", Account.class);
+            Query query = session.createNativeQuery("SELECT * FROM account WHERE username = ?", Account.class);
             query.setParameter(1, userName);
             result = query.getSingleResult();
         } catch (NoResultException ex) {

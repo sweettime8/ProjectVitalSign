@@ -17,7 +17,7 @@
 
 JSON : 
 {
-   "gateId":"00bade93cdd4bd18",
+   "gate_id":"00bade93cdd4bd18",
    "status":"active",
    "sensorLst":[
       {
@@ -73,7 +73,7 @@ Json :
 (đang có data -> LINKED , data đang = 0 -> update gateID -> OK , link thất bại -> failed		 
 Display : pub  DISPLAY_LINK_GATE_REQ_<display_id>
 				
-				Json : {"display_id":"111","display_id":"123456"}
+				Json : {"display_id":"111","gate_id":"123456"}
 
 		  sub  DISPLAY_LINK_GATE_RES_<display_id>
 		  

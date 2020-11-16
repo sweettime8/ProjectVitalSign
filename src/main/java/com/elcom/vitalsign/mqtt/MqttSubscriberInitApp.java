@@ -42,6 +42,7 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
     private final BlockingQueue sharedQueueGateTurnOn;
 
     private final BlockingQueue sharedQueueDspSearchGate;
+    private final BlockingQueue sharedQueueDspGetGateSensor;
     private final BlockingQueue sharedQueueDspAddSensor;
     private final BlockingQueue sharedQueueDspConnSen;
     private final BlockingQueue sharedQueueDspDisConnSen;
@@ -53,7 +54,8 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
 
     public MqttSubscriberInitApp(BlockingQueue sharedQueueData, BlockingQueue sharedQueueDspTurnOn,
             BlockingQueue sharedQueueGetPatient, BlockingQueue sharedQueueDspUnLnkGate, BlockingQueue sharedQueueDspLnkGate,
-            BlockingQueue sharedQueueGateTurnOn, BlockingQueue sharedQueueDspSearchGate, BlockingQueue sharedQueueDspAddSensor,
+            BlockingQueue sharedQueueGateTurnOn, BlockingQueue sharedQueueDspSearchGate,
+            BlockingQueue sharedQueueDspGetGateSensor, BlockingQueue sharedQueueDspAddSensor,
             BlockingQueue sharedQueueDspConnSen, BlockingQueue sharedQueueDspDisConnSen,
             BlockingQueue sharedQueueDataBp, BlockingQueue sharedQueueDataSpo2, BlockingQueue sharedQueueDataTemp,
             ApplicationContext applicationContext) {
@@ -64,6 +66,7 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
         this.sharedQueueDspLnkGate = sharedQueueDspLnkGate;
         this.sharedQueueGateTurnOn = sharedQueueGateTurnOn;
         this.sharedQueueDspSearchGate = sharedQueueDspSearchGate;
+        this.sharedQueueDspGetGateSensor = sharedQueueDspGetGateSensor;
         this.sharedQueueDspAddSensor = sharedQueueDspAddSensor;
         this.sharedQueueDspConnSen = sharedQueueDspConnSen;
         this.sharedQueueDspDisConnSen = sharedQueueDspDisConnSen;
@@ -123,6 +126,14 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
             if (topic.contains(Constant.DISPLAY_SERVER_SEARCH_GATE_REQ)) { // display search gate
                 try {
                     sharedQueueDspSearchGate.put(new String(message.getPayload()));
+                } catch (Exception ex) {
+                    LOGGER.error(ex.toString());
+                }
+            }
+
+            if (topic.contains(Constant.DISPLAY_SERVER_GET_GATE_SENSOR_LINKED_REQ)) { // display get gate sensor after add 
+                try {
+                    sharedQueueDspGetGateSensor.put(new String(message.getPayload()));
                 } catch (Exception ex) {
                     LOGGER.error(ex.toString());
                 }
@@ -236,7 +247,7 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
             MqttClient mqttClient;
             String[] topicName = {
                 "DISPLAY_REQ_GATE_SENSOR", "DISPLAY_UNLINK_GATE_REQ", "GET_PATIENT_LIST",
-                "DISPLAY_LINK_GATE_REQ","RES_CONNECT_TO_SENSOR","RES_DISCONNECT_TO_SENSOR",
+                "DISPLAY_LINK_GATE_REQ", "RES_CONNECT_TO_SENSOR", "RES_DISCONNECT_TO_SENSOR",
                 "RES_TRANSMIT_DATA_SPO2", "RES_TRANSMIT_DATA_TEMP", "RES_TRANSMIT_DATA_NIBP"
             };
             String subId;
@@ -271,7 +282,7 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
             conOpt.setKeepAliveInterval(1800);
 
             MqttClient mqttClient;
-            String[] topicName = { "GATE_REQ_DISPLAY_SENSOR"};
+            String[] topicName = {"GATE_REQ_DISPLAY_SENSOR"};
             String subId;
             for (String gateId : gateLst) {
                 for (String topic : topicName) {
@@ -327,7 +338,8 @@ public class MqttSubscriberInitApp implements MqttCallback, Runnable {
 
         MqttClient mqttClient;
         String[] topicName = {
-            "DISPLAY/SERVER/SEARCH_GATE_REQ/#"
+            "DISPLAY/SERVER/SEARCH_GATE_REQ/#",
+            "DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#"
         };
         for (String topic : topicName) {
             try {

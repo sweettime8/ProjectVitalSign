@@ -7,11 +7,13 @@ package com.elcom.vitalsign.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Admin
  */
+@Component
 public class PropertiesConfig {
 
     public static String MQTT_SUBSCRIBE_CLIENT_ID;

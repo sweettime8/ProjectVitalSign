@@ -9,6 +9,7 @@ import com.elcom.vitalsign.constant.Constant;
 import com.elcom.vitalsign.model.Gate;
 import com.elcom.vitalsign.model.Patient;
 import com.elcom.vitalsign.model.dto.DisplayWithSensor;
+import com.elcom.vitalsign.model.dto.GateLinkedWithSenSor;
 import com.elcom.vitalsign.model.dto.GateWithSensorDisplay;
 import com.elcom.vitalsign.utils.JSONConverter;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -98,6 +99,14 @@ public class MqttPulisherRes {
 
     }
 
+    public void publisherToDisplayGateSensorLinked(String topic, GateLinkedWithSenSor gateLinkedWithSenSor) throws MqttException {
+        String data = JSONConverter.toJSON(gateLinkedWithSenSor);
+        message.setPayload(data.getBytes());
+        client.publish(topic, message);
+        LOGGER.info("Send Message to Display ToPic  : " + topic + " \n" + data);
+
+    }
+
     public void publisherToDisplaySearchGateRes(String topic, Gate gate) throws MqttException, JsonProcessingException {
         try {
             String data = JSONConverter.toJSON(gate);
@@ -109,6 +118,7 @@ public class MqttPulisherRes {
             LOGGER.error(e.toString());
         }
     }
+
 
     public void publisherToDisplayAddSensor(String topic, Map<String, Object> mapdata) throws MqttException, JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();

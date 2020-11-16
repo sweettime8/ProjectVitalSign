@@ -88,8 +88,8 @@
             <artifactId>jackson-dataformat-xml</artifactId>
         </dependency>
         
-        <!-- spring security -->
-<!--        <dependency>
+        <!--         spring security -->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
@@ -97,7 +97,7 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>

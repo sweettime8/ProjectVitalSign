@@ -12,10 +12,11 @@ CREATE TABLE `hospital` (
 
 CREATE TABLE `account` (
   `id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(30) COLLATE utf8_unicode_ci NOT NULL, 
   `email` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
   `password` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `mobile` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `full_name` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Xuất xứ, nhà sx',
+  `full_name` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL ,
   `user_type` int(1) NOT NULL DEFAULT 1,
   `role_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'ADMIN' COMMENT 'từ 0 -> 100',
   `hospital_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,

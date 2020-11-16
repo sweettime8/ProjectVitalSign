@@ -28,10 +28,11 @@ public class Account implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue
-    @Type(type = "uuid-char")
-    @Column(name = "id", length = 36, updatable = false, nullable = false)
-    private UUID id;
+    @Column(name = "id", updatable = false, nullable = false)
+    private String id;
+
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "email")
     private String email;
@@ -52,7 +53,7 @@ public class Account implements Serializable {
     private String roleName;
 
     @Column(name = "hospital_id")
-    private UUID hospitalId;
+    private String hospitalId;
 
     @Column(name = "status")
     private Integer status;
@@ -65,12 +66,28 @@ public class Account implements Serializable {
 
     @PrePersist
     void preInsert() {
-        //if (this.getLastUpdatedAt()== null)
-        //  this.setLastUpdatedAt(new Timestamp(System.currentTimeMillis()));
-        if (this.isDeleted == null) {
+        if (this.getId() == null) {
+            this.setId(UUID.randomUUID().toString());
+        }
+        if (this.getHospitalId() == null) {
+            this.setHospitalId("0");
+        }
+        if (this.getRoleName() == null) {
+            this.setRoleName("USER");
+        }
+        if (this.getUserType()== null) {
+            this.setUserType(3);
+        }
+
+        if (this.lastUpdatedAt == null) {
+            this.setLastUpdatedAt(new Timestamp(System.currentTimeMillis()));
+        }
+        if (this.isDeleted
+                == null) {
             this.setIsDeleted(0);
         }
-        if (this.status == null) {
+        if (this.status
+                == null) {
             this.setStatus(1);
         }
     }
@@ -78,12 +95,20 @@ public class Account implements Serializable {
     public Account() {
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -153,14 +178,14 @@ public class Account implements Serializable {
     /**
      * @return the hospitalId
      */
-    public UUID getHospitalId() {
+    public String getHospitalId() {
         return hospitalId;
     }
 
     /**
      * @param hospitalId the hospitalId to set
      */
-    public void setHospitalId(UUID hospitalId) {
+    public void setHospitalId(String hospitalId) {
         this.hospitalId = hospitalId;
     }
 

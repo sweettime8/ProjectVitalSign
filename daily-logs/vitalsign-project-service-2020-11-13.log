@@ -1,0 +1,957 @@
+13-11-2020 08:15:36.458 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarting - Starting VitalsignProjectServicesApplicationTests on MSI with PID 14064 (started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 08:15:36.463 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 08:15:38.385 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 08:15:38.504 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 08:15:38.678 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 08:15:39.007 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 08:15:39.702 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 08:15:41.664 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarted - Started VitalsignProjectServicesApplicationTests in 5.577 seconds (JVM running for 6.5)
+13-11-2020 08:16:29.609 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 11728 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 08:16:29.609 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 08:16:30.926 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 08:16:30.952 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 08:16:31.066 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 08:16:31.125 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 08:16:31.544 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 08:16:32.198 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.902 seconds (JVM running for 3.214)
+13-11-2020 08:16:32.203 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+13-11-2020 08:16:33.204 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.255 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.444 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.498 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.514 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.545 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_4eb2459ae05f004c
+13-11-2020 08:16:33.545 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:33.545 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:33.561 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:33.565 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c
+13-11-2020 08:16:33.565 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:33.612 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:16:33.612 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c","measure_id": "asacdasdas","ts":1605177092,"spo2":255,"pi":0,"pr":65535,"step":0}
+13-11-2020 08:16:33.644 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:34.120 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:34.233 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:16:34.951 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:35.077 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:35.445 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.108 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.249 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.345 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.361 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.383 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.400 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:16:36.415 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:36.447 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:36.467 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] subscribe topic [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:36.801 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:37.215 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:37.559 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:37.579 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_SPO2_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:37.597 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_TEMP_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:37.612 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_NIBP_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:16:37.675 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] subscribe topic [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:37.690 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:37.831 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_25f97b784dc3780a] subscribe topic [GET_PATIENT_LIST_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:38.454 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:38.544 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:38.585 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:38.593 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_25f97b784dc3780a
+13-11-2020 08:16:38.593 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:38.593 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:38.634 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a
+13-11-2020 08:16:38.634 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:38.745 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:16:38.931 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_SPO2_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:39.061 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_TEMP_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:39.077 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_NIBP_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:16:39.077 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+13-11-2020 08:16:39.093 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af264] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af264] SUCCESS!
+13-11-2020 08:16:39.115 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] SUCCESS!
+13-11-2020 08:16:39.147 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] SUCCESS!
+13-11-2020 08:16:39.163 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] SUCCESS!
+13-11-2020 08:16:39.163 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [subscribersByGate topic ]
+13-11-2020 08:16:39.210 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [GATE/SERVER/ADD_SENSOR_REQ/#] subscribe topic [GATE/SERVER/ADD_SENSOR_REQ/#] SUCCESS!
+13-11-2020 08:16:39.210 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [subscribersByDisplay topic ]
+13-11-2020 08:16:39.231 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/SEARCH_GATE_REQ/#] subscribe topic [DISPLAY/SERVER/SEARCH_GATE_REQ/#] SUCCESS!
+13-11-2020 08:16:39.265 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] subscribe topic [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] SUCCESS!
+13-11-2020 08:17:27.827 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:27.827 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230247,
+    "spo2":18,
+    "pi":45,
+    "pr":29,
+    "step": 9491
+}
+13-11-2020 08:17:29.281 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:29.281 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230248,
+    "spo2":7,
+    "pi":28,
+    "pr":16,
+    "step": 7657
+}
+13-11-2020 08:17:29.918 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:29.918 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230249,
+    "spo2":25,
+    "pi":44,
+    "pr":36,
+    "step": 8637
+}
+13-11-2020 08:17:30.937 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:30.937 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230250,
+    "spo2":22,
+    "pi":13,
+    "pr":12,
+    "step": 7326
+}
+13-11-2020 08:17:31.985 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:31.985 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230251,
+    "spo2":18,
+    "pi":42,
+    "pr":4,
+    "step": 3645
+}
+13-11-2020 08:17:33.039 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:33.039 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230252,
+    "spo2":23,
+    "pi":18,
+    "pr":18,
+    "step": 7020
+}
+13-11-2020 08:17:34.041 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:34.043 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230253,
+    "spo2":23,
+    "pi":42,
+    "pr":48,
+    "step": 8393
+}
+13-11-2020 08:17:35.080 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:35.080 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230254,
+    "spo2":5,
+    "pi":30,
+    "pr":9,
+    "step": 3424
+}
+13-11-2020 08:17:36.115 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:36.115 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230255,
+    "spo2":19,
+    "pi":16,
+    "pr":32,
+    "step": 7057
+}
+13-11-2020 08:17:37.144 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:37.144 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230256,
+    "spo2":22,
+    "pi":26,
+    "pr":48,
+    "step": 3563
+}
+13-11-2020 08:17:38.173 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:38.173 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230257,
+    "spo2":33,
+    "pi":10,
+    "pr":17,
+    "step": 3456
+}
+13-11-2020 08:17:39.203 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:39.203 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230258,
+    "spo2":47,
+    "pi":28,
+    "pr":22,
+    "step": 8312
+}
+13-11-2020 08:17:40.336 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:40.336 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230259,
+    "spo2":27,
+    "pi":3,
+    "pr":0,
+    "step": 2183
+}
+13-11-2020 08:17:41.352 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:41.353 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230260,
+    "spo2":45,
+    "pi":31,
+    "pr":16,
+    "step": 2223
+}
+13-11-2020 08:17:42.378 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:42.379 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230261,
+    "spo2":45,
+    "pi":23,
+    "pr":47,
+    "step": 3750
+}
+13-11-2020 08:17:43.439 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:43.439 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230262,
+    "spo2":24,
+    "pi":26,
+    "pr":46,
+    "step": 10735
+}
+13-11-2020 08:17:44.471 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:44.471 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230263,
+    "spo2":37,
+    "pi":11,
+    "pr":28,
+    "step": 6326
+}
+13-11-2020 08:17:45.502 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:45.502 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230264,
+    "spo2":43,
+    "pi":2,
+    "pr":43,
+    "step": 7534
+}
+13-11-2020 08:17:46.521 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:46.521 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230265,
+    "spo2":7,
+    "pi":43,
+    "pr":32,
+    "step": 847
+}
+13-11-2020 08:17:47.560 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:47.560 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230266,
+    "spo2":30,
+    "pi":45,
+    "pr":33,
+    "step": 11149
+}
+13-11-2020 08:17:48.599 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:48.599 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230267,
+    "spo2":46,
+    "pi":3,
+    "pr":35,
+    "step": 7461
+}
+13-11-2020 08:17:49.627 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:49.627 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230268,
+    "spo2":14,
+    "pi":7,
+    "pr":6,
+    "step": 2239
+}
+13-11-2020 08:17:50.716 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:50.716 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230269,
+    "spo2":36,
+    "pi":48,
+    "pr":26,
+    "step": 2003
+}
+13-11-2020 08:17:51.675 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:51.675 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230270,
+    "spo2":5,
+    "pi":21,
+    "pr":21,
+    "step": 630
+}
+13-11-2020 08:17:52.833 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:17:52.833 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{
+    "gate_id": "ELCGW-001-00000000649af264",
+    "display_id": "4eb2459ae05f004c",
+    "sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g",
+    "measure_id": "asacdasdas",
+    "ts":1605230271,
+    "spo2":45,
+    "pi":8,
+    "pr":6,
+    "step": 2341
+}
+13-11-2020 08:18:50.143 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 8200 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 08:18:50.143 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 08:18:51.520 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 08:18:51.552 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 08:18:51.624 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 08:18:51.749 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 08:18:52.175 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 08:18:52.929 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.107 seconds (JVM running for 3.438)
+13-11-2020 08:18:52.933 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+13-11-2020 08:18:54.793 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.808 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.835 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.858 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.881 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.900 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.924 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.928 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_4eb2459ae05f004c
+13-11-2020 08:18:54.928 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:18:54.928 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:18:54.944 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.946 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c
+13-11-2020 08:18:54.946 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:18:54.969 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 08:18:54.970 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c","measure_id": "asacdasdas","ts":1605177092,"spo2":255,"pi":0,"pr":65535,"step":0}
+13-11-2020 08:18:54.972 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004c] SUCCESS!
+13-11-2020 08:18:54.992 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:18:55.009 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:18:55.027 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:18:55.041 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:18:56.336 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:18:57.900 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:18:58.409 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:18:59.622 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:19:00.588 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:19:02.393 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004f] SUCCESS!
+13-11-2020 08:19:02.906 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:03.090 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:03.161 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] subscribe topic [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:03.700 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:04.099 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:04.148 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:04.164 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_SPO2_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:04.411 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_TEMP_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:04.464 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_NIBP_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 08:19:04.480 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] subscribe topic [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.511 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.518 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_25f97b784dc3780a] subscribe topic [GET_PATIENT_LIST_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.533 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.564 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.580 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.634 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_25f97b784dc3780a
+13-11-2020 08:19:04.634 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:19:04.634 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:19:04.649 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a
+13-11-2020 08:19:04.649 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:19:04.665 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_SPO2_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.696 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_TEMP_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:04.696 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 08:19:05.084 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_NIBP_25f97b784dc3780a] SUCCESS!
+13-11-2020 08:19:05.084 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+13-11-2020 08:19:05.615 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af264] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af264] SUCCESS!
+13-11-2020 08:19:06.294 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] SUCCESS!
+13-11-2020 08:19:06.467 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] SUCCESS!
+13-11-2020 08:19:06.624 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] SUCCESS!
+13-11-2020 08:19:06.624 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [subscribersByGate topic ]
+13-11-2020 08:19:06.856 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [GATE/SERVER/ADD_SENSOR_REQ/#] subscribe topic [GATE/SERVER/ADD_SENSOR_REQ/#] SUCCESS!
+13-11-2020 08:19:06.856 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [subscribersByDisplay topic ]
+13-11-2020 08:19:07.152 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/SEARCH_GATE_REQ/#] subscribe topic [DISPLAY/SERVER/SEARCH_GATE_REQ/#] SUCCESS!
+13-11-2020 08:19:07.190 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] subscribe topic [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] SUCCESS!
+13-11-2020 08:20:30.057 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.657 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.668 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.673 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.678 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.683 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.689 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.696 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.703 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.708 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.715 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:30.725 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.058 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.221 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.227 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.239 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.239 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.243 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.249 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.266 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.496 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.545 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.559 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.564 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.569 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:31.780 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.523 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.537 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.541 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.546 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.551 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.556 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.710 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.715 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.719 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.724 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.740 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.742 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.749 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.753 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.784 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.784 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:32.784 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.465 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.526 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.799 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:33.809 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.800 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.810 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.810 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.810 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.810 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.810 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.818 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.818 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.844 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.844 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.844 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.844 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.844 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.844 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.860 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.860 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.860 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:20:34.860 INFO  c.e.v.mqtt.MqttSubscriberInitApp.connectionLost - Connection lost because: Connection lost (32109) - java.io.EOFException
+13-11-2020 08:30:35.755 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 15224 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 08:30:35.755 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 08:30:37.189 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 08:30:37.227 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 08:30:37.359 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 08:30:37.421 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 08:30:37.829 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 08:30:38.446 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.013 seconds (JVM running for 3.332)
+13-11-2020 08:38:24.162 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 13924 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 08:38:24.164 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 08:38:25.597 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 08:38:25.620 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 08:38:25.725 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 08:38:25.780 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 08:38:26.652 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 08:38:27.334 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.515 seconds (JVM running for 3.829)
+13-11-2020 09:30:58.144 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 6500 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:30:58.144 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:30:59.385 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:30:59.416 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:30:59.516 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:30:59.601 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:31:00.017 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:31:00.672 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.845 seconds (JVM running for 3.161)
+13-11-2020 09:35:46.338 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 09:35:46.441 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 09:35:59.536 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 09:35:59.610 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 09:36:58.859 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 13840 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:36:58.859 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:37:00.557 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:37:00.597 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:37:00.778 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:37:00.900 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:37:01.467 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:37:02.268 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.826 seconds (JVM running for 5.136)
+13-11-2020 09:37:18.245 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 09:37:18.318 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 09:39:48.574 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 9608 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:39:48.589 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:39:50.377 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:39:50.431 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:39:50.609 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:39:50.694 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:39:51.329 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:39:52.463 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 4.426 seconds (JVM running for 5.054)
+13-11-2020 09:39:56.622 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 09:39:56.698 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 09:40:32.509 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 09:40:32.584 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 09:41:01.180 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 7808 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:41:01.188 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:41:02.745 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:41:02.776 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:41:02.930 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:41:03.014 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:41:03.679 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:41:04.573 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.932 seconds (JVM running for 4.545)
+13-11-2020 09:41:43.480 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 09:43:02.099 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 16140 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:43:02.099 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:43:03.706 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:43:03.747 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:43:03.878 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:43:03.978 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:43:04.532 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:43:05.392 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.719 seconds (JVM running for 4.226)
+13-11-2020 09:43:55.357 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 8380 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:43:55.357 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:43:56.886 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:43:56.920 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:43:57.105 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:43:57.221 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:43:57.753 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:43:58.608 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.677 seconds (JVM running for 4.255)
+13-11-2020 09:45:27.001 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 4796 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:45:27.001 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:45:28.543 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:45:28.574 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:45:28.743 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:45:28.828 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:45:29.376 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:45:30.209 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.732 seconds (JVM running for 4.307)
+13-11-2020 09:55:43.564 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 11560 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:55:43.564 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:55:44.983 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:55:44.999 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:55:45.061 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:55:45.163 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:55:45.816 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:55:46.434 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.183 seconds (JVM running for 3.562)
+13-11-2020 09:58:49.579 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 15732 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 09:58:49.595 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 09:58:50.797 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 09:58:50.828 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 09:58:50.897 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 09:58:51.013 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 09:58:51.461 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 09:58:52.085 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.819 seconds (JVM running for 3.134)
+13-11-2020 09:59:41.018 INFO  o.h.e.j.b.internal.AbstractBatchImpl.release - HHH000010: On release of batch it still contained JDBC statements
+13-11-2020 09:59:41.019 ERROR o.h.e.j.batch.internal.BatchingBatch.performExecution - HHH000315: Exception executing batch [java.sql.BatchUpdateException: (conn=2161004) Column 'hospital_id' cannot be null], SQL: insert into account (email, full_name, hospital_id, is_deleted, last_updated_at, mobile, password, role_name, status, user_type, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+13-11-2020 09:59:41.020 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1048, SQLState: 23000
+13-11-2020 09:59:41.020 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - (conn=2161004) Column 'hospital_id' cannot be null
+13-11-2020 09:59:41.044 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute batch; SQL [insert into account (email, full_name, hospital_id, is_deleted, last_updated_at, mobile, password, role_name, status, user_type, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute batch] with root cause
+java.sql.SQLException: Column 'hospital_id' cannot be null
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1688)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1550)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1513)
+	at org.mariadb.jdbc.internal.protocol.AsyncMultiRead.call(AsyncMultiRead.java:150)
+	at org.mariadb.jdbc.internal.protocol.AsyncMultiRead.call(AsyncMultiRead.java:68)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13-11-2020 10:05:08.400 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 9980 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:05:08.416 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:05:09.587 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:05:09.619 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:05:09.666 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:05:09.788 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:05:10.166 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:05:10.805 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.709 seconds (JVM running for 3.01)
+13-11-2020 10:05:39.288 INFO  o.h.e.j.b.internal.AbstractBatchImpl.release - HHH000010: On release of batch it still contained JDBC statements
+13-11-2020 10:05:39.290 ERROR o.h.e.j.batch.internal.BatchingBatch.performExecution - HHH000315: Exception executing batch [java.sql.BatchUpdateException: (conn=2161045) Column 'role_name' cannot be null], SQL: insert into account (email, full_name, hospital_id, is_deleted, last_updated_at, mobile, password, role_name, status, user_type, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+13-11-2020 10:05:39.292 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1048, SQLState: 23000
+13-11-2020 10:05:39.293 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - (conn=2161045) Column 'role_name' cannot be null
+13-11-2020 10:05:39.324 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute batch; SQL [insert into account (email, full_name, hospital_id, is_deleted, last_updated_at, mobile, password, role_name, status, user_type, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute batch] with root cause
+java.sql.SQLException: Column 'role_name' cannot be null
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1688)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1550)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1513)
+	at org.mariadb.jdbc.internal.protocol.AsyncMultiRead.call(AsyncMultiRead.java:150)
+	at org.mariadb.jdbc.internal.protocol.AsyncMultiRead.call(AsyncMultiRead.java:68)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13-11-2020 10:06:30.860 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 13092 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:06:30.860 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:06:32.115 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:06:32.131 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:06:32.247 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:06:32.300 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:06:32.717 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:06:33.350 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.801 seconds (JVM running for 3.111)
+13-11-2020 10:08:08.489 INFO  o.h.e.j.b.internal.AbstractBatchImpl.release - HHH000010: On release of batch it still contained JDBC statements
+13-11-2020 10:08:08.490 ERROR o.h.e.j.batch.internal.BatchingBatch.performExecution - HHH000315: Exception executing batch [java.sql.BatchUpdateException: (conn=2161064) Column 'user_type' cannot be null], SQL: insert into account (email, full_name, hospital_id, is_deleted, last_updated_at, mobile, password, role_name, status, user_type, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+13-11-2020 10:08:08.491 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1048, SQLState: 23000
+13-11-2020 10:08:08.491 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - (conn=2161064) Column 'user_type' cannot be null
+13-11-2020 10:08:08.513 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute batch; SQL [insert into account (email, full_name, hospital_id, is_deleted, last_updated_at, mobile, password, role_name, status, user_type, username, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute batch] with root cause
+java.sql.SQLException: Column 'user_type' cannot be null
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1688)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1550)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1513)
+	at org.mariadb.jdbc.internal.protocol.AsyncMultiRead.call(AsyncMultiRead.java:150)
+	at org.mariadb.jdbc.internal.protocol.AsyncMultiRead.call(AsyncMultiRead.java:68)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13-11-2020 10:09:03.168 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 11380 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:09:03.168 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:09:04.374 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:09:04.393 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:09:04.456 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:09:04.572 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:09:04.995 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:09:05.628 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.758 seconds (JVM running for 3.127)
+13-11-2020 10:09:53.028 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 10:09:53.100 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 10:10:01.857 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 10:10:01.928 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 10:26:40.734 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 12808 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:26:40.750 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:26:41.952 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:26:41.968 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:26:42.021 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:26:42.121 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:26:42.537 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:26:43.154 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.718 seconds (JVM running for 3.026)
+13-11-2020 10:26:51.148 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1054, SQLState: 42S22
+13-11-2020 10:26:51.149 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - No such column: 'birthDate'. 'birthdate' must be in [, patient.fullname, patient.gender, gender, g.gateid, patient.patientcode, patientcode, tuoi, p.patientcode, ., .lstsensor, gateid, gate.gateid, p.fullname, .tuoi, p.gender, d.displayid, fullname, display.displayid, displayid, lstsensor]
+13-11-2020 10:26:51.151 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute query
+13-11-2020 10:26:53.231 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1054, SQLState: 42S22
+13-11-2020 10:26:53.231 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - No such column: 'birthDate'. 'birthdate' must be in [, patient.fullname, patient.gender, gender, g.gateid, patient.patientcode, patientcode, tuoi, p.patientcode, ., .lstsensor, gateid, gate.gateid, p.fullname, .tuoi, p.gender, d.displayid, fullname, display.displayid, displayid, lstsensor]
+13-11-2020 10:26:53.232 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute query
+13-11-2020 10:26:54.349 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1054, SQLState: 42S22
+13-11-2020 10:26:54.349 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - No such column: 'birthDate'. 'birthdate' must be in [, patient.fullname, patient.gender, gender, g.gateid, patient.patientcode, patientcode, tuoi, p.patientcode, ., .lstsensor, gateid, gate.gateid, p.fullname, .tuoi, p.gender, d.displayid, fullname, display.displayid, displayid, lstsensor]
+13-11-2020 10:26:54.350 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute query
+13-11-2020 10:26:54.980 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1054, SQLState: 42S22
+13-11-2020 10:26:54.981 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - No such column: 'birthDate'. 'birthdate' must be in [, patient.fullname, patient.gender, gender, g.gateid, patient.patientcode, patientcode, tuoi, p.patientcode, ., .lstsensor, gateid, gate.gateid, p.fullname, .tuoi, p.gender, d.displayid, fullname, display.displayid, displayid, lstsensor]
+13-11-2020 10:26:54.981 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute query
+13-11-2020 10:26:55.382 WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 1054, SQLState: 42S22
+13-11-2020 10:26:55.382 ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - No such column: 'birthDate'. 'birthdate' must be in [, patient.fullname, patient.gender, gender, g.gateid, patient.patientcode, patientcode, tuoi, p.patientcode, ., .lstsensor, gateid, gate.gateid, p.fullname, .tuoi, p.gender, d.displayid, fullname, display.displayid, displayid, lstsensor]
+13-11-2020 10:26:55.383 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute query
+13-11-2020 10:27:24.951 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 12728 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:27:24.954 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:27:26.277 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:27:26.309 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:27:26.362 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:27:26.478 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:27:26.991 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:27:27.816 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.296 seconds (JVM running for 3.627)
+13-11-2020 10:27:59.623 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for tuoi on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:28:06.164 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 13792 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:28:06.164 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:28:07.373 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:28:07.394 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:28:07.456 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:28:07.556 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:28:07.994 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:28:08.709 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.859 seconds (JVM running for 3.19)
+13-11-2020 10:28:09.290 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:28:10.271 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:28:10.935 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:28:11.866 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:28:12.462 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:30:08.251 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 10756 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:30:08.251 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:30:09.577 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:30:09.609 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:30:09.656 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:30:09.777 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:30:10.178 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:30:10.826 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.884 seconds (JVM running for 3.188)
+13-11-2020 10:30:16.682 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:30:17.584 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:30:18.178 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:30:27.479 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:31:10.609 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 9836 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:31:10.609 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:31:12.350 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:31:12.365 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:31:12.428 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:31:12.550 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:31:12.951 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:31:13.599 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.301 seconds (JVM running for 3.654)
+13-11-2020 10:31:16.003 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:31:17.176 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:31:17.794 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:31:21.462 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for yearOld on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:31:52.872 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 13236 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:31:52.888 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:31:54.190 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:31:54.212 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:31:54.275 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:31:54.392 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:31:54.806 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:31:55.461 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.909 seconds (JVM running for 3.22)
+13-11-2020 10:31:58.505 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for birth_date on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:31:59.951 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for birth_date on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:32:23.740 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 15500 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:32:23.740 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:32:25.228 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:32:25.260 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:32:25.313 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:32:25.413 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:32:26.062 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:32:26.679 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.245 seconds (JVM running for 3.553)
+13-11-2020 10:32:38.113 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for birth_date on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:32:39.328 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for birth_date on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:32:40.005 ERROR c.e.v.r.EmployeeCustomizeRepository.findPatientSensor - javax.persistence.PersistenceException: org.hibernate.PropertyNotFoundException: Could not resolve PropertyAccess for birth_date on class com.elcom.vitalsign.model.dto.AccountPatientSenSorDTO
+13-11-2020 10:33:01.699 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 11968 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:33:01.699 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:33:03.402 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:33:03.418 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:33:03.471 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:33:03.587 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:33:03.973 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:33:04.623 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.216 seconds (JVM running for 3.594)
+13-11-2020 10:33:36.357 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 9436 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:33:36.357 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:33:37.623 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:33:37.660 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:33:37.760 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:33:37.876 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:33:38.292 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:33:38.940 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.883 seconds (JVM running for 3.193)
+13-11-2020 10:34:51.432 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarting - Starting VitalsignProjectServicesApplicationTests on MSI with PID 12364 (started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:34:51.432 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:34:52.974 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:34:53.038 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:34:53.174 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:34:53.421 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:34:54.039 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:34:55.933 INFO  c.e.v.VitalsignProjectServicesApplicationTests.logStarted - Started VitalsignProjectServicesApplicationTests in 4.798 seconds (JVM running for 5.753)
+13-11-2020 10:35:04.191 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 6420 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:35:04.193 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:35:05.410 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:35:05.436 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:35:05.544 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:35:05.596 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:35:05.997 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:35:06.715 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.847 seconds (JVM running for 3.171)
+13-11-2020 10:35:06.715 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+13-11-2020 10:35:06.868 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:06.885 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:06.901 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:06.932 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:06.948 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:06.968 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:06.984 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:07.000 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:07.000 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_4eb2459ae05f004c
+13-11-2020 10:35:07.000 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.000 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.015 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004c] subscribe topic [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004c] SUCCESS!
+13-11-2020 10:35:07.031 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c
+13-11-2020 10:35:07.031 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004c
+13-11-2020 10:35:07.031 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.031 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c","measure_id": "asacdasdas","ts":1605237824,"spo2":255,"pi":0,"pr":65535,"step":0}
+13-11-2020 10:35:07.031 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.048 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.068 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.068 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.084 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.100 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.131 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.162 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_SPO2_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.168 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_TEMP_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.184 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004f] subscribe topic [RES_TRANSMIT_DATA_NIBP_4eb2459ae05f004f] SUCCESS!
+13-11-2020 10:35:07.215 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.231 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.247 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] subscribe topic [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.262 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.269 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.301 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.317 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_SPO2_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.332 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_TEMP_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.348 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_ELC-DL-001-00000000649au198] subscribe topic [RES_TRANSMIT_DATA_NIBP_ELC-DL-001-00000000649au198] SUCCESS!
+13-11-2020 10:35:07.364 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] subscribe topic [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.381 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.399 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_25f97b784dc3780a] subscribe topic [GET_PATIENT_LIST_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.420 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.440 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.460 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.472 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_SPO2_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_SPO2_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.493 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_TEMP_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_TEMP_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.503 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_25f97b784dc3780a
+13-11-2020 10:35:07.503 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.503 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.503 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_TRANSMIT_DATA_NIBP_25f97b784dc3780a] subscribe topic [RES_TRANSMIT_DATA_NIBP_25f97b784dc3780a] SUCCESS!
+13-11-2020 10:35:07.503 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+13-11-2020 10:35:07.523 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a
+13-11-2020 10:35:07.523 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.541 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af264] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af264] SUCCESS!
+13-11-2020 10:35:07.557 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] SUCCESS!
+13-11-2020 10:35:07.557 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33c", "result_code":0}
+13-11-2020 10:35:07.573 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] SUCCESS!
+13-11-2020 10:35:07.604 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] SUCCESS!
+13-11-2020 10:35:07.604 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [subscribersByGate topic ]
+13-11-2020 10:35:07.642 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [GATE/SERVER/ADD_SENSOR_REQ/#] subscribe topic [GATE/SERVER/ADD_SENSOR_REQ/#] SUCCESS!
+13-11-2020 10:35:07.642 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [subscribersByDisplay topic ]
+13-11-2020 10:35:07.669 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/SEARCH_GATE_REQ/#] subscribe topic [DISPLAY/SERVER/SEARCH_GATE_REQ/#] SUCCESS!
+13-11-2020 10:35:07.685 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] subscribe topic [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] SUCCESS!
+13-11-2020 10:38:11.402 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 10644 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:38:11.402 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:38:12.605 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:38:12.621 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:38:12.674 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:38:12.789 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:38:13.190 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:38:13.823 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.736 seconds (JVM running for 3.051)
+13-11-2020 10:38:29.003 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 10:38:29.082 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 10:38:30.983 ERROR c.e.v.r.AccountCustomizeRepository.findByUsername - javax.persistence.NoResultException: No entity found for query
+13-11-2020 10:38:31.055 ERROR c.e.v.controller.AuthController.authenticateUser - org.springframework.security.authentication.BadCredentialsException: Bad credentials
+13-11-2020 10:51:19.199 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 7388 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 10:51:19.214 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 10:51:20.463 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 10:51:20.486 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 10:51:20.548 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 10:51:20.648 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 10:51:21.108 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 10:51:21.805 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 2.907 seconds (JVM running for 3.302)
+13-11-2020 13:44:29.724 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 5492 (E:\6.Project_elcom\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\ProjectVitalSign)
+13-11-2020 13:44:29.724 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+13-11-2020 13:44:31.088 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+13-11-2020 13:44:31.134 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+13-11-2020 13:44:31.258 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13-11-2020 13:44:31.372 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+13-11-2020 13:44:31.849 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13-11-2020 13:44:32.569 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 3.216 seconds (JVM running for 3.53)
+13-11-2020 13:45:36.598 ERROR c.e.v.auth.jwt.JwtTokenProvider.validateToken - Invalid JWT token
+13-11-2020 13:45:37.359 ERROR c.e.v.auth.jwt.JwtTokenProvider.validateToken - Invalid JWT token
+13-11-2020 13:45:37.978 ERROR c.e.v.auth.jwt.JwtTokenProvider.validateToken - Invalid JWT token
+13-11-2020 13:45:45.860 ERROR c.e.v.auth.jwt.JwtTokenProvider.validateToken - Invalid JWT token
