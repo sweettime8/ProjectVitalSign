@@ -76,7 +76,7 @@ public class EmployeeCustomizeRepository {
         try {
             String sql = "select d.serial_number as displayId, g.serial_number as gateId, p.patient_code as patientCode,p.full_name as fullName\n"
                     + ",ROUND(DATEDIFF(CURDATE(), p.birth_date)/ 365, 0) as birthDate, p.gender as genDer\n"
-                    + ", GROUP_CONCAT(s.mac SEPARATOR '###') as lstSensor\n"
+                    + ", GROUP_CONCAT(CONCAT(s.mac,'_', s.sensor_type) SEPARATOR '###') as lstSensor\n"
                     + "from patient p inner join employee_patient ep on p.id = ep.patient_id\n"
                     + "inner join sensor s on p.id = s.patient_id\n"
                     + "inner join gate g on g.serial_number = s.gate_id\n"

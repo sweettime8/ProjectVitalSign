@@ -5,6 +5,7 @@
  */
 package com.elcom.vitalsign.process;
 
+import com.elcom.vitalsign.constant.Constant;
 import com.elcom.vitalsign.model.Display;
 import com.elcom.vitalsign.model.Gate;
 import com.elcom.vitalsign.model.Patient;
@@ -86,7 +87,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstDspTurnOn = new ArrayList<>();
                     sharedQueueDspTurnOn.drainTo(lstDspTurnOn);
                     for (Object s : lstDspTurnOn) {
-                        LOGGER.info("Consummer - [DISPLAY_REQ_GATE_SENSOR] : " + s.toString());
+                        LOGGER.info("Consummer - [DISPLAY/REQ/GATE/SENSOR] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             //display_id của display bắn lên tương ứng serial_number trong database
@@ -107,7 +108,7 @@ public class MqttConsumerInitApp implements Runnable {
                             gateSensor.setStatus(gate.getStatus() == 1 ? "active" : "inactive");
                             gateSensor.setSensorLst(lstSensor);
 
-                            String topic = "SERVER_RES_GATE_SENSOR_" + jSONObject.getString("display_id");
+                            String topic = Constant.SERVER_RES_GATE_SENSOR + "/" + jSONObject.getString("display_id");
 
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherDisplayTurnOn(topic, gateSensor);
@@ -123,14 +124,14 @@ public class MqttConsumerInitApp implements Runnable {
                     sharedQueueGetPatient.drainTo(lstPatients);
                     for (Object s : lstPatients) {
                         try {
-                            LOGGER.info("Consummer - [GET_PATIENT_LIST] : " + s.toString());
+                            LOGGER.info("Consummer - [GET/PATIENT/LIST] : " + s.toString());
                             JSONObject jSONObject = new JSONObject(s.toString());
 
                             //display_id của display bắn lên tương ứng serial_number trong database
                             Display display = this.dataService.findDisplayBySerialNumber(jSONObject.getString("display_id"));
                             String gateId = display.getGateId();
 
-                            List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(gateId);
+                            List<Sensor> lstSensor = this.dataService.findAllPatientOfGateId(gateId);
 
                             List<Patient> lstPatient = new ArrayList<>();
                             for (Sensor sen : lstSensor) {
@@ -141,7 +142,7 @@ public class MqttConsumerInitApp implements Runnable {
                                     LOGGER.error(e.toString());
                                 }
                             }
-                            String topic = "RES_PATIENT_LIST_" + jSONObject.getString("display_id");
+                            String topic = Constant.RES_PATIENT_LIST + "/" + jSONObject.getString("display_id");
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherListPatient(topic, lstPatient);
 
@@ -157,7 +158,7 @@ public class MqttConsumerInitApp implements Runnable {
                     sharedQueueDspUnLnkGate.drainTo(lstDspUnLnkGate);
                     for (Object s : lstDspUnLnkGate) {
                         try {
-                            LOGGER.info("Case = [DISPLAY_UNLINK_GATE_REQ] : " + s.toString());
+                            LOGGER.info("Case = [DISPLAY/UNLINK/GATE/REQ] : " + s.toString());
                             JSONObject jSONObject = new JSONObject(s.toString());
 
                             Map<String, String> map = new LinkedHashMap<String, String>();
@@ -180,7 +181,7 @@ public class MqttConsumerInitApp implements Runnable {
                             } else {
                                 map.put("result", "FAILED");
                             }
-                            String topic = "DISPLAY_UNLINK_GATE_RES_" + jSONObject.getString("display_id");
+                            String topic = Constant.DISPLAY_UNLINK_GATE_RES + "/" + jSONObject.getString("display_id");
 
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherDisplayUnLinkGate(topic, map);
@@ -188,7 +189,6 @@ public class MqttConsumerInitApp implements Runnable {
                         } catch (JsonProcessingException | MqttException | JSONException e) {
                             LOGGER.error(e.toString());
                         }
-
                     }
                 }
 
@@ -198,7 +198,7 @@ public class MqttConsumerInitApp implements Runnable {
                     sharedQueueDspLnkGate.drainTo(lstDspLnkGate);
                     for (Object s : lstDspLnkGate) {
                         try {
-                            LOGGER.info("Consummer - [DISPLAY_LINK_GATE_REQ] : " + s.toString());
+                            LOGGER.info("Consummer - [DISPLAY/LINK/GATE/REQ] : " + s.toString());
                             JSONObject jSONObject = new JSONObject(s.toString());
 
                             Map<String, String> map = new LinkedHashMap<>();
@@ -210,19 +210,20 @@ public class MqttConsumerInitApp implements Runnable {
 
                             if (display != null) {
                                 //gate_id display gui len  = serialNumber gate trong DB
-
                                 if (jSONObject.getString("gate_id").equals(display.getGateId())) {
                                     map.put("result", "LINKED");
                                 } else if (display.getGateId().equals("0")) {
                                     display.setGateId(jSONObject.getString("gate_id"));
                                     this.dataService.addLinkGate(display);
                                     map.put("result", "OK");
+                                }else{
+                                    map.put("result", "FAILED");
                                 }
                             } else {
                                 map.put("result", "FAILED");
                             }
 
-                            String topic = "DISPLAY_LINK_GATE_RES_" + jSONObject.getString("display_id");
+                            String topic = Constant.DISPLAY_LINK_GATE_RES + "/" + jSONObject.getString("display_id");
 
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherDisplayAddLinkGate(topic, map);
@@ -239,7 +240,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstGateTurnOn = new ArrayList<>();
                     sharedQueueGateTurnOn.drainTo(lstGateTurnOn);
                     for (Object s : lstGateTurnOn) {
-                        LOGGER.info("Consummer - [GATE_REQ_DISPLAY_SENSOR] : " + s.toString());
+                        LOGGER.info("Consummer - [GATE/REQ/DISPLAY/SENSOR] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             List<Sensor> lstSensor = this.dataService.findAllSensorByGateId(jSONObject.getString("gate_id"));
@@ -250,7 +251,7 @@ public class MqttConsumerInitApp implements Runnable {
                             displayWithSensor.setDisplayId(display.getSerial_number()); // serial number tra ve cho display
                             displayWithSensor.setSensorLst(lstSensor);
 
-                            String topic = "SERVER_RES_SENSOR_LIST_" + jSONObject.getString("gate_id");
+                            String topic = Constant.SERVER_RES_SENSOR_LIST + "/" + jSONObject.getString("gate_id");
 
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherGateTurnOn(topic, displayWithSensor);
@@ -264,7 +265,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstDspSearchGate = new ArrayList();
                     sharedQueueDspSearchGate.drainTo(lstDspSearchGate);
                     for (Object s : lstDspSearchGate) {
-                        LOGGER.info("Consummer - [DISPLAY_SERVER_SEARCH_GATE_REQ] : " + s.toString());
+                        LOGGER.info("Consummer - [DISPLAY/SERVER/SEARCH/GATE/REQ] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String displaySerial = jSONObject.getString("display_id");
@@ -275,7 +276,7 @@ public class MqttConsumerInitApp implements Runnable {
                                 LOGGER.info("GATE not found");
                                 break;
                             } else {
-                                String topic = "SERVER/DISPLAY/SEARCH_GATE_RES/" + jSONObject.getString("display_id");
+                                String topic = Constant.SERVER_DISPLAY_SEARCH_GATE_RES + "/" + jSONObject.getString("display_id");
                                 MqttPulisherRes mqtt = new MqttPulisherRes();
                                 mqtt.publisherToDisplaySearchGateRes(topic, gate);
                             }
@@ -290,7 +291,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstDspGetGateSensor = new ArrayList<>();
                     sharedQueueDspGetGateSensor.drainTo(lstDspGetGateSensor);
                     for (Object s : lstDspGetGateSensor) {
-                        LOGGER.info("Consummer - [DISPLAY_SERVER_GET_GATE_SENSOR_LINKED_REQ] : " + s.toString());
+                        LOGGER.info("Consummer - [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String displaySerial = jSONObject.getString("display_id");
@@ -314,7 +315,7 @@ public class MqttConsumerInitApp implements Runnable {
                             gateLinkedWithSenSor.setLastUpdatedAt(gate.getLastUpdatedAt());
                             gateLinkedWithSenSor.setSensorLst(lstSensor);
 
-                            String topic = "SERVER/DISPLAY/GET_GATE_SENSOR_LINKED_RES/" + displaySerial;
+                            String topic = Constant.SERVER_DISPLAY_GET_GATE_SENSOR_LINKED_RES + "/" + displaySerial;
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherToDisplayGateSensorLinked(topic, gateLinkedWithSenSor);
 
@@ -329,7 +330,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstDspAddSensor = new ArrayList<>();
                     sharedQueueDspAddSensor.drainTo(lstDspAddSensor);
                     for (Object s : lstDspAddSensor) {
-                        LOGGER.info("Consummer - [DISPLAY_REQ_SERVER_ADD_SENSOR] : " + s.toString());
+                        LOGGER.info("Consummer - [GATE/SERVER/ADD_SENSOR_REQ] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
 
@@ -356,7 +357,7 @@ public class MqttConsumerInitApp implements Runnable {
                             map.put("status", status);
                             map.put("message", message);
 
-                            String topic = "SERVER/DISPLAY/ADD_SENSOR_GATE_RES/" + jSONObject.getString("display_id");
+                            String topic = Constant.SERVER_DISPLAY_ADD_SENSOR_GATE_RES + "/" + jSONObject.getString("display_id");
                             MqttPulisherRes mqtt = new MqttPulisherRes();
                             mqtt.publisherToDisplayAddSensor(topic, map);
 
@@ -370,7 +371,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstDspDisConnSen = new ArrayList<>();
                     sharedQueueDspDisConnSen.drainTo(lstDspDisConnSen);
                     for (Object s : lstDspDisConnSen) {
-                        LOGGER.info("Consummer - [RES_DISCONNECT_TO_SENSOR] : " + s.toString());
+                        LOGGER.info("Consummer - [RES/DISCONNECT/TO/SENSOR] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String sensorMac = jSONObject.getString("sensor_id");
@@ -379,7 +380,7 @@ public class MqttConsumerInitApp implements Runnable {
                             Sensor sensor = this.dataService.findSensorByMac(sensorMac);//sensorMac = sensorID display send
 
                             if (sensor != null) {
-                                if (sensor.getGateId().equals(gateId) && resultCode == 0) {
+                                if (sensor.getGateId().equals(gateId) && resultCode == 1) {
                                     sensor.setStatus(0);
                                     this.dataService.updateStatusSensor(sensor);
                                 }
@@ -396,7 +397,7 @@ public class MqttConsumerInitApp implements Runnable {
                     lstDspConnSen = new ArrayList<>();
                     sharedQueueDspConnSen.drainTo(lstDspConnSen);
                     for (Object s : lstDspConnSen) {
-                        LOGGER.info("Consummer - [RES_CONNECT_TO_SENSOR] : " + s.toString());
+                        LOGGER.info("Consummer - [RES/CONNECT/TO/SENSOR] : " + s.toString());
                         try {
                             JSONObject jSONObject = new JSONObject(s.toString());
                             String sensorId = jSONObject.getString("sensor_id");
@@ -405,7 +406,7 @@ public class MqttConsumerInitApp implements Runnable {
 
                             Sensor sensor = this.dataService.findSensorByMac(sensorId); //sensorMac = sensorID display send
                             if (sensor != null) {
-                                if (sensor.getGateId().equals(gateId) && resultCode == 0) {
+                                if (sensor.getGateId().equals(gateId) && resultCode == 1) {
                                     sensor.setStatus(1);
                                     this.dataService.updateStatusSensor(sensor);
                                 }

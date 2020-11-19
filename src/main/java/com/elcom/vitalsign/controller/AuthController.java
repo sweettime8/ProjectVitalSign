@@ -15,8 +15,6 @@ import com.elcom.vitalsign.message.MessageContent;
 import com.elcom.vitalsign.model.Account;
 import com.elcom.vitalsign.repository.AccountRepository;
 import com.elcom.vitalsign.validation.UserValidation;
-import java.util.HashSet;
-import java.util.Set;
 import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -93,7 +91,6 @@ public class AuthController {
         account.setUsername(signUpRequest.getUsername());
         account.setPassword(encoder.encode(signUpRequest.getPassword()));
         account.setEmail(signUpRequest.getEmail());
-
 
         accountRepository.save(account);
 

@@ -19,47 +19,47 @@ public class Constant {
     public static final int MQTT_QOS = 1;
 
     //display turn On
-    public static final String SERVER_RES_GATE_SENSOR = "SERVER_RES_GATE_SENSOR"; // Pub
-    public static final String DISPLAY_REQ_GATE_SENSOR = "DISPLAY_REQ_GATE_SENSOR"; // Sub
+    public static final String SERVER_RES_GATE_SENSOR = "SERVER/RES/GATE/SENSOR"; // Pub
+    public static final String DISPLAY_REQ_GATE_SENSOR = "DISPLAY/REQ/GATE/SENSOR"; // Sub
 
     //display unlink
     public static final String DISPLAY_UNLINK_GATE_RES = "DISPLAY_UNLINK_GATE_RES"; // Pub
-    public static final String DISPLAY_UNLINK_GATE_REQ = "DISPLAY_UNLINK_GATE_REQ"; // Sub
+    public static final String DISPLAY_UNLINK_GATE_REQ = "DISPLAY/UNLINK/GATE/REQ"; // Sub
 
     //display add gate
-    public static final String DISPLAY_LINK_GATE_RES = "DISPLAY_LINK_GATE_RES"; // Pub
-    public static final String DISPLAY_LINK_GATE_REQ = "DISPLAY_LINK_GATE_REQ"; // Sub
+    public static final String DISPLAY_LINK_GATE_RES = "DISPLAY/LINK/GATE/RES"; // Pub
+    public static final String DISPLAY_LINK_GATE_REQ = "DISPLAY/LINK/GATE/REQ"; // Sub
 
     //display get patient List
-    public static final String RES_PATIENT_LIST = "RES_PATIENT_LIST"; // Pub
-    public static final String GET_PATIENT_LIST = "GET_PATIENT_LIST"; // Sub
+    public static final String RES_PATIENT_LIST = "RES/PATIENT/LIST"; // Pub
+    public static final String GET_PATIENT_LIST = "GET/PATIENT/LIST"; // Sub
 
     //title turn on gate
-    public static final String SERVER_RES_SENSOR_LIST = "SERVER_RES_SENSOR_LIST"; // Pub
-    public static final String GATE_REQ_DISPLAY_SENSOR = "GATE_REQ_DISPLAY_SENSOR"; // Sub
+    public static final String SERVER_RES_SENSOR_LIST = "SERVER/RES/SENSOR/LIST"; // Pub
+    public static final String GATE_REQ_DISPLAY_SENSOR = "GATE/REQ/DISPLAY/SENSOR"; // Sub
 
     //title Add sensor         
-    public static final String SERVER_DISPLAY_ADD_SENSOR_GATE_RES = "SERVER/DISPLAY/ADD_SENSOR_GATE_RES/"; // Pub
+    public static final String SERVER_DISPLAY_ADD_SENSOR_GATE_RES = "SERVER/DISPLAY/ADD_SENSOR_GATE_RES"; // Pub
     public static final String GATE_SERVER_ADD_SENSOR_REQ = "GATE/SERVER/ADD_SENSOR_REQ"; // Sub
 
     //title Dispplay search sensor   
-    public static final String SERVER_DISPLAY_SEARCH_GATE_RES = "SERVER/DISPLAY/SEARCH_GATE_RES/"; // Pub
+    public static final String SERVER_DISPLAY_SEARCH_GATE_RES = "SERVER/DISPLAY/SEARCH_GATE_RES"; // Pub
     public static final String DISPLAY_SERVER_SEARCH_GATE_REQ = "DISPLAY/SERVER/SEARCH_GATE_REQ"; // Sub
 
-    //title Dispplay search sensor   
-    public static final String SERVER_DISPLAY_GET_GATE_SENSOR_LINKED_RES = "SERVER/DISPLAY/GET_GATE_SENSOR_LINKED_RES/"; // Pub
+    //title Dispplay get gate  sensor Linked  
+    public static final String SERVER_DISPLAY_GET_GATE_SENSOR_LINKED_RES = "SERVER/DISPLAY/GET_GATE_SENSOR_LINKED_RES"; // Pub
     public static final String DISPLAY_SERVER_GET_GATE_SENSOR_LINKED_REQ = "DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ"; // Sub
 
     //title Connect Sensor
-    public static final String RES_CONNECT_TO_SENSOR = "RES_CONNECT_TO_SENSOR"; // Sub
+    public static final String RES_CONNECT_TO_SENSOR = "RES/CONNECT/TO/SENSOR"; // Sub
 
     //title DIS Connect Sensor
-    public static final String RES_DISCONNECT_TO_SENSOR = "RES_DISCONNECT_TO_SENSOR"; // Sub
+    public static final String RES_DISCONNECT_TO_SENSOR = "RES/DISCONNECT/TO/SENSOR"; // Sub
 
     //sync data
-    public static final String RES_TRANSMIT_DATA_SPO2 = "RES_TRANSMIT_DATA_SPO2";
-    public static final String RES_TRANSMIT_DATA_TEMP = "RES_TRANSMIT_DATA_TEMP";
-    public static final String RES_TRANSMIT_DATA_NIBP = "RES_TRANSMIT_DATA_NIBP";
+    public static final String RES_TRANSMIT_DATA_SPO2 = "RES/TRANSMIT/DATA/SPO2";
+    public static final String RES_TRANSMIT_DATA_TEMP = "RES/TRANSMIT/DATA/TEMP";
+    public static final String RES_TRANSMIT_DATA_NIBP = "RES/TRANSMIT/DATA/NIBP";
 
     //=================================================================================
     public static final String MQTT_TOPIC_DATA_ECG = "VITALSIGN-TOPIC-DATA-ECG";

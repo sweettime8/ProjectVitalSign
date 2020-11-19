@@ -1,0 +1,59 @@
+17-11-2020 11:01:04.061 INFO  c.e.v.VitalsignProjectServicesApplication.logStarting - Starting VitalsignProjectServicesApplication on MSI with PID 10936 (E:\6.Project_elcom\VitalSign\ProjectVitalSign\target\classes started by admin in E:\6.Project_elcom\VitalSign\ProjectVitalSign)
+17-11-2020 11:01:04.071 INFO  c.e.v.VitalsignProjectServicesApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+17-11-2020 11:01:06.074 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+17-11-2020 11:01:06.105 INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+17-11-2020 11:01:06.318 INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+17-11-2020 11:01:06.381 INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+17-11-2020 11:01:07.115 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17-11-2020 11:01:08.203 INFO  c.e.v.VitalsignProjectServicesApplication.logStarted - Started VitalsignProjectServicesApplication in 4.6 seconds (JVM running for 5.222)
+17-11-2020 11:01:08.206 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [ subscribersByDisplay topic ]
+17-11-2020 11:01:09.981 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004c] SUCCESS!
+17-11-2020 11:01:10.456 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+17-11-2020 11:01:10.966 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004c] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004c] SUCCESS!
+17-11-2020 11:01:11.324 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004c] SUCCESS!
+17-11-2020 11:01:11.728 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+17-11-2020 11:01:11.785 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_4eb2459ae05f004c
+17-11-2020 11:01:11.785 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33f", "result_code":0}
+17-11-2020 11:01:11.786 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33f", "result_code":0}
+17-11-2020 11:01:12.104 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c] SUCCESS!
+17-11-2020 11:01:12.133 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] subscribe topic [DISPLAY_REQ_GATE_SENSOR_4eb2459ae05f004f] SUCCESS!
+17-11-2020 11:01:12.157 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004c
+17-11-2020 11:01:12.157 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g", "result_code":0}
+17-11-2020 11:01:12.158 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-00000000649af264","display_id": "4eb2459ae05f004c","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33g", "result_code":0}
+17-11-2020 11:01:12.163 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_UNLINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+17-11-2020 11:01:12.201 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_4eb2459ae05f004f] subscribe topic [GET_PATIENT_LIST_4eb2459ae05f004f] SUCCESS!
+17-11-2020 11:01:12.233 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] subscribe topic [DISPLAY_LINK_GATE_REQ_4eb2459ae05f004f] SUCCESS!
+17-11-2020 11:01:12.283 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_CONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+17-11-2020 11:01:12.307 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] subscribe topic [RES_DISCONNECT_TO_SENSOR_4eb2459ae05f004f] SUCCESS!
+17-11-2020 11:01:12.346 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_REQ_GATE_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+17-11-2020 11:01:12.376 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_UNLINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+17-11-2020 11:01:12.409 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] subscribe topic [GET_PATIENT_LIST_ELC-DL-001-00000000649au198] SUCCESS!
+17-11-2020 11:01:12.457 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] subscribe topic [DISPLAY_LINK_GATE_REQ_ELC-DL-001-00000000649au198] SUCCESS!
+17-11-2020 11:01:12.519 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_CONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+17-11-2020 11:01:12.549 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] subscribe topic [RES_DISCONNECT_TO_SENSOR_ELC-DL-001-00000000649au198] SUCCESS!
+17-11-2020 11:01:12.608 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] subscribe topic [DISPLAY_REQ_GATE_SENSOR_25f97b784dc3780a] SUCCESS!
+17-11-2020 11:01:12.646 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_UNLINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+17-11-2020 11:01:12.700 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [GET_PATIENT_LIST_25f97b784dc3780a] subscribe topic [GET_PATIENT_LIST_25f97b784dc3780a] SUCCESS!
+17-11-2020 11:01:12.736 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] subscribe topic [DISPLAY_LINK_GATE_REQ_25f97b784dc3780a] SUCCESS!
+17-11-2020 11:01:12.772 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_CONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+17-11-2020 11:01:12.802 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByDisplay - [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] subscribe topic [RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a] SUCCESS!
+17-11-2020 11:01:12.802 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [subscribersByGate topic ]
+17-11-2020 11:01:12.823 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_CONNECT_TO_SENSOR_25f97b784dc3780a
+17-11-2020 11:01:12.823 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-000000006bcbd964","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33b", "result_code":0}
+17-11-2020 11:01:12.824 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_CONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-000000006bcbd964","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33b", "result_code":0}
+17-11-2020 11:01:12.843 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-000000006bcbd964] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-000000006bcbd964] SUCCESS!
+17-11-2020 11:01:12.848 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - [messageArrived topic]: RES_DISCONNECT_TO_SENSOR_25f97b784dc3780a
+17-11-2020 11:01:12.848 INFO  c.e.v.mqtt.MqttSubscriberInitApp.messageArrived - Message received:
+	{"gate_id": "ELCGW-001-000000006bcbd964","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33f", "result_code":0}
+17-11-2020 11:01:12.870 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af265] SUCCESS!
+17-11-2020 11:01:12.894 INFO  c.e.v.process.MqttConsumerInitApp.run - Consummer - [RES_DISCONNECT_TO_SENSOR] : {"gate_id": "ELCGW-001-000000006bcbd964","display_id": "25f97b784dc3780a","sensor_id": "bcbf91bd-c648-46fd-8bac-a0ee0b71d33f", "result_code":0}
+17-11-2020 11:01:12.897 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af266] SUCCESS!
+17-11-2020 11:01:12.917 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersByGate - [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] subscribe topic [GATE_REQ_DISPLAY_SENSOR_ELCGW-001-00000000649af267] SUCCESS!
+17-11-2020 11:01:12.922 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [subscribersByGate topic ]
+17-11-2020 11:01:12.979 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersGateDemo - [GATE/SERVER/ADD_SENSOR_REQ/#] subscribe topic [GATE/SERVER/ADD_SENSOR_REQ/#] SUCCESS!
+17-11-2020 11:01:12.980 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [subscribersByDisplay topic ]
+17-11-2020 11:01:13.009 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/SEARCH_GATE_REQ/#] subscribe topic [DISPLAY/SERVER/SEARCH_GATE_REQ/#] SUCCESS!
+17-11-2020 11:01:13.034 INFO  c.e.v.mqtt.MqttSubscriberInitApp.subscribersDisplayDemo - [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] subscribe topic [DISPLAY/SERVER/GET_GATE_SENSOR_LINKED_REQ/#] SUCCESS!

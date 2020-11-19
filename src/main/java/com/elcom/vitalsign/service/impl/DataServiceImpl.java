@@ -197,6 +197,11 @@ public class DataServiceImpl implements DataService {
     }
 
     @Override
+    public List<Sensor> findAllPatientOfGateId(String gateId) {
+        return sensorCustomizeRepository.findPatientByGateId(gateId);
+    }
+
+    @Override
     public Gate findGateById(String id) {
         return gateCustomizeRepository.findByUuid(id);
     }
@@ -231,7 +236,8 @@ public class DataServiceImpl implements DataService {
     public Sensor findSensorById(String sensorId) {
         return sensorCustomizeRepository.findByUuid(sensorId); //To change body of generated methods, choose Tools | Templates.
     }
-        @Override
+
+    @Override
     public Sensor findSensorByMac(String sensorMac) {
         return sensorCustomizeRepository.findByMac(sensorMac); //To change body of generated methods, choose Tools | Templates.
     }

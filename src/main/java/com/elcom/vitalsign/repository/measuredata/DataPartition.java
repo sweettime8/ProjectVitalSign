@@ -63,7 +63,7 @@ public class DataPartition {
                 query.setParameter(1, partitionValue);
                 query.executeUpdate();
 
-                strSql = " DELETE FROM " + table + " WHERE measure_at < NOW() - INTERVAL ? DAY ";
+                strSql = " DELETE FROM " + table + " WHERE created_at < NOW() - INTERVAL ? DAY ";
                 query = session.createNativeQuery(strSql);
                 query.setParameter(1, Constant.DELETE_DATA_AFTER_DAY);
                 query.executeUpdate();

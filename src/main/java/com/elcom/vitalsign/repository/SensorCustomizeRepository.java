@@ -115,6 +115,23 @@ public class SensorCustomizeRepository {
         return null;
     }
 
+    public List<Sensor> findPatientByGateId(String gateId) {
+        Session session = openSession();
+        List<Sensor> lstSensor = null;
+        try {
+            Query query = session.createNativeQuery("SELECT * FROM sensor WHERE gate_Id = ? GROUP by patient_id", Sensor.class);
+            query.setParameter(1, gateId);
+            lstSensor = query.getResultList();
+            return lstSensor;
+        } catch (NoResultException ex) {
+            LOGGER.error(ex.toString());
+        } finally {
+            closeSession(session);
+        }
+
+        return null;
+    }
+
     public List<Sensor> findAllSensorByGateId(String gateId) {
         Session session = openSession();
         List<Sensor> lstSensor = null;

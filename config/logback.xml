@@ -3,9 +3,9 @@
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
     <appender name="ROLLIN" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>nohup.out</file>
+        <file>daily-logs/vitalsign-project-service.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-
+            <maxHistory>10</maxHistory>
             <!-- daily rollover -->
             <fileNamePattern>daily-logs/vitalsign-project-service-%d{yyyy-MM-dd}.log</fileNamePattern>
 

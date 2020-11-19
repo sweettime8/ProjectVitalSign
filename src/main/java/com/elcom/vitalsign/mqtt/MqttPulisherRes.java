@@ -37,7 +37,7 @@ public class MqttPulisherRes {
 
     public MqttPulisherRes() throws MqttException {
         if (client == null) {
-            client = new MqttClient(MQTT_BROKER, String.valueOf(System.nanoTime()));
+            client = new MqttClient(MQTT_BROKER, MqttClient.generateClientId(), new MemoryPersistence());
             client.connect();
         }
         if (message == null) {
@@ -46,35 +46,40 @@ public class MqttPulisherRes {
     }
 
     public void publisherDisplayTurnOn(String topic, GateWithSensorDisplay gds) throws MqttException {
-
-        String data = JSONConverter.toJSON(gds);
-        message.setPayload(data.getBytes());
-        client.publish(topic, message);
-
-        LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
+        try {
+            String data = JSONConverter.toJSON(gds);
+            message.setPayload(data.getBytes());
+            client.publish(topic, message);
+            LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
+        }
 
     }
 
     public void publisherListPatient(String topic, List<Patient> lstPatient) throws MqttException {
-        String data = JSONConverter.toJSON(lstPatient);
-        message.setPayload(data.getBytes());
-        client.publish(topic, message);
+        try {
 
-        LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
+            String data = JSONConverter.toJSON(lstPatient);
+            message.setPayload(data.getBytes());
+            client.publish(topic, message);
+
+            LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
+        }
     }
 
     public void publisherDisplayUnLinkGate(String topic, Map<String, String> mapdata) throws MqttException, JsonProcessingException {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
         try {
+            ObjectMapper objectMapper = new ObjectMapper();
             String data = objectMapper.writeValueAsString(mapdata);
             message.setPayload(data.getBytes());
             client.publish(topic, message);
 
             LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
         }
     }
 
@@ -86,24 +91,32 @@ public class MqttPulisherRes {
             client.publish(topic, message);
 
             LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
         }
     }
 
     public void publisherGateTurnOn(String topic, DisplayWithSensor ds) throws MqttException {
-        String data = JSONConverter.toJSON(ds);
-        message.setPayload(data.getBytes());
-        client.publish(topic, message);
-        LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
+        try {
+            String data = JSONConverter.toJSON(ds);
+            message.setPayload(data.getBytes());
+            client.publish(topic, message);
+            LOGGER.info("Send Message to Gate ToPic  : " + topic + " \n" + data);
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
+        }
 
     }
 
     public void publisherToDisplayGateSensorLinked(String topic, GateLinkedWithSenSor gateLinkedWithSenSor) throws MqttException {
-        String data = JSONConverter.toJSON(gateLinkedWithSenSor);
-        message.setPayload(data.getBytes());
-        client.publish(topic, message);
-        LOGGER.info("Send Message to Display ToPic  : " + topic + " \n" + data);
+        try {
+            String data = JSONConverter.toJSON(gateLinkedWithSenSor);
+            message.setPayload(data.getBytes());
+            client.publish(topic, message);
+            LOGGER.info("Send Message to Display ToPic  : " + topic + " \n" + data);
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
+        }
 
     }
 
@@ -119,7 +132,6 @@ public class MqttPulisherRes {
         }
     }
 
-
     public void publisherToDisplayAddSensor(String topic, Map<String, Object> mapdata) throws MqttException, JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -128,8 +140,8 @@ public class MqttPulisherRes {
             client.publish(topic, message);
 
             LOGGER.info("Send Message to Display ToPic  : " + topic + " \n" + data);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.error(e.toString());
         }
     }
 

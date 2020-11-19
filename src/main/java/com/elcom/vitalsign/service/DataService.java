@@ -42,6 +42,7 @@ public interface DataService {
     Gate findGateBySerialNumber(String id);
     
     List<Sensor> findAllSensorByGateId(String gateId);
+    List<Sensor> findAllPatientOfGateId(String gateId);
     
     Patient findPatientById(String id);
     

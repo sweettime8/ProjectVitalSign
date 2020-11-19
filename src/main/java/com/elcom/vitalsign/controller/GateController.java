@@ -57,11 +57,17 @@ public class GateController {
     }
 
     @RequestMapping(value = "/api/account/{id}", method = RequestMethod.GET)
-    public ResponseEntity<List<AccountPatientSenSorDTO>> findById(@PathVariable String id) {
-        id = "47f28f75-9f8a-47fb-b858-f9d64c466f2b";
+    public ResponseEntity<String> findById(@PathVariable String id) throws JsonProcessingException {
+        //id = "47f28f75-9f8a-47fb-b858-f9d64c466f2b";
         List<AccountPatientSenSorDTO> lstAccountPatientSenSorDTO = employeeCustomizeRepository.findPatientSensor(id);
-        
-        return new ResponseEntity<>(lstAccountPatientSenSorDTO, HttpStatus.OK);
+
+        MessageContent mc = new MessageContent(HttpStatus.OK.value(), HttpStatus.OK.toString(), lstAccountPatientSenSorDTO);
+        ResponseMessage responseMessage = new ResponseMessage(HttpStatus.OK.value(), HttpStatus.OK.toString(), mc);
+        String result = responseMessage.toJsonString();
+
+        ObjectMapper mapper = new ObjectMapper();
+        ResponseMessage response = mapper.readValue(result, ResponseMessage.class);
+        return new ResponseEntity(response.getData(), HttpStatus.valueOf(response.getStatus()));
     }
 
     @RequestMapping(value = "/api/account", method = RequestMethod.GET)
@@ -78,6 +84,5 @@ public class GateController {
         return new ResponseEntity(response.getData(), HttpStatus.valueOf(response.getStatus()));
 
     }
-    
 
 }

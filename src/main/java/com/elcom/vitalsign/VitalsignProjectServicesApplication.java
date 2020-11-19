@@ -1,11 +1,11 @@
 package com.elcom.vitalsign;
 
+import com.elcom.vitalsign.config.PropertiesConfig;
 import com.elcom.vitalsign.mqtt.MqttSubscriberInitApp;
+import com.elcom.vitalsign.mqtt.MqttSubscriberInitForData;
 import com.elcom.vitalsign.process.DaemonThreadFactory;
-import com.elcom.vitalsign.process.MqttConsumerDataBp;
-import com.elcom.vitalsign.process.MqttConsumerDataSpo2;
-import com.elcom.vitalsign.process.MqttConsumerDataTemp;
 import com.elcom.vitalsign.process.MqttConsumerInitApp;
+import com.elcom.vitalsign.process.MqttConsumerInitForData;
 import java.net.URISyntaxException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -24,6 +24,7 @@ public class VitalsignProjectServicesApplication {
     public static void main(String[] args) throws MqttException, URISyntaxException {
         System.out.println("[CPU] : " + Runtime.getRuntime().availableProcessors());
         ApplicationContext applicationContext = SpringApplication.run(VitalsignProjectServicesApplication.class, args);
+
         BlockingQueue sharedQueueData = new LinkedBlockingQueue();
 
         //communice display and gate
@@ -37,38 +38,46 @@ public class VitalsignProjectServicesApplication {
         BlockingQueue sharedQueueDspAddSensor = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspConnSen = new LinkedBlockingQueue();
         BlockingQueue sharedQueueDspDisConnSen = new LinkedBlockingQueue();
-        //data
-        BlockingQueue sharedQueueDataBp = new LinkedBlockingQueue();
-        BlockingQueue sharedQueueDataSpo2 = new LinkedBlockingQueue();
-        BlockingQueue sharedQueueDataTemp = new LinkedBlockingQueue();
 
-        //subcri init
-        Runnable prodThread = new MqttSubscriberInitApp(sharedQueueData,
-                sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate, sharedQueueDspLnkGate,
-                sharedQueueGateTurnOn, sharedQueueDspSearchGate, sharedQueueDspGetGateSensor,
-                sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
-                sharedQueueDataBp, sharedQueueDataSpo2, sharedQueueDataTemp,
-                applicationContext);
+        Runnable prodThread = null;
+        Runnable consThread = null;
+        if (PropertiesConfig.APP_MASTER) {
+            //subcri init
+            prodThread = new MqttSubscriberInitApp(
+                    sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate, sharedQueueDspLnkGate,
+                    sharedQueueGateTurnOn, sharedQueueDspSearchGate, sharedQueueDspGetGateSensor,
+                    sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
+                    applicationContext);
 
-        //consumer init
-        Runnable consThread = new MqttConsumerInitApp(sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate,
-                sharedQueueDspLnkGate, sharedQueueGateTurnOn, sharedQueueDspSearchGate, sharedQueueDspGetGateSensor,
-                sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
-                applicationContext);
+            //consumer init
+            consThread = new MqttConsumerInitApp(sharedQueueDspTurnOn, sharedQueueGetPatient, sharedQueueDspUnLnkGate,
+                    sharedQueueDspLnkGate, sharedQueueGateTurnOn, sharedQueueDspSearchGate, sharedQueueDspGetGateSensor,
+                    sharedQueueDspAddSensor, sharedQueueDspConnSen, sharedQueueDspDisConnSen,
+                    applicationContext);
 
-        Runnable consThreadBp = new MqttConsumerDataBp(sharedQueueDataBp, applicationContext);
-        Runnable consThreadSpo2 = new MqttConsumerDataSpo2(sharedQueueDataSpo2, applicationContext);
-        Runnable consThreadTemp = new MqttConsumerDataTemp(sharedQueueDataTemp, applicationContext);
+        }
+        
+        //run when appmaster = false
+        Runnable prodThreadData = null;
+        Runnable consThreadData = null;
+        if (!PropertiesConfig.APP_MASTER) {
+            prodThreadData = new MqttSubscriberInitForData(sharedQueueData, applicationContext);
+            consThreadData = new MqttConsumerInitForData(sharedQueueData, applicationContext);
+        }
 
         //executor 
-//        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), new DaemonThreadFactory());
-//        executorService.submit(prodThread);
-//        executorService.submit(consThread);
-//
-//        //data
-//        executorService.submit(consThreadBp);
-//        executorService.submit(consThreadSpo2);
-//        executorService.submit(consThreadTemp);
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), new DaemonThreadFactory());
+
+        if (PropertiesConfig.APP_MASTER) {
+            executorService.submit(prodThread);
+            executorService.submit(consThread);
+        }
+
+        //data Spo2, NIBP, TEMP
+        if (!PropertiesConfig.APP_MASTER) {
+            executorService.submit(prodThreadData);
+            executorService.submit(consThreadData);
+        }
     }
 
 }
